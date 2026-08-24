@@ -1,4 +1,4 @@
-# VOT-Mwanza Website — SEO & Content Pack
+h# VOT-Mwanza Website — SEO & Content Pack
 
 Paste these directly into Wix: **Marketing & SEO → SEO Tools → [each page] → SEO Basics**.
 Each page needs its own unique title + description — Wix penalizes duplicate meta tags across pages.

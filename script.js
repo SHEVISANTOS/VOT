@@ -474,3 +474,24 @@ function initStatCounters() {
   stats.forEach(stat => observer.observe(stat));
 }
 
+/* MAIL SERVICES  */
+function sendEmail(e) {
+  e.preventDefault();
+  
+  const firstName = document.getElementById('first-name').value;
+  const lastName = document.getElementById('last-name').value;
+  const email = document.getElementById('email').value;
+  const phone = document.getElementById('phone').value;
+  const program = document.getElementById('program').value;
+  const message = document.getElementById('message').value;
+  
+  const subject = `New Volunteer Application - ${firstName} ${lastName}`;
+  const body = `Name: ${firstName} ${lastName}%0D%0AEmail: ${email}%0D%0APhone: ${phone}%0D%0AProgram: ${program}%0D%0A%0D%0AMessage:%0D%0A${message}`;
+  
+  // Open email client
+  window.location.href = `mailto:shevijeremiah@proton.me,shevijeremiah@gmail.com?subject=${subject}&body=${body}`;
+  
+  // Show success message
+  document.getElementById('form-note').textContent = 'Opening your email client...';
+  document.getElementById('form-note').className = 'form-note is-success';
+}
