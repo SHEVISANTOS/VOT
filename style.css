@@ -3158,3 +3158,221 @@ video[preload="none"] {
   background-repeat: no-repeat;
   margin-right: 8px;
 }
+/* =========================================================
+   OUR TEAM PAGE — Professional & Unified Styles
+   ========================================================= */
+
+/* 1. Page-Specific Hero */
+.page-hero {
+  background: linear-gradient(160deg, var(--lake-deep), #0A2A31);
+  color: var(--savanna);
+  padding-block: clamp(4rem, 10vw, 7rem);
+  text-align: center;
+}
+
+.page-hero .wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.page-hero .eyebrow {
+  color: var(--sun-ochre);
+  margin-bottom: 1rem;
+}
+
+.page-hero .eyebrow a {
+  color: var(--sun-ochre);
+  transition: color var(--transition);
+}
+
+.page-hero .eyebrow a:hover {
+  color: var(--white);
+  text-decoration: underline;
+}
+
+.page-hero h1 {
+  color: var(--white);
+  font-size: var(--step3);
+  max-width: 20ch;
+  margin-top: 0.45rem;
+  margin-bottom: 1.5rem;
+}
+
+.page-hero .lede {
+  color: var(--savanna-dim);
+  font-size: var(--step1);
+  max-width: 65ch;
+  text-align: center;
+  margin: 0 auto;
+}
+
+/* 2. Section Headings */
+.section-heading {
+  text-align: center;
+  max-width: 760px;
+  margin-inline: auto;
+  margin-bottom: 3rem;
+}
+
+.section-heading h2 {
+  font-size: var(--step3);
+  margin-top: 0.45rem;
+}
+
+/* 3. Grids & Cards (Uniform across Team, Why, Details) */
+.programs-grid,
+.why-grid,
+.detail-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2.5rem;
+}
+
+/* Team / Program Cards */
+.program-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--white);
+  border: 1px solid rgba(28, 26, 22, 0.08);
+  border-radius: 24px;
+  overflow: hidden;
+  position: relative;
+  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+}
+
+.program-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--sun-ochre);
+  box-shadow: 0 14px 30px rgba(28, 26, 22, 0.1);
+}
+
+.program-card img {
+  width: 100%;
+  height: 260px;
+  object-fit: contain;
+  background: var(--savanna-dim);
+}
+
+.program-card__top {
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  font-family: var(--font-utility);
+  font-weight: 700;
+  font-size: var(--step-1);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Unified VOT Brand Colors for Card Headers */
+.program-card__top--leadership,
+.program-card__top--healthcare { background: var(--lake-deep); }
+
+.program-card__top--administration,
+.program-card__top--education { background: var(--sun-ochre); }
+
+.program-card__top--finance,
+.program-card__top--community { background: var(--acacia); }
+
+.program-card__top--facilities,
+.program-card__top--tourism { background: var(--granite); }
+
+.program-card__body {
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.program-card__body h3 {
+  font-size: var(--step1);
+  margin-bottom: 0.25rem;
+}
+
+/* Replaces inline styles in HTML for clean code */
+.role-title {
+  font-family: var(--font-utility);
+  font-size: var(--step-1);
+  font-weight: 600;
+  color: var(--sun-ochre-dark);
+  margin-bottom: 0.75rem;
+}
+
+.program-card__body p {
+  color: var(--ink-soft);
+  font-size: var(--step-1);
+  flex: 1;
+  margin-bottom: 1.25rem;
+  line-height: 1.6;
+}
+
+.card-link {
+  font-family: var(--font-utility);
+  font-size: var(--step-1);
+  font-weight: 600;
+  color: var(--lake-deep);
+  border-bottom: 2px solid var(--sun-ochre);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: max-content;
+  transition: gap var(--transition), color var(--transition), border-color var(--transition);
+}
+
+.card-link:hover {
+  color: var(--sun-ochre-dark);
+  border-color: var(--sun-ochre-dark);
+  gap: 0.75rem;
+}
+
+/* Why Cards */
+.why-card {
+  background: var(--white);
+  border-radius: var(--radius-soft) var(--radius-soft) 8px var(--radius-soft);
+  padding: 2rem 1.75rem;
+  box-shadow: 0 1px 2px rgba(28, 26, 22, 0.06);
+  text-align: center;
+  border: 1px solid rgba(28, 26, 22, 0.06);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.why-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(28, 26, 22, 0.1);
+}
+
+.why-card h3 {
+  font-size: var(--step0);
+  margin-bottom: 0.75rem;
+}
+
+.why-card p {
+  color: var(--ink-soft);
+  font-size: var(--step-1);
+  line-height: 1.6;
+}
+
+/* Detail Cards (Partners) */
+.detail-card {
+  background: var(--savanna);
+  border-radius: 16px;
+  padding: 1.75rem;
+  border-left: 4px solid var(--sun-ochre);
+  transition: transform var(--transition);
+}
+
+.detail-card:hover {
+  transform: translateY(-3px);
+}
+
+.detail-card h3 {
+  font-size: var(--step0);
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
