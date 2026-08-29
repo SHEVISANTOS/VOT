@@ -908,3 +908,76 @@ function sendEmail(e) {
   }
 
 })();
+
+// ================= IMAGE CAROUSEL LOGIC =================
+document.addEventListener('DOMContentLoaded', () => {
+  const slides = document.querySelectorAll('.carousel-slide');
+  const dots = document.querySelectorAll('.dot');
+  const prevBtn = document.querySelector('.carousel-btn.prev');
+  const nextBtn = document.querySelector('.carousel-btn.next');
+  
+  if (!slides.length) return; // Exit if carousel isn't on this page
+
+  let currentIndex = 0;
+  let autoPlayInterval;
+
+  function showSlide(index) {
+    // Remove active class from all
+    slides.forEach(slide => slide.classList.remove('is-active'));
+    dots.forEach(dot => dot.classList.remove('is-active'));
+    
+    // Handle wrapping around
+    currentIndex = (index + slides.length) % slides.length;
+    
+    // Add active class to current
+    slides[currentIndex].classList.add('is-active');
+    dots[currentIndex].classList.add('is-active');
+  }
+
+  function nextSlide() {
+    showSlide(currentIndex + 1);
+  }
+
+  function prevSlide() {
+    showSlide(currentIndex - 1);
+  }
+
+  function startAutoPlay() {
+    autoPlayInterval = setInterval(nextSlide, 4000); // Rotates every 4 seconds
+  }
+
+  function stopAutoPlay() {
+    clearInterval(autoPlayInterval);
+  }
+
+  // Event Listeners
+  if (prevBtn && nextBtn) {
+    prevBtn.addEventListener('click', () => {
+      stopAutoPlay();
+      prevSlide();
+      startAutoPlay();
+    });
+
+    nextBtn.addEventListener('click', () => {
+      stopAutoPlay();
+      nextSlide();
+      startAutoPlay();
+    });
+
+    dots.forEach((dot, index) => {
+      dot.addEventListener('click', () => {
+        stopAutoPlay();
+        showSlide(index);
+        startAutoPlay();
+      });
+    });
+
+    // Pause on hover for better UX
+    const container = document.querySelector('.carousel-container');
+    container.addEventListener('mouseenter', stopAutoPlay);
+    container.addEventListener('mouseleave', startAutoPlay);
+
+    // Start the rotation
+    startAutoPlay();
+  }
+});
