@@ -981,3 +981,18 @@ document.addEventListener('DOMContentLoaded', () => {
     startAutoPlay();
   }
 });
+
+// Mini Carousel Auto-Rotation
+document.addEventListener('DOMContentLoaded', () => {
+  const miniSlides = document.querySelectorAll('.mini-slide');
+  
+  if (miniSlides.length > 0) {
+    let currentMiniIndex = 0;
+    
+    setInterval(() => {
+      miniSlides[currentMiniIndex].classList.remove('is-active');
+      currentMiniIndex = (currentMiniIndex + 1) % miniSlides.length;
+      miniSlides[currentMiniIndex].classList.add('is-active');
+    }, 1000); // Changes every 500ms
+  }
+});
