@@ -996,3 +996,141 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 1000); // Changes every 1 second
   }
 });
+
+// ================= TESTIMONIALS SLIDER LOGIC =================
+document.addEventListener('DOMContentLoaded', () => {
+  const cards = document.querySelectorAll('.testimonial-card');
+  const prevBtn = document.querySelector('.testimonial-nav.prev');
+  const nextBtn = document.querySelector('.testimonial-nav.next');
+  const track = document.querySelector('.testimonial-track');
+  
+  if (cards.length > 0 && prevBtn && nextBtn) {
+    let currentIndex = 0;
+    let autoPlayInterval;
+
+    function showCard(index) {
+      // Remove active class from all cards
+      cards.forEach(card => card.classList.remove('is-active'));
+      
+      // Handle wrapping around (infinite loop)
+      currentIndex = (index + cards.length) % cards.length;
+      
+      // Add active class to the current card
+      cards[currentIndex].classList.add('is-active');
+    }
+
+    function nextCard() {
+      showCard(currentIndex + 1);
+    }
+
+    function prevCard() {
+      showCard(currentIndex - 1);
+    }
+
+    function startAutoPlay() {
+      autoPlayInterval = setInterval(nextCard, 5000); // Changes every 5 seconds
+    }
+
+    function stopAutoPlay() {
+      clearInterval(autoPlayInterval);
+    }
+
+    // Event Listeners for Buttons
+    nextBtn.addEventListener('click', () => {
+      stopAutoPlay();
+      nextCard();
+      startAutoPlay();
+    });
+
+    prevBtn.addEventListener('click', () => {
+      stopAutoPlay();
+      prevCard();
+      startAutoPlay();
+    });
+
+    // Pause auto-play when hovering over the slider for better UX
+    if (track) {
+      track.addEventListener('mouseenter', stopAutoPlay);
+      track.addEventListener('mouseleave', startAutoPlay);
+    }
+
+    // Start the auto-rotation
+    startAutoPlay();
+  }
+});
+
+// ================= ACCOMMODATION REVIEWS SLIDER =================
+document.addEventListener('DOMContentLoaded', () => {
+  const reviewCards = document.querySelectorAll('.review-card');
+  const reviewDots = document.querySelectorAll('.review-dots .dot');
+  const prevReviewBtn = document.querySelector('.review-nav.prev');
+  const nextReviewBtn = document.querySelector('.review-nav.next');
+  const reviewsTrack = document.querySelector('.reviews-track');
+  
+  if (reviewCards.length > 0 && prevReviewBtn && nextReviewBtn) {
+    let currentReviewIndex = 0;
+    let reviewAutoPlayInterval;
+
+    function showReview(index) {
+      // Remove active class from all cards and dots
+      reviewCards.forEach(card => card.classList.remove('is-active'));
+      reviewDots.forEach(dot => dot.classList.remove('is-active'));
+      
+      // Handle wrapping
+      currentReviewIndex = (index + reviewCards.length) % reviewCards.length;
+      
+      // Add active class
+      reviewCards[currentReviewIndex].classList.add('is-active');
+      if (reviewDots[currentReviewIndex]) {
+        reviewDots[currentReviewIndex].classList.add('is-active');
+      }
+    }
+
+    function nextReview() {
+      showReview(currentReviewIndex + 1);
+    }
+
+    function prevReview() {
+      showReview(currentReviewIndex - 1);
+    }
+
+    function startReviewAutoPlay() {
+      reviewAutoPlayInterval = setInterval(nextReview, 4500); // Changes every 4.5 seconds
+    }
+
+    function stopReviewAutoPlay() {
+      clearInterval(reviewAutoPlayInterval);
+    }
+
+    // Button clicks
+    nextReviewBtn.addEventListener('click', () => {
+      stopReviewAutoPlay();
+      nextReview();
+      startReviewAutoPlay();
+    });
+
+    prevReviewBtn.addEventListener('click', () => {
+      stopReviewAutoPlay();
+      prevReview();
+      startReviewAutoPlay();
+    });
+
+    // Dot clicks
+    reviewDots.forEach((dot, index) => {
+      dot.addEventListener('click', () => {
+        stopReviewAutoPlay();
+        showReview(index);
+        startReviewAutoPlay();
+      });
+    });
+
+    // Pause on hover
+    if (reviewsTrack) {
+      reviewsTrack.addEventListener('mouseenter', stopReviewAutoPlay);
+      reviewsTrack.addEventListener('mouseleave', startReviewAutoPlay);
+    }
+
+    // Start auto-rotation
+    startReviewAutoPlay();
+  }
+});
