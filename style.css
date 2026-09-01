@@ -283,7 +283,7 @@ textarea:focus-visible {
 
 @media (max-width: 768px) {
   .logo img {
-    height: 60px;
+    height: 50px;
   }
 }
 
