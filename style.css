@@ -281,6 +281,12 @@ textarea:focus-visible {
   animation: logo-sway 5s ease-in-out infinite;
 }
 
+@media (max-width: 768px) {
+  .logo img {
+    height: 60px;
+  }
+}
+
 @keyframes logo-sway {
   0%, 100% { transform: rotate(-8deg); }
   50%      { transform: rotate(8deg); }
@@ -1837,7 +1843,7 @@ video[preload="none"] {
 }
 
 /* =========================================================
-   SAFARI PAGE FIX — Unscoped styles for Safari page layout
+   SAFARI PAGE
    ========================================================= */
 
 .container {
