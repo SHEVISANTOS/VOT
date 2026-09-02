@@ -3,62 +3,32 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- Community page SEO -->
   <title>Community Volunteer Projects in Tanzania | VOT</title>
-  <meta name="description" content="Join community development volunteer projects in Mwanza, Tanzania — working directly with local families, youth groups, and grassroots initiatives.">
-  <link rel="canonical" href="https://www.volunteertotanzania.com/community.html">
-
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&family=Inter:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/tom-select@2.4.3/dist/css/tom-select.css" rel="stylesheet">
-
-  <!-- Styles -->
   <link rel="stylesheet" href="style.css">
-
-  <!-- Rotating logo -->
-  <style>
-    .logo img {
-      border-radius: 50%;
-      animation: logo-sway 5s ease-in-out infinite;
-    }
-    @keyframes logo-sway {
-      0%, 100% { transform: rotate(-8deg); }
-      50%      { transform: rotate(8deg); }
-    }
-  </style>
-
-  <script src="script.js" defer></script>
+  <script defer src="script.js"></script>
 </head>
-
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
-
-  <!-- ================= HEADER ================= -->
+  <a href="#main" class="skip-link">Skip to content</a>
+  
   <header class="site-header">
     <div class="wrap site-header__inner">
-      <a class="logo" href="index.html" aria-label="Volunteers of Tanzania home">
-        <img src="images/logo.avif" alt="Volunteers of Tanzania logo" width="160" height="60">
+      <a href="index.html" class="logo">
+        <img src="images/logo.avif" alt="VOT Logo">
       </a>
-      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav">
-        <span></span><span class="sr-only">Menu</span>
-      </button>
-      <nav id="primary-nav" class="nav" aria-label="Primary navigation">
+      <nav class="nav" id="primary-nav">
         <a href="index.html#home">Home</a>
         <a href="index.html#about">About</a>
         <a href="index.html#opportunities">Opportunities</a>
-        <a href="index.html#accommodation">Accommodation</a>
-        <a href="index.html#tours">Tours</a>
+        <a href="accommodation.html">Accommodation</a>
+        <a href="tour.html">Tours</a>
+        <a href="prices.html">Prices</a>
         <a href="#contact">Contact</a>
       </nav>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav"><span></span></button>
     </div>
   </header>
 
   <main id="main">
-
-    <!-- ================= PAGE HERO ================= -->
     <section class="page-hero">
       <div class="wrap">
         <p class="eyebrow">
@@ -75,24 +45,20 @@
       </div>
     </section>
 
-    <!-- ================= OUR COMMUNITY ================= -->
     <section class="section">
       <div class="wrap feature-split">
-        <!-- Rotated photo collage — replace src with your photos later -->
         <div class="photo-collage reveal">
           <figure>
-            <!-- Replace later with: images/community-1.jpg -->
             <img
-              src="https://placehold.co/600x750/5C7A5C/FFFFFF?text=Community+1"
+              src="images/community_1.avif"
               alt="Community-based volunteer project in Tanzania"
               loading="lazy"
             >
             <figcaption>Community volunteering in Mwanza</figcaption>
           </figure>
           <figure>
-            <!-- Replace later with: images/community-2.jpg -->
             <img
-              src="https://placehold.co/600x750/E0942C/FFFFFF?text=Community+2"
+              src="images/community_2.avif"
               alt="VOT volunteers working with local community in Mwanza, Tanzania"
               loading="lazy"
             >
@@ -131,7 +97,6 @@
       </div>
     </section>
 
-    <!-- ================= HOW CAN YOU HELP ================= -->
     <section class="section section--white">
       <div class="wrap">
         <div class="section-heading reveal">
@@ -148,7 +113,9 @@
         <div class="help-grid">
           <article class="help-card reveal">
             <div class="help-card__icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+              <!-- 📷 IMAGE: Education icon -->
+              <!-- Replace with: images/icons/education.svg or education.png -->
+              <img src="images/icons/education.svg" alt="" loading="lazy" width="48" height="48">
             </div>
             <h3>Education through teaching</h3>
             <p>Support schools and improve outcomes in English, math, and science. Also a volunteer can organise donation of books and supplies for rural schools. In vocational training, teach trades to enhance job prospects.</p>
@@ -156,7 +123,9 @@
 
           <article class="help-card reveal">
             <div class="help-card__icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+              <!-- 📷 IMAGE: Healthcare icon -->
+              <!-- Replace with: images/icons/healthcare.svg or healthcare.png -->
+              <img src="images/icons/healthcare.svg" alt="" loading="lazy" width="48" height="48">
             </div>
             <h3>Healthcare</h3>
             <p>Assist local clinics with medical care and community health education and help develop healthcare facilities and sanitation systems.</p>
@@ -164,7 +133,9 @@
 
           <article class="help-card reveal">
             <div class="help-card__icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              <!-- 📷 IMAGE: Gender equality icon -->
+              <!-- Replace with: images/icons/gender-equality.svg or gender-equality.png -->
+              <img src="images/icons/gender-equality.svg" alt="" loading="lazy" width="48" height="48">
             </div>
             <h3>Women and Gender Equality</h3>
             <p>Support training programs for women in business skills and financial literacy but also to raise awareness on gender equality and organize community discussions.</p>
@@ -172,7 +143,9 @@
 
           <article class="help-card reveal">
             <div class="help-card__icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg>
+              <!--  IMAGE: Agriculture icon -->
+              <!-- Replace with: images/icons/agriculture.svg or agriculture.png -->
+              <img src="images/icons/agriculture.svg" alt="" loading="lazy" width="48" height="48">
             </div>
             <h3>Agriculture and Sustainable Development</h3>
             <p>Support farmers by teaching sustainable farming practices to improve yields, implement clean water projects and promote sanitation education.</p>
@@ -180,7 +153,9 @@
 
           <article class="help-card reveal">
             <div class="help-card__icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+              <!-- 📷 IMAGE: Youth empowerment icon -->
+              <!-- Replace with: images/icons/youth-empowerment.svg or youth-empowerment.png -->
+              <img src="images/icons/youth-empowerment.svg" alt="" loading="lazy" width="48" height="48">
             </div>
             <h3>Youth Empowerment and Job Creation</h3>
             <p>Guide youth in life skills and employability workshops. You can also focus on entrepreneurship by teaching young people how to start small businesses.</p>
@@ -188,7 +163,9 @@
 
           <article class="help-card reveal">
             <div class="help-card__icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+              <!-- 📷 IMAGE: Community development icon -->
+              <!-- Replace with: images/icons/community-development.svg or community-development.png -->
+              <img src="images/icons/community-development.svg" alt="" loading="lazy" width="48" height="48">
             </div>
             <h3>Community Development</h3>
             <p>Help in improving infrastructure by building roads and health clinics.</p>
@@ -196,7 +173,9 @@
 
           <article class="help-card reveal">
             <div class="help-card__icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+              <!-- 📷 IMAGE: Wildlife conservation icon -->
+              <!-- Replace with: images/icons/wildlife-conservation.svg or wildlife-conservation.png -->
+              <img src="images/icons/wildlife-conservation.svg" alt="" loading="lazy" width="48" height="48">
             </div>
             <h3>Wildlife Conservation</h3>
             <p>Contribute on efforts to protecting wildlife and promoting eco-tourism by engaging on sustainability campaigns.</p>
@@ -205,7 +184,6 @@
       </div>
     </section>
 
-    <!-- ================= COMMUNITY PROGRAMS (PARTNERS) ================= -->
     <section class="section">
       <div class="wrap">
         <div class="section-heading reveal">
@@ -214,9 +192,7 @@
         </div>
 
         <div class="partner-grid">
-          <!-- TECEC -->
           <article class="partner-card reveal">
-            <!-- Replace later with: images/partner-tecec.jpg -->
             <img
               src="https://placehold.co/640x400/5C7A5C/FFFFFF?text=TECEC"
               alt="Tanzania Early Childhood Education and Care (TECEC)"
@@ -239,9 +215,7 @@
             </div>
           </article>
 
-          <!-- Beacon Teens Challenge -->
           <article class="partner-card reveal">
-            <!-- Replace later with: images/partner-beacon.jpg -->
             <img
               src="https://placehold.co/640x400/E0942C/FFFFFF?text=Beacon+Teens"
               alt="Beacon Teens Challenge community support center"
@@ -259,9 +233,7 @@
             </div>
           </article>
 
-          <!-- Upendo Daima -->
           <article class="partner-card reveal">
-            <!-- Replace later with: images/partner-udo.jpg -->
             <img
               src="https://placehold.co/640x400/0F3D46/FFFFFF?text=Upendo+Daima"
               alt="Upendo Daima street children project in Mwanza"
@@ -284,9 +256,7 @@
             </div>
           </article>
 
-          <!-- WoteSawa -->
           <article class="partner-card reveal">
-            <!-- Replace later with: images/partner-wotesawa.jpg -->
             <img
               src="https://placehold.co/640x400/4A4238/FFFFFF?text=WoteSawa"
               alt="WoteSawa NGO advocating for domestic workers in Mwanza"
@@ -312,7 +282,6 @@
       </div>
     </section>
 
-    <!-- ================= CONTACT US ================= -->
     <section class="section section--deep" id="contact">
       <div class="wrap contact-grid">
         <div class="contact-info reveal">
@@ -358,291 +327,278 @@
               </div>
             </div>
 
-           <div class="field">
-    <label for="phone">Phone</label>
-
-    <div class="phone-row">
-
-        <select
-            id="country-code"
-            name="country-code"
-            aria-label="Country code"
-            required>
-
-            <option value="+255" selected>🇹🇿 +255 — Tanzania</option>
-
-            <option value="+93">🇦🇫 +93 — Afghanistan</option>
-            <option value="+355">🇦🇱 +355 — Albania</option>
-            <option value="+213">🇩🇿 +213 — Algeria</option>
-            <option value="+1684">🇦🇸 +1684 — American Samoa</option>
-            <option value="+376">🇦🇩 +376 — Andorra</option>
-            <option value="+244">🇦🇴 +244 — Angola</option>
-            <option value="+1264">🇦🇮 +1264 — Anguilla</option>
-            <option value="+1268">🇦🇬 +1268 — Antigua and Barbuda</option>
-            <option value="+54">🇦🇷 +54 — Argentina</option>
-            <option value="+374">🇦🇲 +374 — Armenia</option>
-            <option value="+297">🇦🇼 +297 — Aruba</option>
-            <option value="+61">🇦🇺 +61 — Australia</option>
-            <option value="+43">🇦🇹 +43 — Austria</option>
-            <option value="+994">🇦🇿 +994 — Azerbaijan</option>
-
-            <option value="+1242">🇧🇸 +1242 — Bahamas</option>
-            <option value="+973">🇧🇭 +973 — Bahrain</option>
-            <option value="+880">🇧🇩 +880 — Bangladesh</option>
-            <option value="+1246">🇧🇧 +1246 — Barbados</option>
-            <option value="+375">🇧🇾 +375 — Belarus</option>
-            <option value="+32">🇧🇪 +32 — Belgium</option>
-            <option value="+501">🇧🇿 +501 — Belize</option>
-            <option value="+229">🇧🇯 +229 — Benin</option>
-            <option value="+1441">🇧🇲 +1441 — Bermuda</option>
-            <option value="+975">🇧🇹 +975 — Bhutan</option>
-            <option value="+591">🇧🇴 +591 — Bolivia</option>
-            <option value="+387">🇧🇦 +387 — Bosnia and Herzegovina</option>
-            <option value="+267">🇧🇼 +267 — Botswana</option>
-            <option value="+55">🇧🇷 +55 — Brazil</option>
-            <option value="+246">🇮🇴 +246 — British Indian Ocean Territory</option>
-            <option value="+1284">🇻🇬 +1284 — British Virgin Islands</option>
-            <option value="+673">🇧🇳 +673 — Brunei</option>
-            <option value="+359">🇧🇬 +359 — Bulgaria</option>
-            <option value="+226">🇧🇫 +226 — Burkina Faso</option>
-            <option value="+257">🇧🇮 +257 — Burundi</option>
-
-            <option value="+238">🇨🇻 +238 — Cabo Verde</option>
-            <option value="+855">🇰🇭 +855 — Cambodia</option>
-            <option value="+237">🇨🇲 +237 — Cameroon</option>
-            <option value="+1">🇨🇦 +1 — Canada</option>
-            <option value="+236">🇨🇫 +236 — Central African Republic</option>
-            <option value="+235">🇹🇩 +235 — Chad</option>
-            <option value="+56">🇨🇱 +56 — Chile</option>
-            <option value="+86">🇨🇳 +86 — China</option>
-            <option value="+57">🇨🇴 +57 — Colombia</option>
-            <option value="+269">🇰🇲 +269 — Comoros</option>
-            <option value="+242">🇨🇬 +242 — Republic of the Congo</option>
-            <option value="+243">🇨🇩 +243 — Democratic Republic of the Congo</option>
-            <option value="+682">🇨🇰 +682 — Cook Islands</option>
-            <option value="+506">🇨🇷 +506 — Costa Rica</option>
-            <option value="+385">🇭🇷 +385 — Croatia</option>
-            <option value="+53">🇨🇺 +53 — Cuba</option>
-            <option value="+599">🇨🇼 +599 — Curaçao</option>
-            <option value="+357">🇨🇾 +357 — Cyprus</option>
-            <option value="+420">🇨🇿 +420 — Czechia</option>
-
-            <option value="+45">🇩🇰 +45 — Denmark</option>
-            <option value="+253">🇩🇯 +253 — Djibouti</option>
-            <option value="+1767">🇩🇲 +1767 — Dominica</option>
-            <option value="+1809">🇩🇴 +1809 — Dominican Republic</option>
-
-            <option value="+593">🇪🇨 +593 — Ecuador</option>
-            <option value="+20">🇪🇬 +20 — Egypt</option>
-            <option value="+503">🇸🇻 +503 — El Salvador</option>
-            <option value="+240">🇬🇶 +240 — Equatorial Guinea</option>
-            <option value="+291">🇪🇷 +291 — Eritrea</option>
-            <option value="+372">🇪🇪 +372 — Estonia</option>
-            <option value="+268">🇸🇿 +268 — Eswatini</option>
-            <option value="+251">🇪🇹 +251 — Ethiopia</option>
-
-            <option value="+500">🇫🇰 +500 — Falkland Islands</option>
-            <option value="+298">🇫🇴 +298 — Faroe Islands</option>
-            <option value="+679">🇫🇯 +679 — Fiji</option>
-            <option value="+358">🇫🇮 +358 — Finland</option>
-            <option value="+33">🇫🇷 +33 — France</option>
-            <option value="+594">🇬🇫 +594 — French Guiana</option>
-            <option value="+689">🇵🇫 +689 — French Polynesia</option>
-
-            <option value="+241">🇬🇦 +241 — Gabon</option>
-            <option value="+220">🇬🇲 +220 — Gambia</option>
-            <option value="+995">🇬🇪 +995 — Georgia</option>
-            <option value="+49">🇩🇪 +49 — Germany</option>
-            <option value="+233">🇬🇭 +233 — Ghana</option>
-            <option value="+350">🇬🇮 +350 — Gibraltar</option>
-            <option value="+30">🇬🇷 +30 — Greece</option>
-            <option value="+299">🇬🇱 +299 — Greenland</option>
-            <option value="+1473">🇬🇩 +1473 — Grenada</option>
-            <option value="+590">🇬🇵 +590 — Guadeloupe</option>
-            <option value="+1671">🇬🇺 +1671 — Guam</option>
-            <option value="+502">🇬🇹 +502 — Guatemala</option>
-            <option value="+44">🇬🇬 +44 — Guernsey</option>
-            <option value="+224">🇬🇳 +224 — Guinea</option>
-            <option value="+245">🇬🇼 +245 — Guinea-Bissau</option>
-            <option value="+592">🇬🇾 +592 — Guyana</option>
-
-            <option value="+509">🇭🇹 +509 — Haiti</option>
-            <option value="+504">🇭🇳 +504 — Honduras</option>
-            <option value="+852">🇭🇰 +852 — Hong Kong</option>
-            <option value="+36">🇭🇺 +36 — Hungary</option>
-
-            <option value="+354">🇮🇸 +354 — Iceland</option>
-            <option value="+91">🇮🇳 +91 — India</option>
-            <option value="+62">🇮🇩 +62 — Indonesia</option>
-            <option value="+98">🇮🇷 +98 — Iran</option>
-            <option value="+964">🇮🇶 +964 — Iraq</option>
-            <option value="+353">🇮🇪 +353 — Ireland</option>
-            <option value="+44">🇮🇲 +44 — Isle of Man</option>
-            <option value="+972">🇮🇱 +972 — Israel</option>
-            <option value="+39">🇮🇹 +39 — Italy</option>
-            <option value="+225">🇨🇮 +225 — Côte d'Ivoire</option>
-
-            <option value="+1876">🇯🇲 +1876 — Jamaica</option>
-            <option value="+81">🇯🇵 +81 — Japan</option>
-            <option value="+44">🇯🇪 +44 — Jersey</option>
-            <option value="+962">🇯🇴 +962 — Jordan</option>
-
-            <option value="+7">🇰🇿 +7 — Kazakhstan</option>
-            <option value="+254">🇰🇪 +254 — Kenya</option>
-            <option value="+686">🇰🇮 +686 — Kiribati</option>
-            <option value="+965">🇰🇼 +965 — Kuwait</option>
-            <option value="+996">🇰🇬 +996 — Kyrgyzstan</option>
-
-            <option value="+856">🇱🇦 +856 — Laos</option>
-            <option value="+371">🇱🇻 +371 — Latvia</option>
-            <option value="+961">🇱🇧 +961 — Lebanon</option>
-            <option value="+266">🇱🇸 +266 — Lesotho</option>
-            <option value="+231">🇱🇷 +231 — Liberia</option>
-            <option value="+218">🇱🇾 +218 — Libya</option>
-            <option value="+423">🇱🇮 +423 — Liechtenstein</option>
-            <option value="+370">🇱🇹 +370 — Lithuania</option>
-            <option value="+352">🇱🇺 +352 — Luxembourg</option>
-
-            <option value="+853">🇲🇴 +853 — Macao</option>
-            <option value="+261">🇲🇬 +261 — Madagascar</option>
-            <option value="+265">🇲🇼 +265 — Malawi</option>
-            <option value="+60">🇲🇾 +60 — Malaysia</option>
-            <option value="+960">🇲🇻 +960 — Maldives</option>
-            <option value="+223">🇲🇱 +223 — Mali</option>
-            <option value="+356">🇲🇹 +356 — Malta</option>
-            <option value="+692">🇲🇭 +692 — Marshall Islands</option>
-            <option value="+596">🇲🇶 +596 — Martinique</option>
-            <option value="+222">🇲🇷 +222 — Mauritania</option>
-            <option value="+230">🇲🇺 +230 — Mauritius</option>
-            <option value="+262">🇾🇹 +262 — Mayotte</option>
-            <option value="+52">🇲🇽 +52 — Mexico</option>
-            <option value="+691">🇫🇲 +691 — Micronesia</option>
-            <option value="+373">🇲🇩 +373 — Moldova</option>
-            <option value="+377">🇲🇨 +377 — Monaco</option>
-            <option value="+976">🇲🇳 +976 — Mongolia</option>
-            <option value="+382">🇲🇪 +382 — Montenegro</option>
-            <option value="+1664">🇲🇸 +1664 — Montserrat</option>
-            <option value="+212">🇲🇦 +212 — Morocco</option>
-            <option value="+258">🇲🇿 +258 — Mozambique</option>
-            <option value="+95">🇲🇲 +95 — Myanmar</option>
-
-            <option value="+264">🇳🇦 +264 — Namibia</option>
-            <option value="+674">🇳🇷 +674 — Nauru</option>
-            <option value="+977">🇳🇵 +977 — Nepal</option>
-            <option value="+31">🇳🇱 +31 — Netherlands</option>
-            <option value="+687">🇳🇨 +687 — New Caledonia</option>
-            <option value="+64">🇳🇿 +64 — New Zealand</option>
-            <option value="+505">🇳🇮 +505 — Nicaragua</option>
-            <option value="+227">🇳🇪 +227 — Niger</option>
-            <option value="+234">🇳🇬 +234 — Nigeria</option>
-            <option value="+683">🇳🇺 +683 — Niue</option>
-            <option value="+850">🇰🇵 +850 — North Korea</option>
-            <option value="+389">🇲🇰 +389 — North Macedonia</option>
-            <option value="+1670">🇲🇵 +1670 — Northern Mariana Islands</option>
-            <option value="+47">🇳🇴 +47 — Norway</option>
-
-            <option value="+968">🇴🇲 +968 — Oman</option>
-
-            <option value="+92">🇵🇰 +92 — Pakistan</option>
-            <option value="+680">🇵🇼 +680 — Palau</option>
-            <option value="+970">🇵🇸 +970 — Palestine</option>
-            <option value="+507">🇵🇦 +507 — Panama</option>
-            <option value="+675">🇵🇬 +675 — Papua New Guinea</option>
-            <option value="+595">🇵🇾 +595 — Paraguay</option>
-            <option value="+51">🇵🇪 +51 — Peru</option>
-            <option value="+63">🇵🇭 +63 — Philippines</option>
-            <option value="+48">🇵🇱 +48 — Poland</option>
-            <option value="+351">🇵🇹 +351 — Portugal</option>
-            <option value="+1787">🇵🇷 +1787 — Puerto Rico</option>
-
-            <option value="+974">🇶🇦 +974 — Qatar</option>
-
-            <option value="+262">🇷🇪 +262 — Réunion</option>
-            <option value="+40">🇷🇴 +40 — Romania</option>
-            <option value="+7">🇷🇺 +7 — Russia</option>
-            <option value="+250">🇷🇼 +250 — Rwanda</option>
-
-            <option value="+290">🇸🇭 +290 — Saint Helena</option>
-            <option value="+1869">🇰🇳 +1869 — Saint Kitts and Nevis</option>
-            <option value="+1758">🇱🇨 +1758 — Saint Lucia</option>
-            <option value="+508">🇵🇲 +508 — Saint Pierre and Miquelon</option>
-            <option value="+1784">🇻🇨 +1784 — Saint Vincent and the Grenadines</option>
-            <option value="+685">🇼🇸 +685 — Samoa</option>
-            <option value="+378">🇸🇲 +378 — San Marino</option>
-            <option value="+239">🇸🇹 +239 — São Tomé and Príncipe</option>
-            <option value="+966">🇸🇦 +966 — Saudi Arabia</option>
-            <option value="+221">🇸🇳 +221 — Senegal</option>
-            <option value="+381">🇷🇸 +381 — Serbia</option>
-            <option value="+248">🇸🇨 +248 — Seychelles</option>
-            <option value="+232">🇸🇱 +232 — Sierra Leone</option>
-            <option value="+65">🇸🇬 +65 — Singapore</option>
-            <option value="+1721">🇸🇽 +1721 — Sint Maarten</option>
-            <option value="+421">🇸🇰 +421 — Slovakia</option>
-            <option value="+386">🇸🇮 +386 — Slovenia</option>
-            <option value="+677">🇸🇧 +677 — Solomon Islands</option>
-            <option value="+252">🇸🇴 +252 — Somalia</option>
-            <option value="+27">🇿🇦 +27 — South Africa</option>
-            <option value="+82">🇰🇷 +82 — South Korea</option>
-            <option value="+211">🇸🇸 +211 — South Sudan</option>
-            <option value="+34">🇪🇸 +34 — Spain</option>
-            <option value="+94">🇱🇰 +94 — Sri Lanka</option>
-            <option value="+249">🇸🇩 +249 — Sudan</option>
-            <option value="+597">🇸🇷 +597 — Suriname</option>
-            <option value="+46">🇸🇪 +46 — Sweden</option>
-            <option value="+41">🇨🇭 +41 — Switzerland</option>
-            <option value="+963">🇸🇾 +963 — Syria</option>
-
-            <option value="+886">🇹🇼 +886 — Taiwan</option>
-            <option value="+992">🇹🇯 +992 — Tajikistan</option>
-            <option value="+255">🇹🇿 +255 — Tanzania</option>
-            <option value="+66">🇹🇭 +66 — Thailand</option>
-            <option value="+670">🇹🇱 +670 — Timor-Leste</option>
-            <option value="+228">🇹🇬 +228 — Togo</option>
-            <option value="+690">🇹🇰 +690 — Tokelau</option>
-            <option value="+676">🇹🇴 +676 — Tonga</option>
-            <option value="+1868">🇹🇹 +1868 — Trinidad and Tobago</option>
-            <option value="+216">🇹🇳 +216 — Tunisia</option>
-            <option value="+90">🇹🇷 +90 — Türkiye</option>
-            <option value="+993">🇹🇲 +993 — Turkmenistan</option>
-            <option value="+1649">🇹🇨 +1649 — Turks and Caicos Islands</option>
-            <option value="+688">🇹🇻 +688 — Tuvalu</option>
-
-            <option value="+256">🇺🇬 +256 — Uganda</option>
-            <option value="+380">🇺🇦 +380 — Ukraine</option>
-            <option value="+971">🇦🇪 +971 — United Arab Emirates</option>
-            <option value="+44">🇬🇧 +44 — United Kingdom</option>
-            <option value="+1">🇺🇸 +1 — United States</option>
-            <option value="+598">🇺🇾 +598 — Uruguay</option>
-            <option value="+998">🇺🇿 +998 — Uzbekistan</option>
-
-            <option value="+678">🇻🇺 +678 — Vanuatu</option>
-            <option value="+379">🇻🇦 +379 — Vatican City</option>
-            <option value="+58">🇻🇪 +58 — Venezuela</option>
-            <option value="+84">🇻🇳 +84 — Vietnam</option>
-            <option value="+1284">🇻🇬 +1284 — British Virgin Islands</option>
-            <option value="+1340">🇻🇮 +1340 — U.S. Virgin Islands</option>
-
-            <option value="+681">🇼🇫 +681 — Wallis and Futuna</option>
-            <option value="+967">🇾🇪 +967 — Yemen</option>
-            <option value="+260">🇿🇲 +260 — Zambia</option>
-            <option value="+263">🇿🇼 +263 — Zimbabwe</option>
-
-        </select>
-
-        <input
-            id="phone"
-            name="phone"
-            type="tel"
-            autocomplete="tel"
-            placeholder="765 883 202"
-            required>
-
-    </div>
-</div>
-              <div class="field">
-                <label for="email">Email *</label>
-                <input id="email" name="email" type="email" required autocomplete="email">
+            <div class="field">
+              <label for="phone">Phone</label>
+              <div class="phone-row">
+                <select
+                  id="country-code"
+                  name="country-code"
+                  aria-label="Country code"
+                  required>
+                  <option value="+255" selected>🇹🇿 +255 — Tanzania</option>
+                  <option value="+93">🇦🇫 +93 — Afghanistan</option>
+                  <option value="+355">🇦🇱 +355 — Albania</option>
+                  <option value="+213">🇩🇿 +213 — Algeria</option>
+                  <option value="+1684">🇦🇸 +1684 — American Samoa</option>
+                  <option value="+376">🇦🇩 +376 — Andorra</option>
+                  <option value="+244">🇦🇴 +244 — Angola</option>
+                  <option value="+1264">🇮 +1264 — Anguilla</option>
+                  <option value="+1268">🇦🇬 +1268 — Antigua and Barbuda</option>
+                  <option value="+54">🇷 +54 — Argentina</option>
+                  <option value="+374">🇲 +374 — Armenia</option>
+                  <option value="+297">🇦🇼 +297 — Aruba</option>
+                  <option value="+61">🇦🇺 +61 — Australia</option>
+                  <option value="+43">🇦🇹 +43 — Austria</option>
+                  <option value="+994">🇦🇿 +994 — Azerbaijan</option>
+                  <option value="+1242">🇧🇸 +1242 — Bahamas</option>
+                  <option value="+973">🇧🇭 +973 — Bahrain</option>
+                  <option value="+880">🇩 +880 — Bangladesh</option>
+                  <option value="+1246">🇧🇧 +1246 — Barbados</option>
+                  <option value="+375">🇧🇾 +375 — Belarus</option>
+                  <option value="+32">🇧🇪 +32 — Belgium</option>
+                  <option value="+501">🇧🇿 +501 — Belize</option>
+                  <option value="+229">🇧 +229 — Benin</option>
+                  <option value="+1441">🇧🇲 +1441 — Bermuda</option>
+                  <option value="+975">🇧🇹 +975 — Bhutan</option>
+                  <option value="+591">🇴 +591 — Bolivia</option>
+                  <option value="+387">🇧🇦 +387 — Bosnia and Herzegovina</option>
+                  <option value="+267">🇧🇼 +267 — Botswana</option>
+                  <option value="+55">🇷 +55 — Brazil</option>
+                  <option value="+246">🇴 +246 — British Indian Ocean Territory</option>
+                  <option value="+1284">🇻🇬 +1284 — British Virgin Islands</option>
+                  <option value="+673">🇧🇳 +673 — Brunei</option>
+                  <option value="+359">🇧🇬 +359 — Bulgaria</option>
+                  <option value="+226">🇧🇫 +226 — Burkina Faso</option>
+                  <option value="+257">🇮 +257 — Burundi</option>
+                  <option value="+238">🇨🇻 +238 — Cabo Verde</option>
+                  <option value="+855">🇰🇭 +855 — Cambodia</option>
+                  <option value="+237">🇨🇲 +237 — Cameroon</option>
+                  <option value="+1">🇨🇦 +1 — Canada</option>
+                  <option value="+236">🇨🇫 +236 — Central African Republic</option>
+                  <option value="+235">🇹🇩 +235 — Chad</option>
+                  <option value="+56">🇨🇱 +56 — Chile</option>
+                  <option value="+86">🇨🇳 +86 — China</option>
+                  <option value="+57">🇨🇴 +57 — Colombia</option>
+                  <option value="+269">🇰🇲 +269 — Comoros</option>
+                  <option value="+242">🇬 +242 — Republic of the Congo</option>
+                  <option value="+243">🇨🇩 +243 — Democratic Republic of the Congo</option>
+                  <option value="+682">🇨🇰 +682 — Cook Islands</option>
+                  <option value="+506">🇨🇷 +506 — Costa Rica</option>
+                  <option value="+385">🇭🇷 +385 — Croatia</option>
+                  <option value="+53">🇨 +53 — Cuba</option>
+                  <option value="+599">🇨🇼 +599 — Curaçao</option>
+                  <option value="+357">🇨🇾 +357 — Cyprus</option>
+                  <option value="+420">🇨🇿 +420 — Czechia</option>
+                  <option value="+45">🇩🇰 +45 — Denmark</option>
+                  <option value="+253">🇩🇯 +253 — Djibouti</option>
+                  <option value="+1767">🇲 +1767 — Dominica</option>
+                  <option value="+1809">🇩🇴 +1809 — Dominican Republic</option>
+                  <option value="+593">🇪🇨 +593 — Ecuador</option>
+                  <option value="+20">🇬 +20 — Egypt</option>
+                  <option value="+503">🇻 +503 — El Salvador</option>
+                  <option value="+240">🇬🇶 +240 — Equatorial Guinea</option>
+                  <option value="+291">🇪🇷 +291 — Eritrea</option>
+                  <option value="+372">🇪 +372 — Estonia</option>
+                  <option value="+268">🇸🇿 +268 — Eswatini</option>
+                  <option value="+251">🇪🇹 +251 — Ethiopia</option>
+                  <option value="+500">🇫🇰 +500 — Falkland Islands</option>
+                  <option value="+298">🇫🇴 +298 — Faroe Islands</option>
+                  <option value="+679">🇫🇯 +679 — Fiji</option>
+                  <option value="+358">🇫 +358 — Finland</option>
+                  <option value="+33">🇫🇷 +33 — France</option>
+                  <option value="+594">🇫 +594 — French Guiana</option>
+                  <option value="+689">🇵🇫 +689 — French Polynesia</option>
+                  <option value="+241">🇬🇦 +241 — Gabon</option>
+                  <option value="+220">🇲 +220 — Gambia</option>
+                  <option value="+995">🇬🇪 +995 — Georgia</option>
+                  <option value="+49">🇩🇪 +49 — Germany</option>
+                  <option value="+233">🇬🇭 +233 — Ghana</option>
+                  <option value="+350">🇬🇮 +350 — Gibraltar</option>
+                  <option value="+30">🇬🇷 +30 — Greece</option>
+                  <option value="+299">🇬🇱 +299 — Greenland</option>
+                  <option value="+1473">🇩 +1473 — Grenada</option>
+                  <option value="+590">🇬🇵 +590 — Guadeloupe</option>
+                  <option value="+1671">🇬🇺 +1671 — Guam</option>
+                  <option value="+502">🇬🇹 +502 — Guatemala</option>
+                  <option value="+44">🇬🇬 +44 — Guernsey</option>
+                  <option value="+224">🇬🇳 +224 — Guinea</option>
+                  <option value="+245">🇬🇼 +245 — Guinea-Bissau</option>
+                  <option value="+592">🇬🇾 +592 — Guyana</option>
+                  <option value="+509">🇭🇹 +509 — Haiti</option>
+                  <option value="+504">🇭🇳 +504 — Honduras</option>
+                  <option value="+852">🇭🇰 +852 — Hong Kong</option>
+                  <option value="+36">🇭🇺 +36 — Hungary</option>
+                  <option value="+354">🇮🇸 +354 — Iceland</option>
+                  <option value="+91">🇮🇳 +91 — India</option>
+                  <option value="+62">🇮🇩 +62 — Indonesia</option>
+                  <option value="+98">🇮🇷 +98 — Iran</option>
+                  <option value="+964">🇮 +964 — Iraq</option>
+                  <option value="+353">🇮🇪 +353 — Ireland</option>
+                  <option value="+44">🇲 +44 — Isle of Man</option>
+                  <option value="+972">🇮🇱 +972 — Israel</option>
+                  <option value="+39">🇮🇹 +39 — Italy</option>
+                  <option value="+225">🇨🇮 +225 — Côte d'Ivoire</option>
+                  <option value="+1876">🇯🇲 +1876 — Jamaica</option>
+                  <option value="+81">🇯🇵 +81 — Japan</option>
+                  <option value="+44">🇯🇪 +44 — Jersey</option>
+                  <option value="+962">🇯🇴 +962 — Jordan</option>
+                  <option value="+7">🇰🇿 +7 — Kazakhstan</option>
+                  <option value="+254">🇰🇪 +254 — Kenya</option>
+                  <option value="+686">🇰🇮 +686 — Kiribati</option>
+                  <option value="+965">🇰🇼 +965 — Kuwait</option>
+                  <option value="+996">🇰🇬 +996 — Kyrgyzstan</option>
+                  <option value="+856">🇱🇦 +856 — Laos</option>
+                  <option value="+371">🇻 +371 — Latvia</option>
+                  <option value="+961">🇧 +961 — Lebanon</option>
+                  <option value="+266">🇱🇸 +266 — Lesotho</option>
+                  <option value="+231">🇷 +231 — Liberia</option>
+                  <option value="+218">🇱🇾 +218 — Libya</option>
+                  <option value="+423">🇱🇮 +423 — Liechtenstein</option>
+                  <option value="+370">🇱🇹 +370 — Lithuania</option>
+                  <option value="+352">🇱🇺 +352 — Luxembourg</option>
+                  <option value="+853">🇲🇴 +853 — Macao</option>
+                  <option value="+261">🇬 +261 — Madagascar</option>
+                  <option value="+265">🇲🇼 +265 — Malawi</option>
+                  <option value="+60">🇲🇾 +60 — Malaysia</option>
+                  <option value="+960">🇲🇻 +960 — Maldives</option>
+                  <option value="+223">🇲🇱 +223 — Mali</option>
+                  <option value="+356">🇲🇹 +356 — Malta</option>
+                  <option value="+692">🇲🇭 +692 — Marshall Islands</option>
+                  <option value="+596">🇶 +596 — Martinique</option>
+                  <option value="+222">🇲🇷 +222 — Mauritania</option>
+                  <option value="+230">🇲🇺 +230 — Mauritius</option>
+                  <option value="+262">🇹 +262 — Mayotte</option>
+                  <option value="+52">🇽 +52 — Mexico</option>
+                  <option value="+691">🇫🇲 +691 — Micronesia</option>
+                  <option value="+373">🇲🇩 +373 — Moldova</option>
+                  <option value="+377">🇨 +377 — Monaco</option>
+                  <option value="+976">🇲🇳 +976 — Mongolia</option>
+                  <option value="+382">🇲🇪 +382 — Montenegro</option>
+                  <option value="+1664">🇲🇸 +1664 — Montserrat</option>
+                  <option value="+212">🇲🇦 +212 — Morocco</option>
+                  <option value="+258">🇲🇿 +258 — Mozambique</option>
+                  <option value="+95">🇲🇲 +95 — Myanmar</option>
+                  <option value="+264">🇳🇦 +264 — Namibia</option>
+                  <option value="+674">🇷 +674 — Nauru</option>
+                  <option value="+977">🇳🇵 +977 — Nepal</option>
+                  <option value="+31">🇳 +31 — Netherlands</option>
+                  <option value="+687">🇨 +687 — New Caledonia</option>
+                  <option value="+64">🇳🇿 +64 — New Zealand</option>
+                  <option value="+505">🇳🇮 +505 — Nicaragua</option>
+                  <option value="+227">🇪 +227 — Niger</option>
+                  <option value="+234">🇬 +234 — Nigeria</option>
+                  <option value="+683">🇳🇺 +683 — Niue</option>
+                  <option value="+850">🇰🇵 +850 — North Korea</option>
+                  <option value="+389">🇰 +389 — North Macedonia</option>
+                  <option value="+1670">🇲🇵 +1670 — Northern Mariana Islands</option>
+                  <option value="+47">🇴 +47 — Norway</option>
+                  <option value="+968">🇲 +968 — Oman</option>
+                  <option value="+92">🇵🇰 +92 — Pakistan</option>
+                  <option value="+680">🇵 +680 — Palau</option>
+                  <option value="+970">🇸 +970 — Palestine</option>
+                  <option value="+507">🇵🇦 +507 — Panama</option>
+                  <option value="+675">🇵🇬 +675 — Papua New Guinea</option>
+                  <option value="+595">🇵🇾 +595 — Paraguay</option>
+                  <option value="+51">🇪 +51 — Peru</option>
+                  <option value="+63">🇵🇭 +63 — Philippines</option>
+                  <option value="+48">🇵🇱 +48 — Poland</option>
+                  <option value="+351">🇹 +351 — Portugal</option>
+                  <option value="+1787">🇵🇷 +1787 — Puerto Rico</option>
+                  <option value="+974">🇶🇦 +974 — Qatar</option>
+                  <option value="+262">🇷🇪 +262 — Réunion</option>
+                  <option value="+40">🇴 +40 — Romania</option>
+                  <option value="+7">🇷🇺 +7 — Russia</option>
+                  <option value="+250">🇷🇼 +250 — Rwanda</option>
+                  <option value="+290">🇸🇭 +290 — Saint Helena</option>
+                  <option value="+1869">🇰🇳 +1869 — Saint Kitts and Nevis</option>
+                  <option value="+1758">🇱🇨 +1758 — Saint Lucia</option>
+                  <option value="+508">🇲 +508 — Saint Pierre and Miquelon</option>
+                  <option value="+1784">🇻🇨 +1784 — Saint Vincent and the Grenadines</option>
+                  <option value="+685">🇼🇸 +685 — Samoa</option>
+                  <option value="+378">🇸 +378 — San Marino</option>
+                  <option value="+239">🇹 +239 — São Tomé and Príncipe</option>
+                  <option value="+966">🇦 +966 — Saudi Arabia</option>
+                  <option value="+221">🇸🇳 +221 — Senegal</option>
+                  <option value="+381">🇷🇸 +381 — Serbia</option>
+                  <option value="+248">🇨 +248 — Seychelles</option>
+                  <option value="+232">🇸🇱 +232 — Sierra Leone</option>
+                  <option value="+65">🇸🇬 +65 — Singapore</option>
+                  <option value="+1721">🇸 +1721 — Sint Maarten</option>
+                  <option value="+421">🇸🇰 +421 — Slovakia</option>
+                  <option value="+386">🇸🇮 +386 — Slovenia</option>
+                  <option value="+677">🇸🇧 +677 — Solomon Islands</option>
+                  <option value="+252">🇸🇴 +252 — Somalia</option>
+                  <option value="+27">🇦 +27 — South Africa</option>
+                  <option value="+82">🇰🇷 +82 — South Korea</option>
+                  <option value="+211">🇸🇸 +211 — South Sudan</option>
+                  <option value="+34">🇪🇸 +34 — Spain</option>
+                  <option value="+94">🇱🇰 +94 — Sri Lanka</option>
+                  <option value="+249">🇸🇩 +249 — Sudan</option>
+                  <option value="+597">🇸🇷 +597 — Suriname</option>
+                  <option value="+46">🇸🇪 +46 — Sweden</option>
+                  <option value="+41">🇨🇭 +41 — Switzerland</option>
+                  <option value="+963">🇾 +963 — Syria</option>
+                  <option value="+886">🇹🇼 +886 — Taiwan</option>
+                  <option value="+992">🇹🇯 +992 — Tajikistan</option>
+                  <option value="+255">🇹🇿 +255 — Tanzania</option>
+                  <option value="+66">🇹🇭 +66 — Thailand</option>
+                  <option value="+670">🇹🇱 +670 — Timor-Leste</option>
+                  <option value="+228">🇹🇬 +228 — Togo</option>
+                  <option value="+690">🇹 +690 — Tokelau</option>
+                  <option value="+676">🇹🇴 +676 — Tonga</option>
+                  <option value="+1868">🇹🇹 +1868 — Trinidad and Tobago</option>
+                  <option value="+216">🇳 +216 — Tunisia</option>
+                  <option value="+90">🇹🇷 +90 — Türkiye</option>
+                  <option value="+993">🇹🇲 +993 — Turkmenistan</option>
+                  <option value="+1649">🇹🇨 +1649 — Turks and Caicos Islands</option>
+                  <option value="+688">🇹🇻 +688 — Tuvalu</option>
+                  <option value="+256">🇺🇬 +256 — Uganda</option>
+                  <option value="+380">🇺🇦 +380 — Ukraine</option>
+                  <option value="+971">🇦🇪 +971 — United Arab Emirates</option>
+                  <option value="+44">🇬 +44 — United Kingdom</option>
+                  <option value="+1">🇸 +1 — United States</option>
+                  <option value="+598">🇾 +598 — Uruguay</option>
+                  <option value="+998">🇺🇿 +998 — Uzbekistan</option>
+                  <option value="+678">🇻🇺 +678 — Vanuatu</option>
+                  <option value="+379">🇻🇦 +379 — Vatican City</option>
+                  <option value="+58">🇻🇪 +58 — Venezuela</option>
+                  <option value="+84">🇻🇳 +84 — Vietnam</option>
+                  <option value="+1284">🇻🇬 +1284 — British Virgin Islands</option>
+                  <option value="+1340">🇻🇮 +1340 — U.S. Virgin Islands</option>
+                  <option value="+681">🇼🇫 +681 — Wallis and Futuna</option>
+                  <option value="+967">🇪 +967 — Yemen</option>
+                  <option value="+260">🇲 +260 — Zambia</option>
+                  <option value="+263">🇿🇼 +263 — Zimbabwe</option>
+                </select>
+                <input
+                  id="phone"
+                  name="phone"
+                  type="tel"
+                  autocomplete="tel"
+                  placeholder="765 883 202"
+                  required>
               </div>
+            </div>
+
+            <div class="field">
+              <label for="email">Email *</label>
+              <input id="email" name="email" type="email" required autocomplete="email">
+            </div>
+
+            <div class="field">
+              <label for="program">Program of interest</label>
+              <select id="program" name="program">
+                <option value="Community">Community</option>
+                <option value="Education">Education</option>
+                <option value="Healthcare">Healthcare</option>
+                <option value="Tourism & Hospitality">Tourism & Hospitality</option>
+                <option value="Not sure yet">Not sure yet</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="message">Message *</label>
+              <textarea id="message" name="message" rows="4" required></textarea>
             </div>
 
             <button class="btn btn--primary" type="submit">Submit</button>
@@ -653,11 +609,10 @@
     </section>
   </main>
 
-  <!-- ================= FOOTER ================= -->
   <footer class="site-footer">
     <div class="wrap footer-inner">
       <p>© <span id="year"></span> Volunteers of Tanzania (VOT-Mwanza). All rights reserved.</p>
-      <nav class="footer-links" aria-label="Footer navigation">
+      <nav class="footer-links">
         <a href="index.html#about">About</a>
         <a href="index.html#opportunities">Opportunities</a>
         <a href="index.html#contact">Contact</a>
@@ -665,9 +620,6 @@
     </div>
   </footer>
 
-  <!-- ================= WHATSAPP FLOAT ================= -->
-  <a class="whatsapp-float" href="https://wa.me/255765883202?text=Hello%20VOT%2C%20I%20would%20like%20to%20ask%20about%20community%20volunteer%20projects." target="_blank" rel="noopener" aria-label="Chat with VOT on WhatsApp">
-    WhatsApp
-  </a>
+  <a href="https://wa.me/255765883202" class="whatsapp-float" target="_blank" rel="noopener">WhatsApp</a>
 </body>
 </html>

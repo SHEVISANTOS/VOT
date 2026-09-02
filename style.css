@@ -578,10 +578,10 @@ textarea:focus-visible {
   font-size: var(--step1);
 }
 
-.program-card__top--community  { background: var(--acacia); }
-.program-card__top--education  { background: var(--sun-ochre); }
-.program-card__top--healthcare { background: var(--lake-deep); }
-.program-card__top--tourism    { background: var(--granite); }
+.program-card__top--community  { background: #1EB960; } /* Tanzania Green */
+.program-card__top--education  { background: #FCD116; } /* Tanzania Yellow */
+.program-card__top--healthcare { background: #000000 ; } /* Tanzania Black */
+.program-card__top--tourism    { background: #00A3DD ; } /* Tanzania Blue */
 
 .program-card__body {
   padding: 1.75rem;
