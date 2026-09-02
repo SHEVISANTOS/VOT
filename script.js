@@ -1259,3 +1259,14 @@ document.addEventListener('DOMContentLoaded', () => {
     startReviewAutoPlay();
   }
 });
+
+// ================= FORMSPREE AJAX SCRIPT =================
+window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
+formspree('initForm', { formElement: '#contact-form', formId: 'mzepwabz' });
+
+// Load Formspree AJAX SDK Dynamically
+const formspreeScript = document.createElement('script');
+formspreeScript.src = "https://unpkg.com/@formspree/ajax@1";
+formspreeScript.defer = true;
+document.head.appendChild(formspreeScript);
+

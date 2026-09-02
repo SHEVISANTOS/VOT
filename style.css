@@ -277,7 +277,7 @@ textarea:focus-visible {
 .logo img {
   height: 130px;
   width: auto;
-  border-radius: 50%;
+  border-radius: 40%;
   animation: logo-sway 5s ease-in-out infinite;
 }
 
