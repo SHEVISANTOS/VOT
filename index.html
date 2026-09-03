@@ -1,25 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Homepage SEO -->
   <title>Volunteer & Internships in Tanzania | VOT Mwanza</title>
-  <meta name="description" content="Volunteer or intern in Mwanza, Tanzania with VOT. Education, healthcare, and community programs with safe housing, airport pickup, and 24/7 local support.">
+  <meta name="description"
+    content="Volunteer or intern in Mwanza, Tanzania with VOT. Education, healthcare, and community programs with safe housing, airport pickup, and 24/7 local support.">
   <link rel="canonical" href="https://www.volunteertotanzania.com/">
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="Volunteer & Internships in Tanzania | VOT Mwanza">
-  <meta property="og:description" content="Volunteer or intern in Mwanza, Tanzania with VOT. Education, healthcare, and community programs with safe housing, airport pickup, and 24/7 local support.">
+  <meta property="og:description"
+    content="Volunteer or intern in Mwanza, Tanzania with VOT. Education, healthcare, and community programs with safe housing, airport pickup, and 24/7 local support.">
   <meta property="og:url" content="https://www.volunteertotanzania.com/">
   <meta property="og:image" content="images/hero.jpg">
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400&family=Inter:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400&family=Inter:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
 
   <!-- Styles -->
   <link rel="stylesheet" href="style.css">
@@ -45,54 +50,56 @@
 
       <nav id="primary-nav" class="nav" aria-label="Primary navigation">
         <a href="#home">Home</a>
-        <a href="#about">About Us</a>
-        <a href="#opportunities">Opportunities</a>
+        <a href="#about">About</a>
+        <a href="#opportunities">Programs</a>
         <a href="#accommodation">Accommodation</a>
         <a href="#tours">Tours</a>
-        <a href="#prices">Prices</a>
-        <a href="#contact">Contact</a>
+        <a href="prices.html">Prices</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact" class="btn btn--primary" style="padding:0.5rem 1.1rem;font-size:var(--step-1);">Apply Now</a>
       </nav>
     </div>
   </header>
 
   <main id="main">
 
-    
 
-    <!-- ================= HERO (photo as background) ================= -->
-<section class="hero hero--photo" id="home">
-  <!-- Background photo -->
-  <div class="hero__background">
-    <img
-      src="images/Hero_Image.jpeg"
-      alt="VOT volunteers working with local community in Mwanza, Tanzania"
-      loading="eager"
-    >
-  </div>
 
-  <!-- Dark overlay so the text stays readable -->
-  <div class="hero__overlay" aria-hidden="true"></div>
-
-  <!-- Text on top of the photo -->
-  <div class="wrap hero__inner">
-    <div class="hero__content reveal">
-      <p class="eyebrow">Based in Mwanza, Tanzania</p>
-
-      <h1>Volunteer in Tanzania, Make a Difference, Discover Africa</h1>
-
-      <p class="lede">
-        Join meaningful volunteer projects in education, healthcare, childcare,
-        community development, and more with safe accommodation, airport pickup,
-        and professional local support.
-      </p>
-
-      <div class="hero__cta">
-        <a class="btn btn--primary" href="#contact">Apply Now</a>
-        <a class="btn btn--ghost" href="#opportunities">Explore Programs</a>
+    <section class="hero hero--photo" id="home">
+      <!-- Background photo -->
+      <div class="hero__background">
+        <img src="images/Hero_Image.jpeg" alt="VOT volunteers working with local community in Mwanza, Tanzania"
+          loading="eager" fetchpriority="high">
       </div>
-    </div>
-  </div>
-</section>
+
+      <!-- Dark overlay -->
+      <div class="hero__overlay" aria-hidden="true"></div>
+
+      <!-- Text -->
+      <div class="wrap hero__inner">
+        <div class="hero__content reveal">
+          <div class="hero-badge" aria-label="Based in Mwanza, Tanzania">
+            <span aria-hidden="true">📍</span> Mwanza, Tanzania &bull; Est. 2018
+          </div>
+
+          <h1>Volunteer in Tanzania,<br>Make a Difference,<br>Discover Africa</h1>
+
+          <p class="lede">
+            Join meaningful volunteer projects in education, healthcare, childcare,
+            community development, and more with safe accommodation, airport pickup,
+            and professional local support.
+          </p>
+
+          <div class="hero__cta">
+            <a class="btn btn--primary" href="#contact" id="hero-apply-btn">Apply Now</a>
+            <a class="btn btn--outline-white" href="#opportunities">Explore Programs</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scroll indicator -->
+      <div class="scroll-indicator" aria-hidden="true">Scroll</div>
+    </section>
 
     <!-- ================= STATS ================= -->
     <section class="section section--deep section--tight" aria-label="VOT statistics">
@@ -128,184 +135,209 @@
         </dl>
       </div>
     </section>
-<!-- ================= ABOUT ================= -->
-<section class="section" id="about">
-  
-  <!-- 1. EXISTING: Our Story -->
-  <div class="wrap about">
-    <figure class="about__media reveal">
-      <img
-        src="images/about_us.jpeg"
-        alt="VOT staff providing 24/7 volunteer support"
-        width="700"
-        height="1850"
-        loading="lazy"
-      >
-    </figure>
+    <!-- ================= ABOUT ================= -->
+    <section class="section" id="about">
 
-    <div class="about__content reveal">
-      <p class="eyebrow">A Little Information About Us</p>
-      <h2>A trusted local organization creating meaningful experiences</h2>
-      <p>
-        Volunteers of Tanzania (VOT-Mwanza) came to life in 2018, the year we were legally registered as an organization that assists interns, students, and volunteers who want to come to Africa and find suitable placements to help the community. </p>
+      <!-- 1. EXISTING: Our Story -->
+      <div class="wrap about">
+        <figure class="about__media reveal">
+          <img src="images/about_us.jpeg" alt="VOT staff providing 24/7 volunteer support" width="700" height="1850"
+            loading="lazy">
+        </figure>
 
-<p>This initiative is driven by our passion to transform communities and alleviate poverty and life hardships in Africa.</p>
+        <div class="about__content reveal">
+          <p class="eyebrow">A Little Information About Us</p>
+          <h2>A trusted local organization creating meaningful experiences</h2>
+          <p>
+            Volunteers of Tanzania (VOT-Mwanza) came to life in 2018, the year we were legally registered as an
+            organization that assists interns, students, and volunteers who want to come to Africa and find suitable
+            placements to help the community. </p>
 
-<p>Since 2018, we have been hosting volunteers and interns from different countries and from this initiative, we are witnessing the changes in our communities.</p> 
+          <p>This initiative is driven by our passion to transform communities and alleviate poverty and life hardships
+            in Africa.</p>
 
- 
+          <p>Since 2018, we have been hosting volunteers and interns from different countries and from this initiative,
+            we are witnessing the changes in our communities.</p>
 
-<p>To ensure interns and volunteers are well accommodated during their stay, the company also provides and accommodation and transport services for the entire duration of volunteer experience.</p>
 
-<p>Our volunteer house can accommodate up to 20 people at once</p>
-      </p>
-      <a class="btn btn--dark" href="#contact">Ask About Volunteering</a>
-      <a class="btn btn--dark" href="our_team.html">Meet Our Team</a>
-    </div>
-  </div>
 
-  <!-- 2. EXISTING: What you can do with VOT -->
-  <div class="wrap about__programs">
-    <div class="why-grid">
-      <article class="why-card reveal">
-        <h3>Volunteer Opportunities</h3>
-        <ul class="feature-list">
-          <li>Healthcare</li>
-          <li>Education</li>
-          <li>Community</li>
-          <li>Environment Conservation</li>
-          <li>Wildlife</li>
-        </ul>
-      </article>
-      <article class="why-card reveal">
-        <h3>Internships & Placements</h3>
-        <ul class="feature-list">
-          <li>Healthcare</li>
-          <li>Education</li>
-          <li>Community</li>
-          <li>Environment</li>
-          <li>Mass Communication</li>
-          <li>Engineering</li>
-          <li>Geology</li>
-        </ul>
-      </article>
-      <article class="why-card reveal">
-        <h3>Tourism & Hospitality</h3>
-        <ul class="feature-list">
-          <li>Training</li>
-          <li>Customer Service</li>
-          <li>Supporting small businesses</li>
-          <li>Environment</li>
-          <li>Developing tourism products</li>
-        </ul>
-      </article>
-    </div>
-  </div>
-<!-- ================= IMAGE CAROUSEL ================= -->
-<section class="section carousel-section" aria-label="Volunteer photo gallery">
-  <div class="wrap">
-    <div class="section-heading reveal">
-      <p class="eyebrow">Our Impact in Pictures</p>
-      <h2>Moments from our volunteer community</h2>
-    </div>
-    
-    <div class="carousel-container reveal">
-      <div class="carousel-track">
-        <!-- 10 Rotating Images -->
-        <img src="images/impact/1.jpeg" alt="Volunteers teaching in Mwanza" class="carousel-slide is-active" loading="lazy">
-        <img src="images/impact/2.jpg" alt="Community development project in Tanzania" class="carousel-slide" loading="lazy">
-        <img src="images/impact/3.jpeg" alt="Healthcare placement volunteer at work" class="carousel-slide" loading="lazy">
-        <img src="images/impact/4.jpeg" alt="Wildlife and environmental conservation volunteers" class="carousel-slide" loading="lazy">
-        <img src="images/impact/5.jpg" alt="Volunteers enjoying Lake Victoria shores" class="carousel-slide" loading="lazy">
-        <img src="images/impact/6.jpeg" alt="Local cultural exchange and greetings" class="carousel-slide" loading="lazy">
-        <img src="images/impact/7.jpg" alt="VOT hostel accommodation and garden" class="carousel-slide" loading="lazy">
-        <img src="images/impact/8.jpeg" alt="Group of international volunteers smiling" class="carousel-slide" loading="lazy">
-        <img src="images/impact/9.jpeg" alt="Volunteers supporting local small businesses" class="carousel-slide" loading="lazy">
-        <img src="images/impact/10.jpeg" alt="Sunset over Mwanza Rock City" class="carousel-slide" loading="lazy">
+          <p>To ensure interns and volunteers are well accommodated during their stay, the company also provides and
+            accommodation and transport services for the entire duration of volunteer experience.</p>
+
+          <p>Our volunteer house can accommodate up to 20 people at once</p>
+          </p>
+          <a class="btn btn--dark" href="#contact">Ask About Volunteering</a>
+          <a class="btn btn--dark" href="our_team.html">Meet Our Team</a>
+        </div>
       </div>
-      
-      <!-- Navigation Buttons -->
-      <button class="carousel-btn prev" aria-label="Previous image">&#10094;</button>
-      <button class="carousel-btn next" aria-label="Next image">&#10095;</button>
-      
-      <!-- Dot Indicators -->
-      <div class="carousel-dots">
-        <span class="dot is-active" data-index="0"></span>
-        <span class="dot" data-index="1"></span>
-        <span class="dot" data-index="2"></span>
-        <span class="dot" data-index="3"></span>
-        <span class="dot" data-index="4"></span>
-        <span class="dot" data-index="5"></span>
-        <span class="dot" data-index="6"></span>
-        <span class="dot" data-index="7"></span>
-        <span class="dot" data-index="8"></span>
-        <span class="dot" data-index="9"></span>
+
+      <!-- 2. EXISTING: What you can do with VOT -->
+      <div class="wrap about__programs">
+        <div class="why-grid">
+          <article class="why-card reveal">
+            <h3>Volunteer Opportunities</h3>
+            <ul class="feature-list">
+              <li>Healthcare</li>
+              <li>Education</li>
+              <li>Community</li>
+              <li>Environment Conservation</li>
+              <li>Wildlife</li>
+            </ul>
+          </article>
+          <article class="why-card reveal">
+            <h3>Internships & Placements</h3>
+            <ul class="feature-list">
+              <li>Healthcare</li>
+              <li>Education</li>
+              <li>Community</li>
+              <li>Environment</li>
+              <li>Mass Communication</li>
+              <li>Engineering</li>
+              <li>Geology</li>
+            </ul>
+          </article>
+          <article class="why-card reveal">
+            <h3>Tourism & Hospitality</h3>
+            <ul class="feature-list">
+              <li>Training</li>
+              <li>Customer Service</li>
+              <li>Supporting small businesses</li>
+              <li>Environment</li>
+              <li>Developing tourism products</li>
+            </ul>
+          </article>
+        </div>
       </div>
-    </div>
-  </div>
-</section>
-  <!-- 3. NEW: Our Mission & Vision -->
-  <div class="wrap mission-vision">
-    <div class="section-header reveal">
-      <p class="eyebrow">Our Purpose</p>
-      <h2>Driven by Mission, Guided by Vision</h2>
-    </div>
-    <div class="mv-grid">
-      <div class="mv-card reveal">
-        <div class="mv-icon">🎯</div>
-        <h3>Our Mission</h3>
-        <p>VOT Mwanza's mission is focused on encouraging all people around the world to volunteer in developing countries. Volunteering will help the world community to better understand the needs and challenges faced by developing countries. In the long run, communities around the world will become more aware and give necessary assistance related to problems in developing countries.</p>
+      <!-- ================= IMAGE CAROUSEL ================= -->
+      <section class="section carousel-section" aria-label="Volunteer photo gallery">
+        <div class="wrap">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Our Impact in Pictures</p>
+            <h2>Moments from our volunteer community</h2>
+          </div>
+
+          <div class="carousel-container reveal">
+            <div class="carousel-track">
+              <!-- 10 Rotating Images -->
+              <img src="images/impact/1.jpeg" alt="Volunteers teaching in Mwanza" class="carousel-slide is-active"
+                loading="lazy">
+              <img src="images/impact/2.jpg" alt="Community development project in Tanzania" class="carousel-slide"
+                loading="lazy">
+              <img src="images/impact/3.jpeg" alt="Healthcare placement volunteer at work" class="carousel-slide"
+                loading="lazy">
+              <img src="images/impact/4.jpeg" alt="Wildlife and environmental conservation volunteers"
+                class="carousel-slide" loading="lazy">
+              <img src="images/impact/5.jpg" alt="Volunteers enjoying Lake Victoria shores" class="carousel-slide"
+                loading="lazy">
+              <img src="images/impact/6.jpeg" alt="Local cultural exchange and greetings" class="carousel-slide"
+                loading="lazy">
+              <img src="images/impact/7.jpg" alt="VOT hostel accommodation and garden" class="carousel-slide"
+                loading="lazy">
+              <img src="images/impact/8.jpeg" alt="Group of international volunteers smiling" class="carousel-slide"
+                loading="lazy">
+              <img src="images/impact/9.jpeg" alt="Volunteers supporting local small businesses" class="carousel-slide"
+                loading="lazy">
+              <img src="images/impact/10.jpeg" alt="Sunset over Mwanza Rock City" class="carousel-slide" loading="lazy">
+            </div>
+
+            <!-- Navigation Buttons -->
+            <button class="carousel-btn prev" aria-label="Previous image">&#10094;</button>
+            <button class="carousel-btn next" aria-label="Next image">&#10095;</button>
+
+            <!-- Dot Indicators -->
+            <div class="carousel-dots">
+              <span class="dot is-active" data-index="0"></span>
+              <span class="dot" data-index="1"></span>
+              <span class="dot" data-index="2"></span>
+              <span class="dot" data-index="3"></span>
+              <span class="dot" data-index="4"></span>
+              <span class="dot" data-index="5"></span>
+              <span class="dot" data-index="6"></span>
+              <span class="dot" data-index="7"></span>
+              <span class="dot" data-index="8"></span>
+              <span class="dot" data-index="9"></span>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- 3. NEW: Our Mission & Vision -->
+      <div class="wrap mission-vision">
+        <div class="section-header reveal">
+          <p class="eyebrow">Our Purpose</p>
+          <h2>Driven by Mission, Guided by Vision</h2>
+        </div>
+        <div class="mv-grid">
+          <div class="mv-card reveal">
+            <div class="mv-icon">🎯</div>
+            <h3>Our Mission</h3>
+            <p>VOT Mwanza's mission is focused on encouraging all people around the world to volunteer in developing
+              countries. Volunteering will help the world community to better understand the needs and challenges faced
+              by developing countries. In the long run, communities around the world will become more aware and give
+              necessary assistance related to problems in developing countries.</p>
+          </div>
+          <div class="mv-card reveal">
+            <div class="mv-icon">🌍</div>
+            <h3>Our Vision</h3>
+            <p>Our vision is to see the life of underdeveloped communities improved through the organization of
+              internships and volunteering programs. Through internships, students' practical training, and voluntary
+              works, we believe a multinational community is created.</p>
+          </div>
+        </div>
       </div>
-      <div class="mv-card reveal">
-        <div class="mv-icon">🌍</div>
-        <h3>Our Vision</h3>
-        <p>Our vision is to see the life of underdeveloped communities improved through the organization of internships and volunteering programs. Through internships, students' practical training, and voluntary works, we believe a multinational community is created.</p>
+
+      <!-- 4. NEW: Life in Mwanza & Culture -->
+      <div class="wrap life-culture">
+        <div class="section-header reveal">
+          <p class="eyebrow">Discover Your Host City</p>
+          <h2>Life in Mwanza "Rock City"</h2>
+        </div>
+
+        <div class="mwanza-intro reveal">
+          <p>Mwanza City, also known as Rock City to the residents, is a port city and capital of Mwanza Region on the
+            southern shore of Lake Victoria in north-western Tanzania. With an urban population of over 3.6 million, it
+            is Tanzania's second-largest city. The Sukuma constitute over 90% of the region's population, alongside
+            smaller communities including the Zinza, Haya, Sumbwa, Nyamwezi, Luo, Kurya, Jita, Shashi, and Kerewe.</p>
+        </div>
+
+        <div class="culture-grid">
+          <article class="culture-card reveal">
+            <h4>🗣️ Language</h4>
+            <p>Swahili is Tanzania’s official language, and English is used alongside it. Most people speak their tribal
+              language and Swahili, with many speaking English as a third language. Learning a few basic Swahili words
+              will go a long way Tanzanians will love to interact with you!</p>
+          </article>
+          <article class="culture-card reveal">
+            <h4>🤝 Greetings</h4>
+            <p>Greetings are an important part of Tanzanian culture. Handshakes may last longer than you expect this is
+              normal. Tanzanians treat the elderly with the greatest respect. To greet an elder, say
+              <em>"Shikamoo"</em>, and they will respond <em>"Marahaba"</em>.
+            </p>
+          </article>
+          <article class="culture-card reveal">
+            <h4>⛪ Religion</h4>
+            <p>Christianity is the most practiced religion (~63%), followed by Islam (~34%). Around 1.2% follow
+              traditional religions, and 1.8% are non-believers. Tanzania is known for its peaceful coexistence among
+              faiths.</p>
+          </article>
+          <article class="culture-card reveal">
+            <h4>👗 Dress Code</h4>
+            <p>Tanzanians generally dress conservatively. Women traditionally wear long skirts with knees and shoulders
+              covered. In places like Zanzibar, there is a strict dress code. At the coast, you'll discover the
+              colourful <em>kikoi</em> (sarong for men) and <em>kanga</em> (sarong for women).</p>
+          </article>
+
+          <article class="culture-card reveal">
+            <h4>📸</h4>
+            <div class="mini-carousel">
+              <img src="images/mwanza_1.jpg" alt="Lake Victoria" class="mini-slide is-active" loading="lazy">
+              <img src="images/mwanza_2.jpg" alt="Mwanza City" class="mini-slide" loading="lazy">
+              <img src="images/Rock_City_Mall.jpg" alt="Rock City Mall" class="mini-slide" loading="lazy">
+              <img src="images/mwanza_4.jpg" alt="Mwanza City" class="mini-slide" loading="lazy">
+            </div>
+          </article>
+        </div>
       </div>
-    </div>
-  </div>
-
-  <!-- 4. NEW: Life in Mwanza & Culture -->
-  <div class="wrap life-culture">
-    <div class="section-header reveal">
-      <p class="eyebrow">Discover Your Host City</p>
-      <h2>Life in Mwanza  "Rock City"</h2>
-    </div>
-    
-    <div class="mwanza-intro reveal">
-      <p>Mwanza City, also known as Rock City to the residents, is a port city and capital of Mwanza Region on the southern shore of Lake Victoria in north-western Tanzania. With an urban population of over 3.6 million, it is Tanzania's second-largest city. The Sukuma constitute over 90% of the region's population, alongside smaller communities including the Zinza, Haya, Sumbwa, Nyamwezi, Luo, Kurya, Jita, Shashi, and Kerewe.</p>
-    </div>
-
-    <div class="culture-grid">
-      <article class="culture-card reveal">
-        <h4>🗣️ Language</h4>
-        <p>Swahili is Tanzania’s official language, and English is used alongside it. Most people speak their tribal language and Swahili, with many speaking English as a third language. Learning a few basic Swahili words will go a long way Tanzanians will love to interact with you!</p>
-      </article>
-      <article class="culture-card reveal">
-        <h4>🤝 Greetings</h4>
-        <p>Greetings are an important part of Tanzanian culture. Handshakes may last longer than you expect this is normal. Tanzanians treat the elderly with the greatest respect. To greet an elder, say <em>"Shikamoo"</em>, and they will respond <em>"Marahaba"</em>.</p>
-      </article>
-      <article class="culture-card reveal">
-        <h4>⛪ Religion</h4>
-        <p>Christianity is the most practiced religion (~63%), followed by Islam (~34%). Around 1.2% follow traditional religions, and 1.8% are non-believers. Tanzania is known for its peaceful coexistence among faiths.</p>
-      </article>
-      <article class="culture-card reveal">
-        <h4>👗 Dress Code</h4>
-        <p>Tanzanians generally dress conservatively. Women traditionally wear long skirts with knees and shoulders covered. In places like Zanzibar, there is a strict dress code. At the coast, you'll discover the colourful <em>kikoi</em> (sarong for men) and <em>kanga</em> (sarong for women).</p>
-      </article>
-
-      <article class="culture-card reveal">
-  <h4>📸</h4>
-  <div class="mini-carousel">
-    <img src="images/mwanza_1.jpg" alt="Lake Victoria" class="mini-slide is-active" loading="lazy">
-    <img src="images/mwanza_2.jpg" alt="Mwanza City" class="mini-slide" loading="lazy">
-    <img src="images/Rock_City_Mall.jpg" alt="Rock City Mall" class="mini-slide" loading="lazy">
-    <img src="images/mwanza_4.jpg" alt="Mwanza City" class="mini-slide" loading="lazy">
-  </div>
-</article>
-    </div>
-  </div>
-
-</section>
+    </section>
 
     <!-- ================= WHY VOT ================= -->
     <section class="section section--tight" id="why">
@@ -313,35 +345,44 @@
         <div class="section-heading reveal">
           <p class="eyebrow">Why Volunteers Choose VOT</p>
           <h2>A complete volunteer experience</h2>
+          <div class="section-divider" aria-hidden="true"></div>
         </div>
 
         <div class="why-grid">
           <article class="why-card reveal">
+            <div class="why-card-icon" aria-hidden="true">🌍</div>
             <h3>Trusted worldwide</h3>
-            <p>
-              Years of placements built on word-of-mouth trust from returning volunteers.
-            </p>
+            <p>Years of placements built on word-of-mouth trust from returning volunteers across 40+ countries.</p>
           </article>
 
           <article class="why-card reveal">
+            <div class="why-card-icon" aria-hidden="true">🏠</div>
             <h3>Safe accommodation</h3>
-            <p>
-              Shared and single rooms at VOT hostels, always with fellow volunteers nearby.
-            </p>
+            <p>Shared and private rooms at VOT hostel, always with fellow volunteers and a 24/7 night guard.</p>
           </article>
 
           <article class="why-card reveal">
+            <div class="why-card-icon" aria-hidden="true">📞</div>
             <h3>24/7 local support</h3>
-            <p>
-              Guidance before, during, and after your placement never far from help.
-            </p>
+            <p>Guidance before, during, and after your placement — never far from help when you need it.</p>
           </article>
 
           <article class="why-card reveal">
+            <div class="why-card-icon" aria-hidden="true">📅</div>
             <h3>Flexible programs</h3>
-            <p>
-              Choose a duration and placement that fits your goals and schedule.
-            </p>
+            <p>1 week to 6 months — choose a duration and placement that fits your goals and schedule.</p>
+          </article>
+
+          <article class="why-card reveal">
+            <div class="why-card-icon" aria-hidden="true">✈️</div>
+            <h3>Airport pickup included</h3>
+            <p>We meet you at Julius Nyerere or Mwanza Airport and take you directly to the hostel.</p>
+          </article>
+
+          <article class="why-card reveal">
+            <div class="why-card-icon" aria-hidden="true">🍽️</div>
+            <h3>Meals &amp; Wi-Fi included</h3>
+            <p>3 meals a day prepared by local staff, plus free Wi-Fi throughout your stay.</p>
           </article>
         </div>
       </div>
@@ -399,6 +440,199 @@
       </div>
     </section>
 
+    <!-- ================= TESTIMONIALS ================= -->
+    <section class="section testimonials" id="testimonials">
+      <div class="wrap">
+        <div class="section-heading reveal">
+          <p class="eyebrow">In Their Words</p>
+          <h2>What volunteers say about VOT</h2>
+        </div>
+
+        <div class="testimonial-slider reveal">
+          <!-- Previous Button -->
+          <button class="testimonial-nav prev" aria-label="Previous testimonial">&#10094;</button>
+
+          <!-- Track containing all 10 cards -->
+          <div class="testimonial-track">
+
+            <!-- Testimonial 1 -->
+            <div class="testimonial-card is-active">
+              <div class="testimonial-stars">★★★★★</div>
+              <blockquote class="testimonial-content">
+                <p>"My three months teaching in Mwanza were the most rewarding of my life. VOT made sure I always felt
+                  supported. The local team went above and beyond to ensure I had everything I needed."</p>
+              </blockquote>
+              <div class="testimonial-author">
+                <img src="https://placehold.co/60x60/0F3D46/FFFFFF?text=SJ" alt="Sarah Johnson" class="author-avatar"
+                  loading="lazy">
+                <div class="author-info">
+                  <strong class="author-name">Sarah Johnson</strong>
+                  <span class="author-location">United Kingdom, Education Program</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Testimonial 2 -->
+            <div class="testimonial-card">
+              <div class="testimonial-stars">★★★★★</div>
+              <blockquote class="testimonial-content">
+                <p>"The healthcare placement gave me hands-on clinical experience I couldn't get anywhere else. The
+                  staff at the local clinic felt like family, and I learned so much about tropical medicine."</p>
+              </blockquote>
+              <div class="testimonial-author">
+                <img src="https://placehold.co/60x60/0F3D46/FFFFFF?text=JS" alt="John Smith" class="author-avatar"
+                  loading="lazy">
+                <div class="author-info">
+                  <strong class="author-name">John Smith</strong>
+                  <span class="author-location">USA, Healthcare Program</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Testimonial 3 -->
+            <div class="testimonial-card">
+              <div class="testimonial-stars">★★★★★</div>
+              <blockquote class="testimonial-content">
+                <p>"Working with the local families and youth groups in the community development program was truly
+                  eye-opening. VOT's orientation prepared me perfectly for the cultural experience."</p>
+              </blockquote>
+              <div class="testimonial-author">
+                <img src="https://placehold.co/60x60/0F3D46/FFFFFF?text=EC" alt="Emily Chen" class="author-avatar"
+                  loading="lazy">
+                <div class="author-info">
+                  <strong class="author-name">Emily Chen</strong>
+                  <span class="author-location">Canada, Community Development</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Testimonial 4 -->
+            <div class="testimonial-card">
+              <div class="testimonial-stars">★★★★★</div>
+              <blockquote class="testimonial-content">
+                <p>"The environmental conservation project around Lake Victoria was incredible. I loved that VOT
+                  organized weekend safaris to the Serengeti. It was the perfect balance of work and adventure!"</p>
+              </blockquote>
+              <div class="testimonial-author">
+                <img src="https://placehold.co/60x60/0F3D46/FFFFFF?text=MB" alt="Michael Brown" class="author-avatar"
+                  loading="lazy">
+                <div class="author-info">
+                  <strong class="author-name">Michael Brown</strong>
+                  <span class="author-location">Australia, Wildlife & Environment</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Testimonial 5 -->
+            <div class="testimonial-card">
+              <div class="testimonial-stars">★★★★★</div>
+              <blockquote class="testimonial-content">
+                <p>"VOT Mwanza provided an unforgettable experience. The accommodation was clean, the food was
+                  delicious, and the 24/7 support meant I never felt alone in a foreign country."</p>
+              </blockquote>
+              <div class="testimonial-author">
+                <img src="https://placehold.co/60x60/0F3D46/FFFFFF?text=SR" alt="Sofia Rodriguez" class="author-avatar"
+                  loading="lazy">
+                <div class="author-info">
+                  <strong class="author-name">Sofia Rodriguez</strong>
+                  <span class="author-location">Spain, Teaching & Education</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Testimonial 6 -->
+            <div class="testimonial-card">
+              <div class="testimonial-stars">★★★★★</div>
+              <blockquote class="testimonial-content">
+                <p>"As a medical student, the hands-on experience I gained in Mwanza was invaluable. The local doctors
+                  were incredibly welcoming and eager to teach. Highly recommend VOT!"</p>
+              </blockquote>
+              <div class="testimonial-author">
+                <img src="https://placehold.co/60x60/0F3D46/FFFFFF?text=DK" alt="David Kim" class="author-avatar"
+                  loading="lazy">
+                <div class="author-info">
+                  <strong class="author-name">David Kim</strong>
+                  <span class="author-location">South Korea, Healthcare Internship</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Testimonial 7 -->
+            <div class="testimonial-card">
+              <div class="testimonial-stars">★★★★★</div>
+              <blockquote class="testimonial-content">
+                <p>"The support from the local team was outstanding from the moment I landed at the airport. They helped
+                  me navigate the language barrier and made me feel right at home in Rock City."</p>
+              </blockquote>
+              <div class="testimonial-author">
+                <img src="https://placehold.co/60x60/0F3D46/FFFFFF?text=LM" alt="Laura Müller" class="author-avatar"
+                  loading="lazy">
+                <div class="author-info">
+                  <strong class="author-name">Laura Müller</strong>
+                  <span class="author-location">Germany, Community Program</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Testimonial 8 -->
+            <div class="testimonial-card">
+              <div class="testimonial-stars">★★★★★</div>
+              <blockquote class="testimonial-content">
+                <p>"Combining my volunteering with the Zanzibar Island tour was a dream come true. VOT makes it so easy
+                  to experience the real Tanzania while contributing to a great cause."</p>
+              </blockquote>
+              <div class="testimonial-author">
+                <img src="https://placehold.co/60x60/0F3D46/FFFFFF?text=JO" alt="James O'Connor" class="author-avatar"
+                  loading="lazy">
+                <div class="author-info">
+                  <strong class="author-name">James O'Connor</strong>
+                  <span class="author-location">Ireland, Tourism & Hospitality</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Testimonial 9 -->
+            <div class="testimonial-card">
+              <div class="testimonial-stars">★★★★★</div>
+              <blockquote class="testimonial-content">
+                <p>"The children in Mwanza stole my heart! Teaching them basic English and seeing their smiles every day
+                  was the highlight of my year. Thank you VOT for this life-changing opportunity."</p>
+              </blockquote>
+              <div class="testimonial-author">
+                <img src="https://placehold.co/60x60/0F3D46/FFFFFF?text=AP" alt="Aisha Patel" class="author-avatar"
+                  loading="lazy">
+                <div class="author-info">
+                  <strong class="author-name">Aisha Patel</strong>
+                  <span class="author-location">India, Education Program</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Testimonial 10 -->
+            <div class="testimonial-card">
+              <div class="testimonial-stars">★★★★★</div>
+              <blockquote class="testimonial-content">
+                <p>"Protecting Lake Victoria's ecosystem alongside the local community was a profound experience. The
+                  VOT hostel was a great place to relax and meet other volunteers from around the world."</p>
+              </blockquote>
+              <div class="testimonial-author">
+                <img src="https://placehold.co/60x60/0F3D46/FFFFFF?text=LS" alt="Lucas Silva" class="author-avatar"
+                  loading="lazy">
+                <div class="author-info">
+                  <strong class="author-name">Lucas Silva</strong>
+                  <span class="author-location">Brazil, Environmental Conservation</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Next Button -->
+          <button class="testimonial-nav next" aria-label="Next testimonial">&#10095;</button>
+        </div>
+      </div>
+    </section>
+
     <!-- ================= MWANZA ================= -->
     <section class="section section--deep" id="mwanza">
       <div class="wrap mwanza reveal">
@@ -414,32 +648,20 @@
         </p>
 
         <div class="mwanza-gallery">
-          <img
-            src="images/mwanza_1.jpg"
-            alt="Mwanza Rock City landscape, Tanzania"
-            width="700"
-            height="500"
-            loading="lazy"
-          >
+          <img src="images/mwanza_1.jpg" alt="Mwanza Rock City landscape, Tanzania" width="700" height="500"
+            loading="lazy">
 
-          <img
-            src="images/Rock_City_Mall.jpg"
-            alt="Mwanza Rock City landscape, Tanzania"
-            width="700"
-            height="500"
-            loading="lazy"
-          >
+          <img src="images/Rock_City_Mall.jpg" alt="Mwanza Rock City landscape, Tanzania" width="700" height="500"
+            loading="lazy">
 
-          <img
-            src="images/mwanza_3.jpeg"
-            alt="Mwanza Rock City landscape, Tanzania"
-            width="700"
-            height="500"
-            loading="lazy"
-          >
+          <img src="images/mwanza_3.jpeg" alt="Mwanza Rock City landscape, Tanzania" width="700" height="500"
+            loading="lazy">
         </div>
+
       </div>
     </section>
+
+
 
     <!-- ================= ACCOMMODATION ================= -->
     <section class="section accommodation" id="accommodation">
@@ -476,84 +698,69 @@
               If you enjoy cooking, you are always welcome in the kitchen.
               Soft drinks and beer are available for purchase in nearby stores.
             </p>
-              <!-- Quick Stats -->
-  <div class="accommodation-stats">
-    <div class="stat-item">
-      <div class="stat-icon"></div>
-      <div class="stat-label">Capacity</div>
-      <div class="stat-value">20+ Guests</div>
-    </div>
-    <div class="stat-item">
-      <div class="stat-icon">🍽️</div>
-      <div class="stat-label">Meals</div>
-      <div class="stat-value">3 Daily</div>
-    </div>
-    <div class="stat-item">
-      <div class="stat-icon">🛏️</div>
-      <div class="stat-label">Room Types</div>
-      <div class="stat-value">Private & Shared</div>
-    </div>
-     <div class="stat-item">
-      <div class="stat-icon">🛜</div>
-      <div class="stat-label">Network</div>
-      <div class="stat-value">Free Wi-Fi</div>
-    </div>
-    <div class="stat-item">
-      <div class="stat-icon">🛡️</div>
-      <div class="stat-label">Safety</div>
-      <div class="stat-value">24/7 Guard</div>
-    </div>
-  </div>
+            <!-- Quick Stats -->
+            <div class="accommodation-stats">
+              <div class="stat-item">
+                <div class="stat-icon"></div>
+                <div class="stat-label">Capacity</div>
+                <div class="stat-value">20+ Guests</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-icon">🍽️</div>
+                <div class="stat-label">Meals</div>
+                <div class="stat-value">3 Daily</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-icon">🛏️</div>
+                <div class="stat-label">Room Types</div>
+                <div class="stat-value">Private & Shared</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-icon">🛜</div>
+                <div class="stat-label">Network</div>
+                <div class="stat-value">Free Wi-Fi</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-icon">🛡️</div>
+                <div class="stat-label">Safety</div>
+                <div class="stat-value">24/7 Guard</div>
+              </div>
+            </div>
           </div>
-          
+
 
           <figure class="acc-intro__media">
-            <img
-              src="images/hostel.jpg"
-              alt="VOT volunteer hostel accommodation in Mwanza"
-              loading="lazy"
-            >
+            <img src="images/hostel.jpg" alt="VOT volunteer hostel accommodation in Mwanza" loading="lazy">
             <figcaption>VOT Hostel Nyegezi, Mwanza</figcaption>
           </figure>
         </div>
 
         <!-- ===== Hostel photo gallery ===== -->
         <div class="acc-gallery reveal">
-          <img
-            src="images/sitting_room.jpeg"
-            alt="VOT hostel sitting room in Mwanza"
-            loading="lazy"
-          >
-          <img
-            src="images/bedroom.jpeg"
-            alt="VOT volunteer hostel room in Mwanza, Tanzania"
-            loading="lazy"
-          >
-          <img
-            src="images/hostel.jpg"
-            alt="VOT volunteer hostel accommodation in Mwanza"
-            loading="lazy"
-          >
-          <img
-            src="images/garden.jpeg"
-            alt="VOT hostel garden and yard in Mwanza"
-            loading="lazy"
-          >
+          <img src="images/sitting_room.jpeg" alt="VOT hostel sitting room in Mwanza" loading="lazy">
+          <img src="images/bedroom.jpeg" alt="VOT volunteer hostel room in Mwanza, Tanzania" loading="lazy">
+          <img src="images/hostel.jpg" alt="VOT volunteer hostel accommodation in Mwanza" loading="lazy">
+          <img src="images/garden.jpeg" alt="VOT hostel garden and yard in Mwanza" loading="lazy">
         </div>
 
         <!-- Accommodation CTA Section -->
-<section class="section" style="background: linear-gradient(135deg, var(--sun-ochre) 0%, var(--sun-ochre-dark) 100%); border-radius: var(--radius-soft); padding: clamp(3rem, 6vw, 5rem); text-align: center; margin-top: 4rem;">
-    <h2 style="color: var(--white); font-size: var(--step3); margin-bottom: 1rem;">Ready to Experience Comfort?</h2>
-    <p style="color: rgba(255,255,255,0.95); font-size: var(--step1); max-width: 600px; margin: 0 auto 2rem;">
-        Discover our modern, fully-equipped accommodation designed for your comfort and convenience during your volunteer journey.
-    </p>
-    <a href="accommodation.html" class="btn" style="background: var(--white); color: var(--sun-ochre); font-size: 1.1rem; padding: 1rem 2.5rem; font-weight: 700;">
-        View Accommodation Details
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="margin-left: 8px; vertical-align: middle;">
-            <path d="M5 12h14M12 5l7 7-7 7"/>
-        </svg>
-    </a>
-</section>
+        <section class="section"
+          style="background: linear-gradient(135deg, var(--sun-ochre) 0%, var(--sun-ochre-dark) 100%); border-radius: var(--radius-soft); padding: clamp(3rem, 6vw, 5rem); text-align: center; margin-top: 4rem;">
+          <h2 style="color: var(--white); font-size: var(--step3); margin-bottom: 1rem;">Ready to Experience Comfort?
+          </h2>
+          <p style="color: rgba(255,255,255,0.95); font-size: var(--step1); max-width: 600px; margin: 0 auto 2rem;">
+            Discover our modern, fully-equipped accommodation designed for your comfort and convenience during your
+            volunteer journey.
+          </p>
+          <a href="accommodation.html" class="btn"
+            style="background: var(--white); color: var(--sun-ochre); font-size: 1.1rem; padding: 1rem 2.5rem; font-weight: 700;">
+            View Accommodation Details
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+              style="margin-left: 8px; vertical-align: middle;">
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </a>
+        </section>
 
         <!-- ===== Bedrooms: dark panel + blue panel ===== -->
         <div class="acc-bedrooms reveal">
@@ -601,7 +808,7 @@
               is always on duty.
             </p>
           </div>
-          
+
         </div>
 
         <!-- ===== Shared bedrooms house ===== -->
@@ -615,521 +822,468 @@
           </p>
 
           <div class="acc-shared__gallery">
-            <img
-              src="images/shared_bedrooms.jpeg"
-              alt="Shared volunteer bedroom at VOT hostel in Mwanza"
-              loading="lazy"
-            >
-            <img
-              src="images/bunk_beds.webp"
-              alt="Shared volunteer bedroom with bunk beds at VOT hostel"
-              loading="lazy"
-            >
+            <img src="images/shared_bedrooms.jpeg" alt="Shared volunteer bedroom at VOT hostel in Mwanza"
+              loading="lazy">
+            <img src="images/bunk_beds.webp" alt="Shared volunteer bedroom with bunk beds at VOT hostel" loading="lazy">
           </div>
         </div>
       </div>
       <!-- Quality Indicators & Reviews -->
-<div class="accommodation-quality">
-  <!-- Star Rating Badge -->
-  <div class="quality-badge">
-    <div class="rating-stars">★★★★★</div>
-    <div class="rating-score">4.9/5.0</div>
-    <div class="rating-count">Based on 75+ volunteer reviews</div>
-    <div class="verified-badge">✓ Verified Accommodation</div>
-  </div>
-
-
- <!-- Guest Reviews Slider -->
-<div class="guest-reviews-slider">
-  <h3>What Volunteers Say About Our Accommodation</h3>
-  
-  <div class="reviews-slider-container">
-    <button class="review-nav prev" aria-label="Previous review">&#10094;</button>
-    
-    <div class="reviews-track">
-      
-      <!-- Review 1 -->
-      <div class="review-card is-active">
-        <div class="review-top">
-          <div class="review-stars">★★★★★</div>
-          <div class="review-date">August 2025</div>
+      <div class="accommodation-quality">
+        <!-- Star Rating Badge -->
+        <div class="quality-badge">
+          <div class="rating-stars">★★★★★</div>
+          <div class="rating-score">4.9/5.0</div>
+          <div class="rating-count">Based on 75+ volunteer reviews</div>
+          <div class="verified-badge">✓ Verified Accommodation</div>
         </div>
-        <p class="review-text">"The hostel exceeded my expectations! Clean rooms, comfortable beds, and the staff was incredibly welcoming. The meals were delicious with a great mix of local and Western food."</p>
-        <div class="reviewer">
-          <div class="reviewer-avatar">EM</div>
-          <div class="reviewer-info">
-            <strong>Emma Mitchell</strong>
-            <span>Education Volunteer - UK</span>
+
+
+        <!-- Guest Reviews Slider -->
+        <div class="guest-reviews-slider">
+          <h3>What Volunteers Say About Our Accommodation</h3>
+
+          <div class="reviews-slider-container">
+            <button class="review-nav prev" aria-label="Previous review">&#10094;</button>
+
+            <div class="reviews-track">
+
+              <!-- Review 1 -->
+              <div class="review-card is-active">
+                <div class="review-top">
+                  <div class="review-stars">★★★★★</div>
+                  <div class="review-date">August 2025</div>
+                </div>
+                <p class="review-text">"The hostel exceeded my expectations! Clean rooms, comfortable beds, and the
+                  staff was incredibly welcoming. The meals were delicious with a great mix of local and Western food."
+                </p>
+                <div class="reviewer">
+                  <div class="reviewer-avatar">EM</div>
+                  <div class="reviewer-info">
+                    <strong>Emma Mitchell</strong>
+                    <span>Education Volunteer - UK</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Review 2 -->
+              <div class="review-card">
+                <div class="review-top">
+                  <div class="review-stars">★★★★★</div>
+                  <div class="review-date">July 2024</div>
+                </div>
+                <p class="review-text">"Felt safe and at home. The location is perfect - close to the city but peaceful.
+                  The swimming pool was a great way to relax after work. WiFi worked well too!"</p>
+                <div class="reviewer">
+                  <div class="reviewer-avatar">JC</div>
+                  <div class="reviewer-info">
+                    <strong>James Chen</strong>
+                    <span>Healthcare Intern - USA</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Review 3 -->
+              <div class="review-card">
+                <div class="review-top">
+                  <div class="review-stars">★★★★★</div>
+                  <div class="review-date">June 2024</div>
+                </div>
+                <p class="review-text">"The accommodation was clean, comfortable, and had everything I needed. Loved the
+                  garden area and meeting other volunteers. The night guard made me feel very secure."</p>
+                <div class="reviewer">
+                  <div class="reviewer-avatar">SP</div>
+                  <div class="reviewer-info">
+                    <strong>Sofia Petersen</strong>
+                    <span>Community Volunteer - Denmark</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Review 4 -->
+              <div class="review-card">
+                <div class="review-top">
+                  <div class="review-stars">★★★★★</div>
+                  <div class="review-date">May 2024</div>
+                </div>
+                <p class="review-text">"Amazing experience! The bunk beds were comfortable, and having a table in the
+                  room was great for studying. The kitchen was well-equipped for when I wanted to cook."</p>
+                <div class="reviewer">
+                  <div class="reviewer-avatar">LK</div>
+                  <div class="reviewer-info">
+                    <strong>Liam O'Connor</strong>
+                    <span>Teaching Volunteer - Ireland</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Review 5 -->
+              <div class="review-card">
+                <div class="review-top">
+                  <div class="review-stars">★★★★★</div>
+                  <div class="review-date">April 2024</div>
+                </div>
+                <p class="review-text">"The VOT hostel felt like a home away from home. The staff remembered my name and
+                  dietary preferences. The garden and pool area were perfect for weekend relaxation."</p>
+                <div class="reviewer">
+                  <div class="reviewer-avatar">AN</div>
+                  <div class="reviewer-info">
+                    <strong>Aisha Nakamura</strong>
+                    <span>Healthcare Volunteer - Japan</span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <button class="review-nav next" aria-label="Next review">&#10095;</button>
+          </div>
+
+          <!-- Dots Navigation -->
+          <div class="review-dots">
+            <span class="dot is-active" data-index="0"></span>
+            <span class="dot" data-index="1"></span>
+            <span class="dot" data-index="2"></span>
+            <span class="dot" data-index="3"></span>
+            <span class="dot" data-index="4"></span>
           </div>
         </div>
-      </div>
-
-      <!-- Review 2 -->
-      <div class="review-card">
-        <div class="review-top">
-          <div class="review-stars">★★★★★</div>
-          <div class="review-date">July 2024</div>
-        </div>
-        <p class="review-text">"Felt safe and at home. The location is perfect - close to the city but peaceful. The swimming pool was a great way to relax after work. WiFi worked well too!"</p>
-        <div class="reviewer">
-          <div class="reviewer-avatar">JC</div>
-          <div class="reviewer-info">
-            <strong>James Chen</strong>
-            <span>Healthcare Intern - USA</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Review 3 -->
-      <div class="review-card">
-        <div class="review-top">
-          <div class="review-stars">★★★★★</div>
-          <div class="review-date">June 2024</div>
-        </div>
-        <p class="review-text">"The accommodation was clean, comfortable, and had everything I needed. Loved the garden area and meeting other volunteers. The night guard made me feel very secure."</p>
-        <div class="reviewer">
-          <div class="reviewer-avatar">SP</div>
-          <div class="reviewer-info">
-            <strong>Sofia Petersen</strong>
-            <span>Community Volunteer - Denmark</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Review 4 -->
-      <div class="review-card">
-        <div class="review-top">
-          <div class="review-stars">★★★★★</div>
-          <div class="review-date">May 2024</div>
-        </div>
-        <p class="review-text">"Amazing experience! The bunk beds were comfortable, and having a table in the room was great for studying. The kitchen was well-equipped for when I wanted to cook."</p>
-        <div class="reviewer">
-          <div class="reviewer-avatar">LK</div>
-          <div class="reviewer-info">
-            <strong>Liam O'Connor</strong>
-            <span>Teaching Volunteer - Ireland</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Review 5 -->
-      <div class="review-card">
-        <div class="review-top">
-          <div class="review-stars">★★★★★</div>
-          <div class="review-date">April 2024</div>
-        </div>
-        <p class="review-text">"The VOT hostel felt like a home away from home. The staff remembered my name and dietary preferences. The garden and pool area were perfect for weekend relaxation."</p>
-        <div class="reviewer">
-          <div class="reviewer-avatar">AN</div>
-          <div class="reviewer-info">
-            <strong>Aisha Nakamura</strong>
-            <span>Healthcare Volunteer - Japan</span>
-          </div>
-        </div>
-      </div>
-
-    </div>
-
-    <button class="review-nav next" aria-label="Next review">&#10095;</button>
-  </div>
-
-  <!-- Dots Navigation -->
-  <div class="review-dots">
-    <span class="dot is-active" data-index="0"></span>
-    <span class="dot" data-index="1"></span>
-    <span class="dot" data-index="2"></span>
-    <span class="dot" data-index="3"></span>
-    <span class="dot" data-index="4"></span>
-  </div>
-</div>
     </section>
 
-<!-- ================= TOURS ================= -->
-<section class="section" id="tours">
-  <div class="wrap">
-    <div class="feature-split feature-split--reverse">
-      <figure class="feature-split__media reveal">
-       
-        <img
-          src="images/tour_cover.jpeg"
-          alt="Tanzania national park safari with VOT"
-          width="800"
-          height="650"
-          loading="lazy"
-        >
-      </figure>
+    <!-- ================= TOURS ================= -->
+    <section class="section" id="tours">
+      <div class="wrap">
+        <div class="feature-split feature-split--reverse">
+          <figure class="feature-split__media reveal">
 
-      <div class="feature-split__content reveal">
-        <p class="eyebrow">Tours</p>
-        <h2>Volunteering, plus unforgettable adventure</h2>
-        <p>
-          We organize safaris to destinations across Tanzania, including the
-          Serengeti, Ngorongoro, and the famous Zanzibar Island more than 15
-          national parks and reserves to choose from.
-        </p>
-        <ul class="feature-list">
-          <li>Day trips from Mwanza</li>
-          <li>National park safaris</li>
-          <li>Zanzibar Island getaways</li>
-        </ul>
-        <a class="card-link" href="tour.html">Explore all tours</a>
+            <img src="images/tour_cover.jpeg" alt="Tanzania national park safari with VOT" width="800" height="650"
+              loading="lazy">
+          </figure>
+
+          <div class="feature-split__content reveal">
+            <p class="eyebrow">Tours</p>
+            <h2>Volunteering, plus unforgettable adventure</h2>
+            <p>
+              We organize safaris to destinations across Tanzania, including the
+              Serengeti, Ngorongoro, and the famous Zanzibar Island more than 15
+              national parks and reserves to choose from.
+            </p>
+            <ul class="feature-list">
+              <li>Day trips from Mwanza</li>
+              <li>National park safaris</li>
+              <li>Zanzibar Island getaways</li>
+            </ul>
+            <a class="card-link" href="tour.html">Explore all tours</a>
+          </div>
+        </div>
+
+        <!-- 3 clickable tour tiles -->
+        <div class="tour-tiles">
+          <a class="tour-tile reveal" href="tour.html#day-trips">
+            <!-- Replace later with: images/tour-daytrip.jpg -->
+            <img src="images/saanane_island.webp" alt="Day trip from Mwanza, Tanzania" loading="lazy">
+            <div class="tour-tile__body">
+              <h3>Day Trips from Mwanza</h3>
+              <p>Bismarck Rock, Lake Victoria shores & local markets</p>
+            </div>
+          </a>
+
+          <a class="tour-tile reveal" href="tour.html#national-parks">
+            <!-- Replace later with: images/tour-safari.jpg -->
+            <img src="images/tanzania_nationalparks.jpeg" alt="Tanzania national park safari with VOT" loading="lazy">
+            <div class="tour-tile__body">
+              <h3>National Park Safaris</h3>
+              <p>Serengeti, Ngorongoro & 15+ parks and reserves</p>
+            </div>
+          </a>
+
+          <a class="tour-tile reveal" href="tour.html#zanzibar">
+            <!-- Replace later with: images/tour-zanzibar.jpg -->
+            <img src="images/zanzibar.jpeg" alt="Zanzibar Island tour for volunteers with VOT" loading="lazy">
+            <div class="tour-tile__body">
+              <h3>Zanzibar Island</h3>
+              <p>Beaches, culture & history after your placement</p>
+            </div>
+          </a>
+        </div>
       </div>
-    </div>
+    </section>
 
-    <!-- 3 clickable tour tiles -->
-    <div class="tour-tiles">
-      <a class="tour-tile reveal" href="tour.html#day-trips">
-        <!-- Replace later with: images/tour-daytrip.jpg -->
-        <img
-          src="images/saanane_island.webp"
-          alt="Day trip from Mwanza, Tanzania"
-          loading="lazy"
-        >
-        <div class="tour-tile__body">
-          <h3>Day Trips from Mwanza</h3>
-          <p>Bismarck Rock, Lake Victoria shores & local markets</p>
-        </div>
-      </a>
 
-      <a class="tour-tile reveal" href="tour.html#national-parks">
-        <!-- Replace later with: images/tour-safari.jpg -->
-        <img
-          src="images/tanzania_nationalparks.jpeg"
-          alt="Tanzania national park safari with VOT"
-          loading="lazy"
-        >
-        <div class="tour-tile__body">
-          <h3>National Park Safaris</h3>
-          <p>Serengeti, Ngorongoro & 15+ parks and reserves</p>
-        </div>
-      </a>
-
-      <a class="tour-tile reveal" href="tour.html#zanzibar">
-        <!-- Replace later with: images/tour-zanzibar.jpg -->
-        <img
-          src="images/zanzibar.jpeg"
-          alt="Zanzibar Island tour for volunteers with VOT"
-          loading="lazy"
-        >
-        <div class="tour-tile__body">
-          <h3>Zanzibar Island</h3>
-          <p>Beaches, culture & history after your placement</p>
-        </div>
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- ================= TESTIMONIALS ================= -->
-<section class="section testimonials" id="testimonials">
-  <div class="wrap">
-    <div class="section-heading reveal">
-      <p class="eyebrow">In Their Words</p>
-      <h2>What volunteers say about VOT</h2>
-    </div>
-
-    <div class="testimonial-slider reveal">
-      <!-- Previous Button -->
-      <button class="testimonial-nav prev" aria-label="Previous testimonial">&#10094;</button>
-      
-      <!-- Track containing all 10 cards -->
-      <div class="testimonial-track">
-        
-        <!-- Testimonial 1 -->
-        <div class="testimonial-card is-active">
-          <div class="testimonial-stars">★★★★★</div>
-          <blockquote class="testimonial-content">
-            <p>"My three months teaching in Mwanza were the most rewarding of my life. VOT made sure I always felt supported. The local team went above and beyond to ensure I had everything I needed."</p>
-          </blockquote>
-          <div class="testimonial-author">
-            <img src="https://placehold.co/60x60/0F3D46/FFFFFF?text=SJ" alt="Sarah Johnson" class="author-avatar" loading="lazy">
-            <div class="author-info">
-              <strong class="author-name">Sarah Johnson</strong>
-              <span class="author-location">United Kingdom, Education Program</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Testimonial 2 -->
-        <div class="testimonial-card">
-          <div class="testimonial-stars">★★★★★</div>
-          <blockquote class="testimonial-content">
-            <p>"The healthcare placement gave me hands-on clinical experience I couldn't get anywhere else. The staff at the local clinic felt like family, and I learned so much about tropical medicine."</p>
-          </blockquote>
-          <div class="testimonial-author">
-            <img src="https://placehold.co/60x60/0F3D46/FFFFFF?text=JS" alt="John Smith" class="author-avatar" loading="lazy">
-            <div class="author-info">
-              <strong class="author-name">John Smith</strong>
-              <span class="author-location">USA, Healthcare Program</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Testimonial 3 -->
-        <div class="testimonial-card">
-          <div class="testimonial-stars">★★★★★</div>
-          <blockquote class="testimonial-content">
-            <p>"Working with the local families and youth groups in the community development program was truly eye-opening. VOT's orientation prepared me perfectly for the cultural experience."</p>
-          </blockquote>
-          <div class="testimonial-author">
-            <img src="https://placehold.co/60x60/0F3D46/FFFFFF?text=EC" alt="Emily Chen" class="author-avatar" loading="lazy">
-            <div class="author-info">
-              <strong class="author-name">Emily Chen</strong>
-              <span class="author-location">Canada, Community Development</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Testimonial 4 -->
-        <div class="testimonial-card">
-          <div class="testimonial-stars">★★★★★</div>
-          <blockquote class="testimonial-content">
-            <p>"The environmental conservation project around Lake Victoria was incredible. I loved that VOT organized weekend safaris to the Serengeti. It was the perfect balance of work and adventure!"</p>
-          </blockquote>
-          <div class="testimonial-author">
-            <img src="https://placehold.co/60x60/0F3D46/FFFFFF?text=MB" alt="Michael Brown" class="author-avatar" loading="lazy">
-            <div class="author-info">
-              <strong class="author-name">Michael Brown</strong>
-              <span class="author-location">Australia, Wildlife & Environment</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Testimonial 5 -->
-        <div class="testimonial-card">
-          <div class="testimonial-stars">★★★★★</div>
-          <blockquote class="testimonial-content">
-            <p>"VOT Mwanza provided an unforgettable experience. The accommodation was clean, the food was delicious, and the 24/7 support meant I never felt alone in a foreign country."</p>
-          </blockquote>
-          <div class="testimonial-author">
-            <img src="https://placehold.co/60x60/0F3D46/FFFFFF?text=SR" alt="Sofia Rodriguez" class="author-avatar" loading="lazy">
-            <div class="author-info">
-              <strong class="author-name">Sofia Rodriguez</strong>
-              <span class="author-location">Spain, Teaching & Education</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Testimonial 6 -->
-        <div class="testimonial-card">
-          <div class="testimonial-stars">★★★★★</div>
-          <blockquote class="testimonial-content">
-            <p>"As a medical student, the hands-on experience I gained in Mwanza was invaluable. The local doctors were incredibly welcoming and eager to teach. Highly recommend VOT!"</p>
-          </blockquote>
-          <div class="testimonial-author">
-            <img src="https://placehold.co/60x60/0F3D46/FFFFFF?text=DK" alt="David Kim" class="author-avatar" loading="lazy">
-            <div class="author-info">
-              <strong class="author-name">David Kim</strong>
-              <span class="author-location">South Korea, Healthcare Internship</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Testimonial 7 -->
-        <div class="testimonial-card">
-          <div class="testimonial-stars">★★★★★</div>
-          <blockquote class="testimonial-content">
-            <p>"The support from the local team was outstanding from the moment I landed at the airport. They helped me navigate the language barrier and made me feel right at home in Rock City."</p>
-          </blockquote>
-          <div class="testimonial-author">
-            <img src="https://placehold.co/60x60/0F3D46/FFFFFF?text=LM" alt="Laura Müller" class="author-avatar" loading="lazy">
-            <div class="author-info">
-              <strong class="author-name">Laura Müller</strong>
-              <span class="author-location">Germany, Community Program</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Testimonial 8 -->
-        <div class="testimonial-card">
-          <div class="testimonial-stars">★★★★★</div>
-          <blockquote class="testimonial-content">
-            <p>"Combining my volunteering with the Zanzibar Island tour was a dream come true. VOT makes it so easy to experience the real Tanzania while contributing to a great cause."</p>
-          </blockquote>
-          <div class="testimonial-author">
-            <img src="https://placehold.co/60x60/0F3D46/FFFFFF?text=JO" alt="James O'Connor" class="author-avatar" loading="lazy">
-            <div class="author-info">
-              <strong class="author-name">James O'Connor</strong>
-              <span class="author-location">Ireland, Tourism & Hospitality</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Testimonial 9 -->
-        <div class="testimonial-card">
-          <div class="testimonial-stars">★★★★★</div>
-          <blockquote class="testimonial-content">
-            <p>"The children in Mwanza stole my heart! Teaching them basic English and seeing their smiles every day was the highlight of my year. Thank you VOT for this life-changing opportunity."</p>
-          </blockquote>
-          <div class="testimonial-author">
-            <img src="https://placehold.co/60x60/0F3D46/FFFFFF?text=AP" alt="Aisha Patel" class="author-avatar" loading="lazy">
-            <div class="author-info">
-              <strong class="author-name">Aisha Patel</strong>
-              <span class="author-location">India, Education Program</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Testimonial 10 -->
-        <div class="testimonial-card">
-          <div class="testimonial-stars">★★★★★</div>
-          <blockquote class="testimonial-content">
-            <p>"Protecting Lake Victoria's ecosystem alongside the local community was a profound experience. The VOT hostel was a great place to relax and meet other volunteers from around the world."</p>
-          </blockquote>
-          <div class="testimonial-author">
-            <img src="https://placehold.co/60x60/0F3D46/FFFFFF?text=LS" alt="Lucas Silva" class="author-avatar" loading="lazy">
-            <div class="author-info">
-              <strong class="author-name">Lucas Silva</strong>
-              <span class="author-location">Brazil, Environmental Conservation</span>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-      <!-- Next Button -->
-      <button class="testimonial-nav next" aria-label="Next testimonial">&#10095;</button>
-    </div>
-  </div>
-</section>
 
     <!-- ================= PRICES CTA ================= -->
     <section class="section section--tight" id="prices">
       <div class="wrap">
         <div class="cta-banner reveal">
-          <h2>See program fees and what is included</h2>
-          <a class="btn btn--dark" href="prices.html">Request Pricing</a>
+          <h2>Internships Are Free, Costs Are For Living</h2>
+          <a class="btn btn--dark" href="prices.html" id="pricing-cta-btn">View Living Costs</a>
         </div>
       </div>
     </section>
-<!-- ================= HOW IT WORKS ================= -->
-<section class="how-it-works section" id="how-it-works">
-  <div class="wrap">
-    <div class="how-it-works-header reveal">
-      <h2 class="how-it-works-title">HOW IT WORKS</h2>
-      <p class="how-it-works-subtitle">Your Journey to Make an Impact in Tanzania</p>
-      <p class="how-it-works-tagline">Simple steps. Real impact. Lifelong memories.</p>
-    </div>
-
-    <div class="how-it-works-steps">
-      <!-- Step 1 -->
-      <div class="hiw-step reveal">
-        <div class="hiw-step-number">1</div>
-        <h3 class="hiw-step-title">CHOOSE YOUR PROGRAM</h3>
-        <div class="hiw-step-image">
-          <img src="images/chooseprogram.jpeg" alt="Choose your volunteer program in Tanzania">
+    <!-- ================= HOW IT WORKS ================= -->
+    <section class="how-it-works section" id="how-it-works">
+      <div class="wrap">
+        <div class="how-it-works-header reveal">
+          <h2 class="how-it-works-title">HOW IT WORKS</h2>
+          <p class="how-it-works-subtitle">Your Journey to Make an Impact in Tanzania</p>
+          <p class="how-it-works-tagline">Simple steps. Real impact. Lifelong memories.</p>
         </div>
-        <p class="hiw-step-description">
-          Browse our diverse volunteer opportunities and select the placement that best matches your interests, skills, and availability.
+
+        <div class="how-it-works-steps">
+          <!-- Step 1 -->
+          <div class="hiw-step reveal">
+            <div class="hiw-step-number">1</div>
+            <h3 class="hiw-step-title">CHOOSE YOUR PROGRAM</h3>
+            <div class="hiw-step-image">
+              <img src="images/chooseprogram.jpeg" alt="Choose your volunteer program in Tanzania">
+            </div>
+            <p class="hiw-step-description">
+              Browse our diverse volunteer opportunities and select the placement that best matches your interests,
+              skills, and availability.
+            </p>
+            <div class="hiw-step-details">
+              <div class="hiw-icon">📚</div>
+              <ul class="hiw-list">
+                <li>Education</li>
+                <li>Healthcare</li>
+                <li>Childcare</li>
+                <li>Conservation</li>
+                <li>Community Development</li>
+                <li>Media & More</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="hiw-step reveal">
+            <div class="hiw-step-number">2</div>
+            <h3 class="hiw-step-title">APPLY ONLINE</h3>
+            <div class="hiw-step-image">
+              <img src="images/applyonline.png" alt="Apply online for volunteer program">
+            </div>
+            <p class="hiw-step-description">
+              Complete our simple application form. Once we receive it, we shall review your application and contact you
+              to discuss your placement, dates, and answer any questions.
+            </p>
+            <div class="hiw-step-details">
+              <div class="hiw-icon hiw-icon-blue"></div>
+              <ul class="hiw-list">
+                <li>Quick application</li>
+                <li>Personal support</li>
+                <li>We are here for you!</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="hiw-step reveal">
+            <div class="hiw-step-number">3</div>
+            <h3 class="hiw-step-title">PREPARE FOR TANZANIA</h3>
+            <div class="hiw-step-image">
+              <img src="images/experience_in_Tanzania.jpeg" alt="Prepare for your Tanzania journey">
+            </div>
+            <p class="hiw-step-description">
+              After your placement is confirmed, we'll guide you through everything you need, including visa
+              information, travel planning, airport pickup, accommodation, and what to pack.
+            </p>
+            <div class="hiw-step-details">
+              <div class="hiw-icon hiw-icon-orange">🧳</div>
+              <ul class="hiw-list">
+                <li>Visa guidance</li>
+                <li>Accommodation</li>
+                <li>Airport pickup</li>
+                <li>Orientation</li>
+                <li>What to pack</li>
+                <li>24/7 Support</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="hiw-step reveal">
+            <div class="hiw-step-number">4</div>
+            <h3 class="hiw-step-title">ARRIVE & MAKE AN IMPACT</h3>
+            <div class="hiw-step-image">
+              <img src="images/arrive in tanzania.jpeg" alt="Arrive in Tanzania and make an impact">
+            </div>
+            <p class="hiw-step-description">
+              Arrive in Tanzania, receive a warm welcome, attend orientation, and begin your volunteer experience while
+              immersing yourself in the local culture and creating lasting memories.
+            </p>
+            <div class="hiw-step-details">
+              <div class="hiw-icon hiw-icon-pink">❤️</div>
+              <ul class="hiw-list">
+                <li>Volunteer</li>
+                <li>Explore</li>
+                <li>Learn</li>
+                <li>Grow</li>
+                <li>Make a difference!</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom Features -->
+        <div class="hiw-features reveal">
+          <div class="hiw-feature">
+            <div class="hiw-feature-icon hiw-feature-icon-green">️</div>
+            <h4>SAFE & SECURE</h4>
+            <p>Your safety is our priority</p>
+          </div>
+          <div class="hiw-feature">
+            <div class="hiw-feature-icon hiw-feature-icon-yellow">👥</div>
+            <h4>TRUSTED LOCAL TEAM</h4>
+            <p>Experienced, caring & passionate</p>
+          </div>
+          <div class="hiw-feature">
+            <div class="hiw-feature-icon hiw-feature-icon-pink">💚</div>
+            <h4>ETHICAL & RESPONSIBLE</h4>
+            <p>Community focused & sustainable</p>
+          </div>
+          <div class="hiw-feature">
+            <div class="hiw-feature-icon hiw-feature-icon-blue">🌍</div>
+            <h4>VOLUNTEERS FROM 40+ COUNTRIES</h4>
+            <p>Join a global community</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= TRUST STRIP ================= -->
+    <section class="trust-strip section" aria-labelledby="trust-heading">
+      <div class="wrap" style="text-align:center;">
+        <p class="eyebrow" style="color:var(--sun-ochre);">Why Volunteers Trust VOT</p>
+        <h2 id="trust-heading" style="color:var(--white);margin-top:0.4rem;">A legitimate, registered organisation</h2>
+        <p style="color:var(--savanna-dim);max-width:60ch;margin:1rem auto 0;">
+          Registered in Tanzania since 2018, with volunteers hosted from over 40 countries and a permanent local team
+          based in Mwanza.
         </p>
-        <div class="hiw-step-details">
-          <div class="hiw-icon">📚</div>
-          <ul class="hiw-list">
-            <li>Education</li>
-            <li>Healthcare</li>
-            <li>Childcare</li>
-            <li>Conservation</li>
-            <li>Community Development</li>
-            <li>Media & More</li>
-          </ul>
+        <div class="trust-badges" role="list">
+          <div class="trust-badge" role="listitem"><span class="trust-badge-icon" aria-hidden="true">🏛️</span>
+            Registered NGO — Tanzania 2018</div>
+          <div class="trust-badge" role="listitem"><span class="trust-badge-icon" aria-hidden="true">🌐</span> 40+
+            Countries</div>
+          <div class="trust-badge" role="listitem"><span class="trust-badge-icon" aria-hidden="true">⭐</span> 4.9/5
+            Volunteer Rating</div>
+          <div class="trust-badge" role="listitem"><span class="trust-badge-icon" aria-hidden="true">👥</span> 7+
+            Permanent Local Staff</div>
+          <div class="trust-badge" role="listitem"><span class="trust-badge-icon" aria-hidden="true">🏥</span> 10+
+            Community Partners</div>
+          <div class="trust-badge" role="listitem"><span class="trust-badge-icon" aria-hidden="true">📍</span> Mwanza,
+            Lake Victoria</div>
         </div>
       </div>
+    </section>
 
-      <!-- Step 2 -->
-      <div class="hiw-step reveal">
-        <div class="hiw-step-number">2</div>
-        <h3 class="hiw-step-title">APPLY ONLINE</h3>
-        <div class="hiw-step-image">
-          <img src="images/applyonline.png" alt="Apply online for volunteer program">
+    <!-- ================= FAQ ================= -->
+    <section class="section faq-section" id="faq" aria-labelledby="faq-heading">
+      <div class="wrap">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Got Questions?</p>
+          <h2 id="faq-heading">Frequently Asked Questions</h2>
+          <div class="section-divider" aria-hidden="true"></div>
         </div>
-        <p class="hiw-step-description">
-          Complete our simple application form. Once we receive it, we shall review your application and contact you to discuss your placement, dates, and answer any questions.
-        </p>
-        <div class="hiw-step-details">
-          <div class="hiw-icon hiw-icon-blue"></div>
-          <ul class="hiw-list">
-            <li>Quick application</li>
-            <li>Personal support</li>
-            <li>We are here for you!</li>
-          </ul>
-        </div>
-      </div>
 
-      <!-- Step 3 -->
-      <div class="hiw-step reveal">
-        <div class="hiw-step-number">3</div>
-        <h3 class="hiw-step-title">PREPARE FOR TANZANIA</h3>
-        <div class="hiw-step-image">
-          <img src="images/experience_in_Tanzania.jpeg" alt="Prepare for your Tanzania journey">
-        </div>
-        <p class="hiw-step-description">
-          After your placement is confirmed, we'll guide you through everything you need, including visa information, travel planning, airport pickup, accommodation, and what to pack.
-        </p>
-        <div class="hiw-step-details">
-          <div class="hiw-icon hiw-icon-orange">🧳</div>
-          <ul class="hiw-list">
-            <li>Visa guidance</li>
-            <li>Accommodation</li>
-            <li>Airport pickup</li>
-            <li>Orientation</li>
-            <li>What to pack</li>
-            <li>24/7 Support</li>
-          </ul>
-        </div>
-      </div>
+        <div class="faq-grid reveal">
 
-      <!-- Step 4 -->
-      <div class="hiw-step reveal">
-        <div class="hiw-step-number">4</div>
-        <h3 class="hiw-step-title">ARRIVE & MAKE AN IMPACT</h3>
-        <div class="hiw-step-image">
-          <img src="images/arrive in tanzania.jpeg" alt="Arrive in Tanzania and make an impact">
-        </div>
-        <p class="hiw-step-description">
-          Arrive in Tanzania, receive a warm welcome, attend orientation, and begin your volunteer experience while immersing yourself in the local culture and creating lasting memories.
-        </p>
-        <div class="hiw-step-details">
-          <div class="hiw-icon hiw-icon-pink">❤️</div>
-          <ul class="hiw-list">
-            <li>Volunteer</li>
-            <li>Explore</li>
-            <li>Learn</li>
-            <li>Grow</li>
-            <li>Make a difference!</li>
-          </ul>
-        </div>
-      </div>
-    </div>
+          <details class="faq-item">
+            <summary class="faq-question">
+              How much does volunteering cost?
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </summary>
+            <div class="faq-answer">
+              <p>Program fees depend on the duration of your stay. They typically cover accommodation, 3 meals a day,
+                airport pickup, orientation, and 24/7 local support. Visit our <a href="prices.html">Pricing page</a>
+                for full details.</p>
+            </div>
+          </details>
 
-    <!-- Bottom Features -->
-    <div class="hiw-features reveal">
-      <div class="hiw-feature">
-        <div class="hiw-feature-icon hiw-feature-icon-green">️</div>
-        <h4>SAFE & SECURE</h4>
-        <p>Your safety is our priority</p>
+          <details class="faq-item">
+            <summary class="faq-question">
+              Where will I stay?
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </summary>
+            <div class="faq-answer">
+              <p>You will stay at VOT Hostel in Nyegezi, just 8 km from Mwanza City Centre. The hostel features private
+                and shared rooms, a garden, swimming pool, hot showers, and free Wi-Fi.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">
+              Are meals included?
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </summary>
+            <div class="faq-answer">
+              <p>Yes — breakfast, lunch, and dinner are prepared daily by our local staff. Special dietary needs are
+                accommodated. Tea, coffee, and drinking water are complimentary.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">
+              Do I need previous experience?
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </summary>
+            <div class="faq-answer">
+              <p>Most programs welcome volunteers regardless of experience level. For healthcare placements, some
+                medical background is preferred. We match you with a placement that fits your skills.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">
+              How long can I volunteer?
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </summary>
+            <div class="faq-answer">
+              <p>We accept volunteers for as little as 1 week up to 6 months or more. The minimum recommended stay for
+                meaningful impact is 2–4 weeks.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">
+              How do I get from the airport to Mwanza?
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </summary>
+            <div class="faq-answer">
+              <p>Airport pickup is included in your program fee. Simply share your flight details with us after applying
+                and our team will meet you at Mwanza Airport (MWZ).</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">
+              Is Wi-Fi available?
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </summary>
+            <div class="faq-answer">
+              <p>Yes, free Wi-Fi is provided at the hostel. Occasional power outages may temporarily affect connectivity
+                — this is normal in Tanzania.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">
+              What happens after I apply?
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </summary>
+            <div class="faq-answer">
+              <p>Our team contacts you within 2–3 business days to confirm your placement, discuss dates and fees, and
+                answer any remaining questions. We then send a full pre-departure information pack.</p>
+            </div>
+          </details>
+
+        </div>
       </div>
-      <div class="hiw-feature">
-        <div class="hiw-feature-icon hiw-feature-icon-yellow">👥</div>
-        <h4>TRUSTED LOCAL TEAM</h4>
-        <p>Experienced, caring & passionate</p>
-      </div>
-      <div class="hiw-feature">
-        <div class="hiw-feature-icon hiw-feature-icon-pink">💚</div>
-        <h4>ETHICAL & RESPONSIBLE</h4>
-        <p>Community focused & sustainable</p>
-      </div>
-      <div class="hiw-feature">
-        <div class="hiw-feature-icon hiw-feature-icon-blue">🌍</div>
-        <h4>VOLUNTEERS FROM 40+ COUNTRIES</h4>
-        <p>Join a global community</p>
-      </div>
-    </div>
-  </div>
-</section>
+    </section>
+
     <!-- ================= CONTACT ================= -->
- <section class="section section--deep" id="contact">
+    <section class="section section--deep" id="contact">
       <div class="wrap contact-grid">
         <div class="contact-info reveal">
+
           <p class="eyebrow">Contact Us</p>
           <h2>Ready to volunteer in Tanzania?</h2>
           <p>Tell us your interests and availability — our team will help match you with the right placement.</p>
@@ -1139,12 +1293,17 @@
               <dt>Address</dt>
               <dd>P. O. Box 4127, SAUT road, Igubinya Street, House no 2, Nyegezi, Mwanza Tanzania.</dd>
             </div>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1253.3321040410708!2d32.91420456962136!3d-2.5870824998369346!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x19ce7d07a1fdd4d7%3A0x6dc735ae6312effa!2sVot%20Mwanza%20Limited!5e1!3m2!1sen!2stz!4v1788285508091!5m2!1sen!2stz" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1253.3321040410708!2d32.91420456962136!3d-2.5870824998369346!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x19ce7d07a1fdd4d7%3A0x6dc735ae6312effa!2sVot%20Mwanza%20Limited!5e1!3m2!1sen!2stz!4v1788285508091!5m2!1sen!2stz"
+              width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+              referrerpolicy="strict-origin-when-cross-origin"></iframe>
             <div>
               <dt>Email</dt>
               <dd>
-                <a href="mailto:samlugema@volunteertotanzania.com?subject=Internship%20and%20Volunteer%20Opportunity">samlugema@volunteertotanzania.com</a><br>
-                <a href="mailto:millangah@votmwanza.com?subject=Internship%20and%20Volunteer%20Opportunity">millangah@votmwanza.com</a>
+                <a
+                  href="mailto:samlugema@volunteertotanzania.com?subject=Internship%20and%20Volunteer%20Opportunity">samlugema@volunteertotanzania.com</a><br>
+                <a
+                  href="mailto:millangah@votmwanza.com?subject=Internship%20and%20Volunteer%20Opportunity">millangah@votmwanza.com</a>
               </dd>
             </div>
             <div>
@@ -1176,11 +1335,7 @@
             <div class="field">
               <label for="phone">Phone</label>
               <div class="phone-row">
-                <select
-                  id="country-code"
-                  name="country-code"
-                  aria-label="Country code"
-                  required>
+                <select id="country-code" name="country-code" aria-label="Country code" required>
                   <option value="+255" selected>🇹🇿 +255 — Tanzania</option>
                   <option value="+93">🇦🇫 +93 — Afghanistan</option>
                   <option value="+355">🇦🇱 +355 — Albania</option>
@@ -1416,13 +1571,7 @@
                   <option value="+260">🇲 +260 — Zambia</option>
                   <option value="+263">🇿🇼 +263 — Zimbabwe</option>
                 </select>
-                <input
-                  id="phone"
-                  name="phone"
-                  type="tel"
-                  autocomplete="tel"
-                  placeholder="765 883 202"
-                  required>
+                <input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="765 883 202" required>
               </div>
             </div>
 
@@ -1454,7 +1603,12 @@
       </div>
     </section>
   </main>
-    <!-- ================= FORMSPREE AJAX SCRIPT ================= -->
+
+  <!-- ================= STICKY MOBILE CTA ================= -->
+  <div class="sticky-cta" role="complementary" aria-label="Apply now">
+    <a href="#contact" class="btn btn--primary" id="sticky-apply-btn">✈️ Apply Now — It's Free</a>
+  </div>
+  <!-- ================= FORMSPREE AJAX SCRIPT ================= -->
   <script>
     window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
     formspree('initForm', { formElement: '#contact-form', formId: 'mzepwabz' });
@@ -1463,21 +1617,76 @@
 
 
   <!-- ================= FOOTER ================= -->
-  <footer class="site-footer">
-    <div class="wrap footer-inner">
-      <p>© <span id="year"></span> Volunteers of Tanzania (VOT-Mwanza). All rights reserved.</p>
-   
+  <footer class="site-footer" role="contentinfo">
+    <div class="wrap">
+      <div class="footer-inner">
+        <!-- Brand -->
+        <div class="footer-brand footer-col">
+          <a href="#home" aria-label="Volunteers of Tanzania home">
+            <img src="images/logo.avif" alt="VOT Mwanza logo" width="90" height="34" loading="lazy"
+              style="border-radius:8px;">
+          </a>
+          <p>Connecting international volunteers with meaningful community programs in Mwanza, Tanzania since 2018.</p>
+          <div class="footer-social" aria-label="Social media links">
+            <a href="https://www.facebook.com/votmwanza" target="_blank" rel="noopener" aria-label="Facebook">f</a>
+            <a href="https://www.instagram.com/votmwanza" target="_blank" rel="noopener"
+              aria-label="Instagram">&#9679;</a>
+            <a href="https://wa.me/255765883202" target="_blank" rel="noopener" aria-label="WhatsApp">W</a>
+          </div>
+        </div>
+
+        <!-- Programs -->
+        <div class="footer-col">
+          <h4>Programs</h4>
+          <ul>
+            <li><a href="community.html">Community Development</a></li>
+            <li><a href="education.html">Teaching &amp; Education</a></li>
+            <li><a href="healthcare.html">Healthcare Placements</a></li>
+            <li><a href="tour.html">Tourism &amp; Hospitality</a></li>
+          </ul>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="our_team.html">Our Team</a></li>
+            <li><a href="accommodation.html">Accommodation</a></li>
+            <li><a href="prices.html">Pricing</a></li>
+            <li><a href="#faq">FAQ</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li>📍 Nyegezi, Mwanza, Tanzania</li>
+            <li><a href="tel:+255765883202">+255 765 883 202</a></li>
+            <li><a href="tel:+255769519123">+255 769 519 123</a></li>
+            <li><a href="mailto:samlugema@volunteertotanzania.com">samlugema@volunteertotanzania.com</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Bottom bar -->
+      <div class="footer-bottom">
+        <p>© <span id="year"></span> Volunteers of Tanzania (VOT-Mwanza) · Reg. P.O. Box 4127, Mwanza · All rights
+          reserved.</p>
+        <div class="footer-links">
+          <a href="prices.html">Pricing</a>
+          <a href="#faq">FAQ</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
     </div>
   </footer>
 
   <!-- ================= WHATSAPP FLOAT ================= -->
-  <a
-    class="whatsapp-float"
+  <a class="whatsapp-float"
     href="https://wa.me/255765883202?text=Hello%20VOT%2C%20I%20would%20like%20to%20ask%20about%20volunteer%20opportunities%20in%20Tanzania."
-    target="_blank"
-    rel="noopener"
-    aria-label="Chat with VOT on WhatsApp"
-  >
+    target="_blank" rel="noopener" aria-label="Chat with VOT on WhatsApp">
     WhatsApp
   </a>
 
