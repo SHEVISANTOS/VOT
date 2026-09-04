@@ -190,7 +190,7 @@ textarea:focus-visible {
 
 .section {
   /* Reduced vertical spacing for tighter layout across devices */
-  padding-block: clamp(2rem, 5vw, 4rem);
+  padding-block: clamp(1.5rem, 4vw, 3rem);
 }
 
 .section--tight {
@@ -555,7 +555,7 @@ textarea:focus-visible {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   /* reduce gap and allow dense packing */
-  gap: 1rem;
+  gap: 0.5rem;
   grid-auto-flow: dense;
   margin-top: 2.5rem;
 }
@@ -589,7 +589,7 @@ textarea:focus-visible {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   /* tighter gap and dense packing to fill empty slots */
-  gap: 1rem;
+  gap: 0.5rem;
   grid-auto-flow: dense;
   margin-top: 2.5rem;
 }
@@ -2878,8 +2878,8 @@ video[preload="none"] {
 }
 
 .stat-icon {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
+  font-size: 0.5rem;
+  margin-bottom: 0.5rem;
   opacity: 0.8;
   transition: all 0.3s ease;
   position: relative;
@@ -4108,7 +4108,7 @@ video[preload="none"] {
 .testimonials {
   background-color: #f4f4f5;
   /* Light grey background */
-  padding: 5rem 0;
+  padding: 2.5rem 0 3rem;
 }
 
 .testimonial-slider {
@@ -4301,52 +4301,31 @@ video[preload="none"] {
   letter-spacing: 0.5px;
 }
 
-/* Accommodation Stats */
+
+/* ===== Quick Stats — small/medium ===== */
 .accommodation-stats {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 1.5rem;
-  margin-bottom: 3rem;
+  grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+  gap: 0.5rem;
+  margin-bottom: 1rem;
 }
 
 .stat-item {
+  padding: 0.7rem 0.5rem;
+  border-radius: 8px;
   text-align: center;
-  padding: 1.5rem;
-  background: white;
-  border-radius: 12px;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
-  transition: transform 0.3s ease;
 }
 
-.stat-item:hover {
-  transform: translateY(-5px);
-}
+.stat-icon  { font-size: 1.25rem; margin-bottom: 0.25rem; }
+.stat-label { font-size: 0.65rem; letter-spacing: 0.5px;
+              text-transform: uppercase; margin-bottom: 0.15rem; }
+.stat-value { font-size: 0.85rem; font-weight: 700; }
 
-.stat-icon {
-  font-size: 2.5rem;
-  margin-bottom: 0.75rem;
-}
-
-.stat-label {
-  font-size: 0.85rem;
-  color: #666;
-  margin-bottom: 0.5rem;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
-
-.stat-value {
-  font-size: 1.1rem;
-  font-weight: 700;
-  color: #0F3D46;
-}
-
-/* Guest Reviews Section */
-.guest-reviews h3 {
-  font-size: 1.75rem;
-  color: #0F3D46;
-  margin-bottom: 2rem;
-  text-align: center;
+@media (max-width: 600px) {
+  .accommodation-stats {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+  }
 }
 
 .review-card {
@@ -4420,39 +4399,11 @@ video[preload="none"] {
 
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
-  .accommodation-quality {
-    padding: 1.5rem;
-  }
-
-  .quality-badge {
-    padding: 1.5rem;
-  }
-
-  .rating-stars {
-    font-size: 2rem;
-    letter-spacing: 6px;
-  }
-
-  .rating-score {
-    font-size: 2.5rem;
-  }
-
-  .accommodation-stats {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
-  }
-
-  .stat-item {
-    padding: 1rem;
-  }
-
-  .stat-icon {
-    font-size: 2rem;
-  }
-
-  .review-card {
-    padding: 1.5rem;
-  }
+  .accommodation-quality { padding: 1.5rem; }
+  .quality-badge { padding: 1.5rem; }
+  .rating-stars { font-size: 2rem; letter-spacing: 6px; }
+  .rating-score { font-size: 2.5rem; }
+  .review-card { padding: 1.5rem; }
 }
 
 /* ================= ACCOMMODATION REVIEWS SLIDER ================= */
@@ -4971,3 +4922,56 @@ details.faq-item[open] .faq-icon {
   margin: -1px; padding: 0; overflow: hidden;
   clip: rect(0,0,0,0); border: 0;
 }
+
+/* =========================================================
+FINAL OVERRIDES — paste at the VERY END of style.css
+========================================================= */
+
+/* Stat cards: small/medium on all screens */
+.accommodation-stats {
+  grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+.stat-item  { padding: 0.7rem 0.5rem; border-radius: 8px; }
+.stat-icon  { font-size: 1.25rem; margin-bottom: 0.25rem; }
+.stat-label { font-size: 0.65rem; letter-spacing: 0.5px; margin-bottom: 0.15rem; }
+.stat-value { font-size: 0.85rem; }
+@media (max-width: 768px) {
+  .stat-item { padding: 0.7rem 0.5rem; }
+  .stat-icon { font-size: 1.25rem; }
+}
+@media (max-width: 600px) {
+  .accommodation-stats { grid-template-columns: repeat(2, 1fr); gap: 0.5rem; }
+}
+
+/* Tight vertical rhythm — every section band */
+.section          { padding-block: clamp(1.5rem, 3.5vw, 2.5rem); } /* fixes TOURS top gap */
+.section--tight   { padding-block: clamp(1.5rem, 3.5vw, 2.5rem); }
+.carousel-section { padding: 2rem 0; }   /* fixes grey band above it */
+.testimonials     { background-color: #f4f4f5; padding: 2rem 0 2.5rem; }
+.how-it-works     { padding-block: clamp(2rem, 5vw, 3.5rem); }
+.trust-strip      { padding-block: clamp(1.5rem, 4vw, 2.5rem); }
+.page-hero        { padding-block: clamp(2.5rem, 7vw, 4.5rem); }
+.hero--photo      { padding-block: clamp(3rem, 7vw, 5rem); }
+.site-footer      { padding-block: clamp(2rem, 5vw, 3.5rem); }
+
+/* Internal gaps, tightened */
+.section-heading      { margin-bottom: 2rem; }
+.mission-vision,
+.life-culture         { margin-top: 2.5rem; }
+.partner-logos        { margin-top: 2.5rem; }
+.how-it-works-header  { margin-bottom: 2.5rem; }
+.how-it-works-steps   { margin-bottom: 3rem; }
+.testimonial-track    { margin-top: 1.5rem; min-height: 220px; }
+
+/* ===== Tighten Accommodation reviews area ===== */
+.accommodation-quality   { margin-top: 1.5rem; padding: 1.5rem; }
+.quality-badge           { padding: 1.25rem; margin-bottom: 1.5rem; }
+.guest-reviews-slider    { margin-top: 1.5rem; padding: 1.5rem; }
+.guest-reviews-slider h3 { margin-bottom: 1.25rem; }
+.review-card             { padding: 1.5rem; }
+.review-text             { margin-bottom: 1rem; }
+.review-dots             { margin-top: 1rem; }
+.section                 { padding-block: clamp(1.5rem, 3.5vw, 2.5rem); } /* band below */
+
