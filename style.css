@@ -52,6 +52,24 @@
   --shadow-xl:  0 28px 60px rgba(28,26,22,0.2);
 }
 
+/* ===== WhatsApp float: sit ABOVE the sticky Apply Now bar on phones ===== */
+@media (max-width: 680px) {
+  .whatsapp-float {
+    right: 0.75rem;
+    bottom: 6rem;              /* clears the ~87px sticky bar + gap */
+    padding: 0.7rem 0.9rem;    /* slightly compact on phones */
+  }
+}
+
+/* ===== WhatsApp float: sit ABOVE the sticky Apply Now bar on phones ===== */
+@media (max-width: 680px) {
+  .whatsapp-float {
+    right: 0.75rem;
+    bottom: 6rem;              /* clears the ~87px sticky bar + gap */
+    padding: 0.7rem 0.9rem;    /* slightly compact on phones */
+  }
+}
+
 /* ===== Hero CTA buttons — look good on every screen ===== */
 .hero__cta .btn {
   padding: 1rem 2.2rem;
@@ -466,7 +484,7 @@ textarea:focus-visible {
   margin-top: 1.25rem;
   font-size: var(--step1);
   color: var(--ink-soft);
-  max-width: 58ch;
+  max-width: 78ch;
 }
 
 .hero__cta {
@@ -730,14 +748,14 @@ textarea:focus-visible {
 
 .mwanza h2 {
   color: var(--white);
-  font-size: var(--step3);
-  max-width: 22ch;
-  margin-top: 0.45rem;
+  font-size: var(--step2);
+  max-width: 45ch;
+  margin-top: 0.15rem;
 }
 
 .mwanza p {
   color: var(--savanna-dim);
-  max-width: 70ch;
+  max-width: 170ch;
   margin-top: 1.25rem;
 }
 
@@ -3879,13 +3897,48 @@ video[preload="none"] {
   margin-top: 5rem;
 }
 
+/* ===== Mwanza intro — as a card ===== */
 .mwanza-intro {
   max-width: 850px;
-  margin: 0 auto 3rem;
-  text-align: center;
-  font-size: 1.1rem;
+  margin: 0 auto 2rem;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 2rem 2.5rem;
+  box-shadow: 0 10px 25px rgba(15, 61, 70, 0.08);
+  position: relative;
+  overflow: hidden;
+  font-size: 1.05rem;
   line-height: 1.8;
   color: #475569;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* teal accent bar on top, same as culture cards */
+.mwanza-intro::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 4px;
+  background: #0F3D46;
+}
+
+.mwanza-intro:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 14px 30px rgba(15, 61, 70, 0.12);
+}
+
+.mwanza-intro p {
+  text-align: center;   /* delete this line if you prefer justified text */
+}
+
+/* optional title inside the card */
+.mwanza-intro h4 {
+  color: #0F3D46;
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
 }
 
 .culture-grid {
@@ -4104,7 +4157,7 @@ video[preload="none"] {
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   opacity: 0;
   transition: opacity 1s ease-in-out;
 }
@@ -5020,3 +5073,495 @@ FINAL OVERRIDES — paste at the VERY END of style.css
     letter-spacing: 0.02em;
   }
 }
+
+
+/* ===== "Life in Mwanza" intro card ===== */
+.city-card {
+  position: relative;
+  max-width: 920px;
+  margin: 0 auto 3rem;
+  background: var(--white);
+  border-radius: var(--radius-card);
+  border-top: 4px solid var(--sun-ochre);
+  box-shadow: var(--shadow-md);
+  padding: clamp(1.75rem, 4vw, 3rem);
+  text-align: center;
+  overflow: hidden;
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+.city-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+.city-card::before {           /* little Rock City badge */
+  content: "🪨";
+  position: absolute;
+  top: 1rem;
+  right: 1.25rem;
+  font-size: 1.5rem;
+}
+.city-card .eyebrow {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+.city-card h2 {
+  color: var(--lake-deep);
+  font-size: var(--step2);
+  margin-bottom: 1rem;
+}
+.city-card p {
+  color: var(--ink-soft);
+  line-height: 1.8;
+  max-width: 75ch;
+  margin-inline: auto;
+}
+.city-card .mwanza-intro {     /* in case the p keeps its old class */
+  margin: 0;
+}
+
+/* ===== Life in Mwanza: fill the empty grid slot ===== */
+.culture-grid > .culture-card:last-child {
+  grid-column: auto / -1;      /* always stretch to the end of the row — no hole */
+  padding: 1rem;               /* slim frame around the photos */
+  position: relative;
+}
+
+/* turn the lone 📸 into a floating chip on the photo */
+.culture-card:last-child h4 {
+  position: absolute;
+  top: 1.4rem;
+  left: 1.4rem;
+  z-index: 3;
+  margin: 0;
+  background: rgba(15, 61, 70, 0.85);
+  color: #fff;
+  padding: 0.35rem 0.9rem;
+  border-radius: 999px;
+  font-size: 1rem;
+}
+
+/* wide banner instead of a tall 4/3 box */
+.culture-card:last-child .mini-carousel {
+  aspect-ratio: 21 / 9;
+  max-height: 280px;
+  border-radius: 12px;
+}
+
+@media (max-width: 700px) {
+  .culture-card:last-child .mini-carousel {
+    aspect-ratio: 16 / 10;     /* taller on small screens */
+  }
+}
+
+/* ===== MWANZA CULTURE GRID — gallery card fills the empty slot ===== */
+.culture-grid > .culture-card:last-child {
+  grid-column: span 2 / -1;      /* take the last TWO slots of the row */
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  position: relative;
+}
+
+.culture-card:last-child h4 {    /* 📸 becomes a floating badge */
+  position: absolute;
+  top: 1.4rem;
+  left: 1.4rem;
+  z-index: 3;
+  margin: 0;
+  background: rgba(15, 61, 70, 0.85);
+  color: #fff;
+  padding: 0.35rem 0.9rem;
+  border-radius: 999px;
+  font-size: 1rem;
+}
+
+.culture-card:last-child .mini-carousel {
+  flex: 1;                       /* photo fills the whole card */
+  aspect-ratio: auto;
+  min-height: 240px;
+  max-height: 320px;
+}
+
+@media (max-width: 640px) {
+  .culture-grid > .culture-card:last-child {
+    grid-column: auto;
+  }
+}
+
+/* =========================================================
+   RESPONSIVE SAFETY OVERRIDES — final cascade
+   ========================================================= */
+
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Prevent intrinsic content from forcing grid/flex containers wider. */
+.wrap,
+main,
+section,
+article,
+header,
+footer,
+[class*="grid"],
+[class*="card"],
+[class*="content"],
+[class*="media"] {
+  min-width: 0;
+  max-width: 100%;
+}
+
+img,
+svg,
+video,
+iframe,
+canvas {
+  max-width: 100%;
+}
+
+button,
+.btn,
+.cta-button,
+input,
+select,
+textarea {
+  min-height: 44px;
+  max-width: 100%;
+}
+
+.btn,
+.cta-button,
+.sticky-cta .btn,
+.nav a,
+summary {
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+
+.stats,
+.mwanza-gallery,
+.culture-grid,
+.accommodation-stats {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 180px), 1fr));
+}
+
+.why-grid,
+.programs-grid {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
+}
+
+.hero__inner,
+.about,
+.feature-split {
+  min-width: 0;
+}
+
+.hero__inner > *,
+.about > *,
+.feature-split > *,
+.reviews-slider-container > *,
+.site-header__inner > * {
+  min-width: 0;
+}
+
+@media (max-width: 1020px) {
+  .hero__inner,
+  .feature-split {
+    grid-template-columns: 1fr;
+  }
+
+  .feature-split--reverse .feature-split__media {
+    order: 0;
+  }
+
+  .hero__media {
+    max-width: 760px;
+    width: 100%;
+    margin-inline: auto;
+  }
+}
+
+@media (max-width: 900px) {
+  .site-header__inner {
+    gap: 0.5rem;
+  }
+
+  .nav {
+    min-width: 0;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+
+  .mwanza-gallery {
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .wrap {
+    padding-inline: clamp(1rem, 5vw, 1.5rem);
+  }
+
+  .nav a {
+    padding-block: 0.65rem;
+  }
+
+  .reviews-slider-container {
+    gap: 0.75rem;
+  }
+
+  .review-top {
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero h1 {
+    max-width: none;
+    font-size: clamp(2.25rem, 11vw, 3.5rem);
+  }
+
+  .stats,
+  .mwanza-gallery,
+  .culture-grid,
+  .why-grid,
+  .programs-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .culture-grid > .culture-card:last-child {
+    grid-column: auto;
+  }
+
+  .culture-card:last-child .mini-carousel {
+    min-height: 0;
+    max-height: none;
+  }
+
+  .reviews-slider-container {
+    flex-direction: column;
+  }
+
+  .review-nav {
+    width: 100%;
+    max-width: none;
+  }
+
+  .sticky-cta {
+    padding: 0.65rem clamp(0.75rem, 4vw, 1rem);
+  }
+
+  body {
+    padding-bottom: 88px;
+  }
+}
+
+@media (max-width: 680px) {
+  .whatsapp-float {
+    bottom: 6.25rem;
+    right: 0.75rem;
+    max-width: calc(100vw - 1.5rem);
+  }
+}
+
+@media (max-width: 375px) {
+  .section-heading h2,
+  .mwanza h2,
+  .feature-split__content h2 {
+    font-size: clamp(1.75rem, 9vw, 2.5rem);
+  }
+
+  .review-card,
+  .guest-reviews-slider,
+  .accommodation-quality {
+    padding: 1rem;
+  }
+}
+
+/* ===== Header: always sticky on desktop ===== */
+.site-header {
+  position: sticky !important;
+  top: 0 !important;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+/* overflow-x: hidden breaks position:sticky — clip doesn't */
+html, body {
+  overflow-x: clip;
+}
+
+/* optional: slim the header down once you scroll (nicer sticky bar) */
+.site-header .logo img { transition: height 0.3s ease; }
+.site-header.is-scrolled .logo img { height: 64px; }
+
+/* ===== Hero text polish ===== */
+.hero h1,
+.hero--photo h1 {
+  font-size: clamp(2.3rem, 1.7rem + 3vw, 4.3rem);
+  line-height: 1.08;
+  letter-spacing: -0.015em;
+  max-width: 24ch;          /* was 13ch — no more cramped wrapping */
+}
+
+/* highlight the last line in ochre */
+.hero h1 em,
+.hero--photo h1 em {
+  font-style: normal;
+  color: var(--sun-ochre);
+}
+
+/* lead paragraph: stop justify + hyphen splits */
+.hero p.lede,
+.hero--photo p.lede {
+  text-align: left;
+  hyphens: none;
+  -webkit-hyphens: none;
+  line-height: 1.7;
+  max-width: 52ch;
+}
+
+/* ===== Culture gallery card — final fix (PC + phones) ===== */
+.culture-grid > .culture-card:last-child {
+  grid-column: span 2 / -1;
+  display: block;
+  padding: 1rem;
+  position: relative;
+}
+
+.culture-card:last-child h4 {
+  position: absolute;
+  top: 1.4rem;
+  left: 1.4rem;
+  z-index: 3;
+  margin: 0;
+  background: rgba(15, 61, 70, 0.85);
+  color: #fff;
+  padding: 0.35rem 0.9rem;
+  border-radius: 999px;
+  font-size: 1rem;
+}
+
+.culture-card:last-child .mini-carousel {
+  width: 100%;
+  height: 300px;
+  aspect-ratio: auto;
+  border-radius: 12px;
+}
+
+.mini-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+@media (max-width: 640px) {
+  .culture-grid > .culture-card:last-child { grid-column: auto; }
+  .culture-card:last-child .mini-carousel { height: 220px; }
+}
+
+/* =========================================================
+PARTNER LOGOS — auto-scrolling, scrollable strip
+========================================================= */
+.partners-section {
+  background: var(--white);
+  padding-block: clamp(2rem, 5vw, 3.5rem);
+  overflow: hidden;
+}
+
+.partners-section .section-heading {
+  text-align: center;
+  margin-inline: auto;
+  margin-bottom: 2rem;
+}
+
+/* The scrolling window */
+.partner-marquee {
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent);
+          mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent);
+}
+
+/* The moving track */
+.partner-marquee-track {
+  display: flex;
+  width: max-content;
+  animation: partner-scroll 45s linear infinite;
+}
+
+/* Pause when hovering or tabbing through logos */
+.partner-marquee:hover .partner-marquee-track,
+.partner-marquee:focus-within .partner-marquee-track {
+  animation-play-state: paused;
+}
+
+@keyframes partner-scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+/* One row of logos */
+.logo-set {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding-right: 1.5rem; /* keeps the loop seamless */
+}
+
+/* Reuse your existing .partner-logo card, sized for the strip */
+.partner-marquee .partner-logo {
+  flex: 0 0 auto;
+  width: 190px;
+  height: 110px;
+  margin: 0;
+}
+
+
+
+/* Accessibility: no animation for reduced-motion users */
+@media (prefers-reduced-motion: reduce) {
+  .partner-marquee-track { animation: none; }
+  .partner-marquee { overflow-x: auto; }
+  .logo-set[aria-hidden="true"] { display: none; }
+}
+
+/* =========================================================
+PARTNER LOGOS — FULL COLOUR (overrides grayscale)
+========================================================= */
+.partner-logo,
+.partner-logo img {
+  filter: none !important;
+  opacity: 1 !important;
+}
+
+.partner-logo:hover {
+  filter: none !important;
+  opacity: 1 !important;
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: 0 12px 30px rgba(28, 26, 22, 0.16);
+}
+
+/* Colourful accent bar under each logo (cycles brand colours) */
+.partner-logo {
+  border-bottom: 4px solid transparent;
+}
+.partner-logo:nth-child(5n+1) { border-bottom-color: var(--sun-ochre); }   /* ochre */
+.partner-logo:nth-child(5n+2) { border-bottom-color: var(--acacia); }      /* green */
+.partner-logo:nth-child(5n+3) { border-bottom-color: var(--lake-deep); }   /* teal */
+.partner-logo:nth-child(5n+4) { border-bottom-color: #E4572E; }            /* coral */
+.partner-logo:nth-child(5n+5) { border-bottom-color: #7EB2D9; }            /* blue */
+
+/* Soft coloured glow on hover matching the accent bar */
+.partner-logo:nth-child(5n+1):hover { box-shadow: 0 12px 30px rgba(224, 148, 44, 0.25); }
+.partner-logo:nth-child(5n+2):hover { box-shadow: 0 12px 30px rgba(92, 122, 92, 0.25); }
+.partner-logo:nth-child(5n+3):hover { box-shadow: 0 12px 30px rgba(15, 61, 70, 0.25); }
+.partner-logo:nth-child(5n+4):hover { box-shadow: 0 12px 30px rgba(228, 87, 46, 0.25); }
+.partner-logo:nth-child(5n+5):hover { box-shadow: 0 12px 30px rgba(126, 178, 217, 0.3); }

@@ -4,32 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Comfortable, safe, and modern volunteer accommodation in Mwanza, Tanzania.">
-    <link rel="stylesheet" href="style.css">
+      <!-- Styles -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- JavaScript -->
+  <script src="script.js" defer></script>
     <title>Accommodation - Volunteers of Tanzania</title>
 </head>
 <body class="accommodation-page">
 
-    <!-- Page Hero -->
-<section class="acc-page-hero">
-    <!-- Background Video -->
-    <video class="acc-hero-video" autoplay muted loop playsinline>
-        <source src="videos/A peak at_HD.mp4" type="video/mp4">
-        <!-- Fallback image if video doesn't load -->
-        <img src="videos/acc-hero-fallback.jpg" alt="Accommodation Background">
-    </video>
-    
-    <!-- Dark Overlay -->
-    <div class="acc-hero-overlay"></div>
-    
-    <!-- Content -->
-    <div class="acc-page-hero-content">
-        <h1>Feel at Home in Mwanza</h1>
-        <p>Safe, comfortable, and fully-equipped accommodation designed for your volunteer journey.</p>
-        <a href="index.html" class="btn btn--ghost">← Back to Home</a>
-    </div>
-</section>
+    <!-- ================= PAGE HERO WITH VIDEO ================= -->
+    <section class="acc-page-hero">
+        <video class="acc-hero-video" autoplay muted loop playsinline>
+            <source src="videos/A peak at_HD.mp4" type="video/mp4">
+            <img src="videos/acc-hero-fallback.jpg" alt="Accommodation Background">
+        </video>
+        <div class="acc-page-hero-overlay"></div>
+        <div class="acc-page-hero-content">
+            <h1>Feel at Home in Mwanza</h1>
+            <p>Safe, comfortable, and fully-equipped accommodation designed for your volunteer journey.</p>
+            <a href="index.html" class="btn btn--ghost">← Back to Home</a>
+        </div>
+    </section>
 
-    <!-- Introduction -->
+    <!-- ================= INTRODUCTION ================= -->
     <section class="section">
         <div class="wrap">
             <div class="acc-page-intro">
@@ -40,7 +38,7 @@
                 </div>
                 <div class="acc-page-features">
                     <div class="acc-feature-card">
-                        <div class="acc-feature-icon">️</div>
+                        <div class="acc-feature-icon">🛡️</div>
                         <h3>24/7 Security</h3>
                         <p>Gated premises with round-the-clock security for your peace of mind.</p>
                     </div>
@@ -64,16 +62,14 @@
         </div>
     </section>
 
-    <!-- Photo Gallery (12 Pictures) -->
+    <!-- ================= PHOTO GALLERY ================= -->
     <section class="section section--tight">
         <div class="wrap">
             <div class="acc-page-gallery-header">
                 <h2>Explore Our Spaces</h2>
                 <p>Take a look around our modern living areas, bedrooms, and recreational spaces.</p>
             </div>
-            
             <div class="acc-page-gallery">
-                <!-- Replace src with your actual 12 image file names -->
                 <div class="acc-gallery-item"><img src="images/a_13.jpeg" alt="Accommodation Living Area" loading="lazy"></div>
                 <div class="acc-gallery-item"><img src="images/a_1.jpeg" alt="Modern Bedroom" loading="lazy"></div>
                 <div class="acc-gallery-item"><img src="images/a_5.jpg" alt="Exterior View" loading="lazy"></div>
@@ -90,21 +86,22 @@
         </div>
     </section>
 
-    <!-- Call to Action -->
+    <!-- ================= CALL TO ACTION ================= -->
     <section class="section">
         <div class="wrap">
             <div class="cta-banner">
                 <h2>Ready to Start Your Journey?</h2>
                 <p>Book your stay with us and experience the best of volunteering in Tanzania.</p>
-                <a href="mailto:samlugema@volunteertotanzania.com?subject=Accommodation%20Inquiry" class="btn btn--dark">Contact Us to Book</a>
+                <a href="#contact" class="btn btn--dark">Contact Us to Book</a>
             </div>
-            <a href="index.html#accommodation" class="btn btn--ghost">← Back to Home</a>
+            <a href="index.html" class="btn btn--ghost">← Back to Home</a>
         </div>
-    
     </section>
- <section class="section section--deep" id="contact">
+    <!-- ================= CONTACT ================= -->
+    <section class="section section--deep" id="contact">
       <div class="wrap contact-grid">
         <div class="contact-info reveal">
+
           <p class="eyebrow">Contact Us</p>
           <h2>Ready to volunteer in Tanzania?</h2>
           <p>Tell us your interests and availability — our team will help match you with the right placement.</p>
@@ -114,12 +111,17 @@
               <dt>Address</dt>
               <dd>P. O. Box 4127, SAUT road, Igubinya Street, House no 2, Nyegezi, Mwanza Tanzania.</dd>
             </div>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1253.3321040410708!2d32.91420456962136!3d-2.5870824998369346!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x19ce7d07a1fdd4d7%3A0x6dc735ae6312effa!2sVot%20Mwanza%20Limited!5e1!3m2!1sen!2stz!4v1788285508091!5m2!1sen!2stz" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1253.3321040410708!2d32.91420456962136!3d-2.5870824998369346!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x19ce7d07a1fdd4d7%3A0x6dc735ae6312effa!2sVot%20Mwanza%20Limited!5e1!3m2!1sen!2stz!4v1788285508091!5m2!1sen!2stz"
+              width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+              referrerpolicy="strict-origin-when-cross-origin"></iframe>
             <div>
               <dt>Email</dt>
               <dd>
-                <a href="mailto:samlugema@volunteertotanzania.com?subject=Internship%20and%20Volunteer%20Opportunity">samlugema@volunteertotanzania.com</a><br>
-                <a href="mailto:millangah@votmwanza.com?subject=Internship%20and%20Volunteer%20Opportunity">millangah@votmwanza.com</a>
+                <a
+                  href="mailto:samlugema@volunteertotanzania.com?subject=Internship%20and%20Volunteer%20Opportunity">samlugema@volunteertotanzania.com</a><br>
+                <a
+                  href="mailto:millangah@votmwanza.com?subject=Internship%20and%20Volunteer%20Opportunity">millangah@votmwanza.com</a>
               </dd>
             </div>
             <div>
@@ -151,11 +153,7 @@
             <div class="field">
               <label for="phone">Phone</label>
               <div class="phone-row">
-                <select
-                  id="country-code"
-                  name="country-code"
-                  aria-label="Country code"
-                  required>
+                <select id="country-code" name="country-code" aria-label="Country code" required>
                   <option value="+255" selected>🇹🇿 +255 — Tanzania</option>
                   <option value="+93">🇦🇫 +93 — Afghanistan</option>
                   <option value="+355">🇦🇱 +355 — Albania</option>
@@ -391,13 +389,7 @@
                   <option value="+260">🇲 +260 — Zambia</option>
                   <option value="+263">🇿🇼 +263 — Zimbabwe</option>
                 </select>
-                <input
-                  id="phone"
-                  name="phone"
-                  type="tel"
-                  autocomplete="tel"
-                  placeholder="765 883 202"
-                  required>
+                <input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="765 883 202" required>
               </div>
             </div>
 
@@ -430,6 +422,15 @@
     </section>
   </main>
 
+  <!-- ================= STICKY MOBILE CTA ================= -->
+  <div class="sticky-cta" role="complementary" aria-label="Apply now">
+    <a href="#contact" class="btn btn--primary" id="sticky-apply-btn">✈️ Apply Now — It's Free</a>
+  </div>
+  <!-- ================= FORMSPREE AJAX SCRIPT ================= -->
+  <script>
+    window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
+    formspree('initForm', { formElement: '#contact-form', formId: 'mzepwabz' });
+  </script>
 
 </body>
 </html>

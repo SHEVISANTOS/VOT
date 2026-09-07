@@ -1118,7 +1118,7 @@ document.addEventListener('DOMContentLoaded', () => {
       miniSlides[currentMiniIndex].classList.remove('is-active');
       currentMiniIndex = (currentMiniIndex + 1) % miniSlides.length;
       miniSlides[currentMiniIndex].classList.add('is-active');
-    }, 1000); // Changes every 1 second
+    }, 2000); // Changes every 1 second
   }
 });
 
