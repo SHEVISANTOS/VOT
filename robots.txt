@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Sitemap: https://www.volunteertotanzania.com/sitemap.xml
+
+# Block unnecessary crawling
+Disallow: /admin/
+Disallow: /includes/
+Disallow: /*.css$
+Disallow: /*.js$
