@@ -732,6 +732,13 @@ function sendEmail(e) {
             DOM.navToggle.setAttribute('aria-expanded', 'false');
             DOM.navToggle.classList.remove('is-active');
             DOM.primaryNav.classList.remove('is-open');
+            // Undo the fixed-position scroll lock (see initNavToggle) without
+            // fighting the smooth-scroll already in progress above.
+            document.body.style.position = '';
+            document.body.style.top = '';
+            document.body.style.left = '';
+            document.body.style.right = '';
+            document.body.style.width = '';
             document.body.style.overflow = '';
           }
         }
