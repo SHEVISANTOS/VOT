@@ -1270,3 +1270,40 @@ formspreeScript.src = "https://unpkg.com/@formspree/ajax@1";
 formspreeScript.defer = true;
 document.head.appendChild(formspreeScript);
 
+/* =========================================================
+   PRICING CALCULATOR
+   ========================================================= */
+function initPricingCalculator() {
+  const slider = document.getElementById('durationSlider');
+  const durationValue = document.getElementById('durationValue');
+  const totalAmount = document.getElementById('totalAmount');
+  const totalBreakdown = document.getElementById('totalBreakdown');
+
+  if (!slider || !durationValue || !totalAmount || !totalBreakdown) return;
+
+  function getRate(weeks) {
+    if (weeks <= 4) return 340;
+    if (weeks <= 8) return 315;
+    return 295;
+  }
+
+  function updateEstimate() {
+    const weeks = parseInt(slider.value);
+    const rate = getRate(weeks);
+    const total = rate * weeks;
+
+    durationValue.textContent = weeks + ' week' + (weeks !== 1 ? 's' : '');
+    totalAmount.textContent = '$' + total.toLocaleString();
+    totalBreakdown.textContent = '$' + rate + ' / week · ' + weeks + ' week' + (weeks !== 1 ? 's' : '');
+
+    // Update slider track fill
+    const pct = ((weeks - slider.min) / (slider.max - slider.min)) * 100;
+    slider.style.setProperty('--range-pct', pct + '%');
+  }
+
+  slider.addEventListener('input', updateEstimate);
+  updateEstimate();
+}
+
+document.addEventListener("DOMContentLoaded", initPricingCalculator);
+
