@@ -45,29 +45,6 @@ function initNavToggle() {
 
   const relatedNavs = [nav, document.querySelector(".nav")].filter(Boolean);
 
-  let lockedScrollY = 0;
-
-  function lockBodyScroll() {
-    lockedScrollY = window.scrollY;
-    document.body.style.position = "fixed";
-    document.body.style.top = `-${lockedScrollY}px`;
-    document.body.style.left = "0";
-    document.body.style.right = "0";
-    document.body.style.width = "100%";
-    document.body.style.overflow = "hidden";
-  }
-
-  function unlockBodyScroll() {
-    if (document.body.style.position !== "fixed") return;
-    document.body.style.position = "";
-    document.body.style.top = "";
-    document.body.style.left = "";
-    document.body.style.right = "";
-    document.body.style.width = "";
-    document.body.style.overflow = "";
-    window.scrollTo(0, lockedScrollY);
-  }
-
   function syncNavVisibility() {
     // Stay in sync with whatever breakpoint the CSS actually uses to show
     // the hamburger button, instead of hard-coding a second breakpoint here.
@@ -82,7 +59,6 @@ function initNavToggle() {
       toggle.classList.remove("is-active");
       toggle.setAttribute("aria-expanded", "false");
       toggle.setAttribute("aria-label", "Open menu");
-      unlockBodyScroll();
       return;
     }
 
@@ -103,11 +79,6 @@ function initNavToggle() {
     toggle.classList.toggle("is-active", isOpen);
     toggle.setAttribute("aria-expanded", String(isOpen));
     toggle.setAttribute("aria-label", isOpen ? "Close menu" : "Open menu");
-    if (isOpen) {
-      lockBodyScroll();
-    } else {
-      unlockBodyScroll();
-    }
   }
 
   function closeNav() {
@@ -732,14 +703,6 @@ function sendEmail(e) {
             DOM.navToggle.setAttribute('aria-expanded', 'false');
             DOM.navToggle.classList.remove('is-active');
             DOM.primaryNav.classList.remove('is-open');
-            // Undo the fixed-position scroll lock (see initNavToggle) without
-            // fighting the smooth-scroll already in progress above.
-            document.body.style.position = '';
-            document.body.style.top = '';
-            document.body.style.left = '';
-            document.body.style.right = '';
-            document.body.style.width = '';
-            document.body.style.overflow = '';
           }
         }
       });
