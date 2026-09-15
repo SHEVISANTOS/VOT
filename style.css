@@ -588,22 +588,13 @@ textarea:focus-visible {
   margin-top: 2rem;
 }
 
-/* ---------- Our Story (text-only intro block) ---------- */
+/* ---------- Our Story (text + stats sidebar) ---------- */
 
-#story .story-block {
-  max-width: 68ch;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-}
-
-#story .story-block .eyebrow {
-  text-align: center;
-}
-
-#story .story-block .section-divider {
-  margin-left: auto;
-  margin-right: auto;
+.story-layout {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
+  gap: clamp(2.5rem, 5vw, 4.5rem);
+  align-items: start;
 }
 
 #story .story-lede {
@@ -612,12 +603,10 @@ textarea:focus-visible {
   font-weight: 500;
   color: var(--ink);
   line-height: 1.55;
-  text-align: left;
   margin-top: 1.75rem;
 }
 
 #story .story-body {
-  text-align: left;
   margin-top: 1rem;
 }
 
@@ -630,41 +619,92 @@ textarea:focus-visible {
   margin-top: 0;
 }
 
-#story .story-stats {
+.story-side {
   display: flex;
+  flex-direction: column;
+  gap: 0;
+  background: var(--white);
+  border-top: 4px solid;
+  border-image: linear-gradient(90deg, var(--sun-ochre), var(--sun-ochre-dark)) 1;
+  border-radius: var(--radius-soft);
+  padding: clamp(1.75rem, 3vw, 2.25rem);
+  box-shadow: 0 18px 40px rgba(28, 26, 22, 0.08);
+  position: sticky;
+  top: 6rem;
+}
+
+.story-stat-card {
+  display: flex;
+  align-items: center;
+  gap: 1.1rem;
+  padding-block: 1.15rem;
+  border-bottom: 1px solid rgba(28, 26, 22, 0.08);
+}
+
+.story-stat-card:first-child {
+  padding-top: 0;
+}
+
+.story-stat-card:last-of-type {
+  border-bottom: none;
+  padding-bottom: 1.6rem;
+}
+
+.story-stat-card__icon {
+  display: flex;
+  align-items: center;
   justify-content: center;
-  gap: clamp(2rem, 6vw, 4rem);
-  margin: 2.5rem 0;
-  padding: 1.5rem 0;
-  border-top: 1px solid rgba(28, 26, 22, 0.1);
-  border-bottom: 1px solid rgba(28, 26, 22, 0.1);
+  flex-shrink: 0;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: var(--savanna-dim);
+  font-size: 1.5rem;
 }
 
-#story .story-stat {
-  text-align: center;
-}
-
-#story .story-stat__num {
+.story-stat-card__num {
   display: block;
   font-family: var(--font-display);
-  font-size: var(--step3);
+  font-size: var(--step2);
   font-weight: 700;
   color: var(--sun-ochre-dark);
   line-height: 1;
 }
 
-#story .story-stat__label {
+.story-stat-card__label {
   display: block;
-  margin-top: 0.4rem;
+  margin-top: 0.3rem;
   font-family: var(--font-utility);
   font-size: var(--step-1);
   color: var(--ink-soft);
 }
 
-#story .story-block .btn {
-  display: block;
-  width: max-content;
-  margin: 0 auto;
+.story-side__cta {
+  justify-content: center;
+  background: var(--sun-ochre);
+  border-color: var(--sun-ochre);
+  color: var(--white);
+}
+
+.story-side__cta:hover {
+  background: var(--sun-ochre-dark);
+  border-color: var(--sun-ochre-dark);
+  color: var(--white);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 900px) {
+  .story-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .story-side {
+    position: static;
+  }
+
+  .story-side__cta {
+    margin-top: 1.6rem;
+  }
 }
 
 @media (max-width: 1000px) {
