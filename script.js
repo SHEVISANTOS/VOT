@@ -46,7 +46,9 @@ function initNavToggle() {
   const relatedNavs = [nav, document.querySelector(".nav")].filter(Boolean);
 
   function syncNavVisibility() {
-    const isMobile = window.matchMedia("(max-width: 767.98px)").matches;
+    // Stay in sync with whatever breakpoint the CSS actually uses to show
+    // the hamburger button, instead of hard-coding a second breakpoint here.
+    const isMobile = window.getComputedStyle(toggle).display !== "none";
 
     if (!isMobile) {
       relatedNavs.forEach((menu) => {
@@ -88,7 +90,7 @@ function initNavToggle() {
   toggle.addEventListener("click", (event) => {
     event.preventDefault();
     event.stopPropagation();
-    const isMobile = window.matchMedia("(max-width: 767.98px)").matches;
+    const isMobile = window.getComputedStyle(toggle).display !== "none";
     if (!isMobile) return;
     setNavState(!nav.classList.contains("is-open"));
   });
@@ -596,100 +598,6 @@ function sendEmail(e) {
   };
 
   /* =========================================================
-     MOBILE NAVIGATION
-     ========================================================= */
-  const initMobileNav = () => {
-    if (!DOM.navToggle || !DOM.primaryNav) return;
-    if (DOM.navToggle.dataset.navBound === 'true') return;
-    DOM.navToggle.dataset.navBound = 'true';
-
-    DOM.navToggle.setAttribute('type', 'button');
-    DOM.navToggle.setAttribute('aria-expanded', 'false');
-    DOM.navToggle.setAttribute('aria-label', 'Open menu');
-
-    if (!DOM.navToggle.innerHTML.trim()) {
-      DOM.navToggle.innerHTML = `
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-      `;
-    }
-
-    const relatedNavs = [DOM.primaryNav, document.querySelector('.nav')].filter(Boolean);
-
-    const syncNavVisibility = () => {
-      const isMobile = window.matchMedia('(max-width: 767.98px)').matches;
-
-      if (!isMobile) {
-        relatedNavs.forEach((menu) => {
-          menu.classList.add('is-visible');
-          menu.classList.remove('is-open', 'open');
-          menu.setAttribute('aria-hidden', 'false');
-        });
-        DOM.navToggle.classList.remove('is-active');
-        DOM.navToggle.setAttribute('aria-expanded', 'false');
-        DOM.navToggle.setAttribute('aria-label', 'Open menu');
-        document.body.style.overflow = '';
-        return;
-      }
-
-      relatedNavs.forEach((menu) => {
-        const isOpen = menu.classList.contains('is-open');
-        menu.classList.toggle('is-visible', isOpen);
-        menu.setAttribute('aria-hidden', isOpen ? 'false' : 'true');
-      });
-    };
-
-    const setNavState = (isOpen) => {
-      relatedNavs.forEach((menu) => {
-        menu.classList.toggle('is-open', isOpen);
-        menu.classList.toggle('open', isOpen);
-        menu.classList.toggle('is-visible', isOpen);
-        menu.setAttribute('aria-hidden', isOpen ? 'false' : 'true');
-      });
-      DOM.navToggle.setAttribute('aria-expanded', String(isOpen));
-      DOM.navToggle.classList.toggle('is-active', isOpen);
-      DOM.navToggle.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
-      document.body.style.overflow = isOpen ? 'hidden' : '';
-    };
-
-    const toggleNav = () => {
-      if (!window.matchMedia('(max-width: 767.98px)').matches) return;
-      const isExpanded = DOM.navToggle.getAttribute('aria-expanded') === 'true';
-      setNavState(!isExpanded);
-    };
-
-    // Close menu when clicking outside
-    const closeMenuOnOutsideClick = (e) => {
-      if (!relatedNavs.some((menu) => menu.contains(e.target)) && !DOM.navToggle.contains(e.target)) {
-        setNavState(false);
-      }
-    };
-
-    // Close menu on escape key
-    const handleEscapeKey = (e) => {
-      if (e.key === 'Escape' && relatedNavs.some((menu) => menu.classList.contains('is-open'))) {
-        setNavState(false);
-        DOM.navToggle.focus();
-      }
-    };
-
-    // Close menu when clicking on a link
-    const closeMenuOnLinkClick = (e) => {
-      if (e.target.tagName === 'A' && !e.target.getAttribute('href')?.startsWith('#')) {
-        setNavState(false);
-      }
-    };
-
-    DOM.navToggle.addEventListener('click', toggleNav);
-    document.addEventListener('click', closeMenuOnOutsideClick);
-    document.addEventListener('keydown', handleEscapeKey);
-    DOM.primaryNav.addEventListener('click', closeMenuOnLinkClick);
-    window.addEventListener('resize', syncNavVisibility);
-    syncNavVisibility();
-  };
-
-  /* =========================================================
      SCROLL REVEAL ANIMATION
      ========================================================= */
   const initScrollReveal = () => {
@@ -1012,7 +920,6 @@ function sendEmail(e) {
      INITIALIZE ALL FUNCTIONS
      ========================================================= */
   const init = () => {
-    initMobileNav();
     initScrollReveal();
     initDynamicYear();
     initHeaderScroll();
