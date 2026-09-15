@@ -58,6 +58,7 @@ function initNavToggle() {
   }
 
   function unlockBodyScroll() {
+    if (document.body.style.position !== "fixed") return;
     document.body.style.position = "";
     document.body.style.top = "";
     document.body.style.left = "";
@@ -102,7 +103,11 @@ function initNavToggle() {
     toggle.classList.toggle("is-active", isOpen);
     toggle.setAttribute("aria-expanded", String(isOpen));
     toggle.setAttribute("aria-label", isOpen ? "Close menu" : "Open menu");
-    document.body.style.overflow = isOpen ? "hidden" : "";
+    if (isOpen) {
+      lockBodyScroll();
+    } else {
+      unlockBodyScroll();
+    }
   }
 
   function closeNav() {
