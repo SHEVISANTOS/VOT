@@ -45,6 +45,28 @@ function initNavToggle() {
 
   const relatedNavs = [nav, document.querySelector(".nav")].filter(Boolean);
 
+  let lockedScrollY = 0;
+
+  function lockBodyScroll() {
+    lockedScrollY = window.scrollY;
+    document.body.style.position = "fixed";
+    document.body.style.top = `-${lockedScrollY}px`;
+    document.body.style.left = "0";
+    document.body.style.right = "0";
+    document.body.style.width = "100%";
+    document.body.style.overflow = "hidden";
+  }
+
+  function unlockBodyScroll() {
+    document.body.style.position = "";
+    document.body.style.top = "";
+    document.body.style.left = "";
+    document.body.style.right = "";
+    document.body.style.width = "";
+    document.body.style.overflow = "";
+    window.scrollTo(0, lockedScrollY);
+  }
+
   function syncNavVisibility() {
     // Stay in sync with whatever breakpoint the CSS actually uses to show
     // the hamburger button, instead of hard-coding a second breakpoint here.
