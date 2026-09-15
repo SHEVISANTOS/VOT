@@ -81,7 +81,7 @@ function initNavToggle() {
       toggle.classList.remove("is-active");
       toggle.setAttribute("aria-expanded", "false");
       toggle.setAttribute("aria-label", "Open menu");
-      document.body.style.overflow = "";
+      unlockBodyScroll();
       return;
     }
 
