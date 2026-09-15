@@ -5016,6 +5016,100 @@ details.faq-item[open] .faq-icon {
 .faq-answer p { padding-top: 1rem; }
 
 /* =========================================================
+   GALLERY (filterable)
+   ========================================================= */
+
+.gallery-filters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-top: 2rem;
+}
+
+.gallery-filter {
+  font-family: var(--font-utility);
+  font-weight: 600;
+  font-size: var(--step-1);
+  color: var(--white);
+  background: var(--ink);
+  border: none;
+  padding: 0.65rem 1.25rem;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background var(--transition), transform var(--transition);
+}
+
+.gallery-filter:hover {
+  transform: translateY(-2px);
+}
+
+.gallery-filter.is-active {
+  background: var(--acacia);
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin-top: 2.5rem;
+}
+
+.gallery-item {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: var(--radius-soft);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.gallery-item:hover {
+  transform: scale(1.03);
+  box-shadow: 0 14px 30px rgba(28, 26, 22, 0.15);
+}
+
+.gallery-item.is-hidden,
+.gallery-item.is-limited {
+  display: none;
+}
+
+.gallery-show-more {
+  display: block;
+  margin: 2rem auto 0;
+  font-family: var(--font-utility);
+  font-weight: 600;
+  font-size: var(--step-1);
+  color: var(--ink);
+  background: var(--white);
+  border: 1px solid rgba(28, 26, 22, 0.2);
+  padding: 0.75rem 2rem;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background var(--transition), border-color var(--transition);
+}
+
+.gallery-show-more:hover {
+  background: var(--savanna-dim);
+  border-color: var(--acacia);
+}
+
+.gallery-show-more[hidden] {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 520px) {
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =========================================================
    TRUST / CREDIBILITY STRIP
    ========================================================= */
 

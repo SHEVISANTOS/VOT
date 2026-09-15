@@ -1307,3 +1307,70 @@ function initPricingCalculator() {
 
 document.addEventListener("DOMContentLoaded", initPricingCalculator);
 
+/* =========================================================
+   GALLERY FILTER (with "Show more" on mobile)
+   ========================================================= */
+function initGalleryFilter() {
+  const filters = document.querySelectorAll('.gallery-filter');
+  const items = Array.from(document.querySelectorAll('.gallery-item'));
+  const showMoreBtn = document.querySelector('.gallery-show-more');
+
+  if (!filters.length || !items.length) return;
+
+  const MOBILE_LIMIT = 6;
+  const isMobile = function () {
+    return window.matchMedia('(max-width: 640px)').matches;
+  };
+
+  let currentFilter = 'all';
+  let expanded = false;
+
+  function render() {
+    const matching = items.filter(function (item) {
+      return currentFilter === 'all' || item.dataset.category === currentFilter;
+    });
+    const limit = (isMobile() && !expanded) ? MOBILE_LIMIT : matching.length;
+
+    items.forEach(function (item) {
+      const matches = currentFilter === 'all' || item.dataset.category === currentFilter;
+      item.classList.toggle('is-hidden', !matches);
+    });
+
+    matching.forEach(function (item, i) {
+      item.classList.toggle('is-limited', i >= limit);
+    });
+
+    if (showMoreBtn) {
+      const hasMore = isMobile() && !expanded && matching.length > MOBILE_LIMIT;
+      showMoreBtn.hidden = !hasMore;
+    }
+  }
+
+  filters.forEach(function (button) {
+    button.addEventListener('click', function () {
+      filters.forEach(function (b) {
+        b.classList.remove('is-active');
+        b.setAttribute('aria-selected', 'false');
+      });
+      button.classList.add('is-active');
+      button.setAttribute('aria-selected', 'true');
+      currentFilter = button.dataset.filter;
+      expanded = false;
+      render();
+    });
+  });
+
+  if (showMoreBtn) {
+    showMoreBtn.addEventListener('click', function () {
+      expanded = true;
+      render();
+    });
+  }
+
+  window.addEventListener('resize', render);
+
+  render();
+}
+
+document.addEventListener("DOMContentLoaded", initGalleryFilter);
+
