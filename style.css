@@ -4549,6 +4549,16 @@ video[preload="none"] {
   margin-bottom: 1.25rem;
 }
 
+/* 4 partner cards leave a lone card in the last row at 3-up —
+   let it fill the row instead of leaving empty slots beside it. */
+.partner-grid:has(> :nth-child(4):last-child) > :last-child {
+  grid-column: 1 / -1;
+}
+
+.partner-grid:has(> :nth-child(4):last-child) > :last-child img {
+  height: 240px;
+}
+
 /* =========================================
    ABOUT SECTION: MISSION & VISION
    ========================================= */
