@@ -6596,7 +6596,7 @@ PARTNER LOGOS — FULL COLOUR (overrides grayscale)
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 2px;
-  color: #8a9bae;
+  color: var(--ink-soft);
   text-transform: uppercase;
   margin-bottom: 8px;
 }
@@ -6604,7 +6604,7 @@ PARTNER LOGOS — FULL COLOUR (overrides grayscale)
 .duration-value {
   font-size: 18px;
   font-weight: 700;
-  color: #ffffff;
+  color: var(--ink);
   font-family: 'Courier New', monospace;
   margin-bottom: 14px;
 }
@@ -6629,19 +6629,19 @@ PARTNER LOGOS — FULL COLOUR (overrides grayscale)
 .pricing-right input[type="range"]::-webkit-slider-runnable-track {
   height: 6px;
   border-radius: 3px;
-  background: linear-gradient(to right, #d4a04a var(--range-pct), #1e3348 var(--range-pct));
+  background: linear-gradient(to right, var(--sun-ochre) var(--range-pct), rgba(28, 26, 22, 0.12) var(--range-pct));
 }
 
 .pricing-right input[type="range"]::-moz-range-track {
   height: 6px;
   border-radius: 3px;
-  background: #1e3348;
+  background: rgba(28, 26, 22, 0.12);
 }
 
 .pricing-right input[type="range"]::-moz-range-progress {
   height: 6px;
   border-radius: 3px;
-  background: #d4a04a;
+  background: var(--sun-ochre);
 }
 
 .pricing-right input[type="range"]::-webkit-slider-thumb {
@@ -6651,33 +6651,33 @@ PARTNER LOGOS — FULL COLOUR (overrides grayscale)
   height: 22px;
   margin-top: -8px;
   border-radius: 50%;
-  background: #ffffff;
-  border: 3px solid var(--gold);
+  background: var(--white);
+  border: 3px solid var(--sun-ochre);
   cursor: pointer;
-  box-shadow: 0 2px 8px rgba(212,160,74,0.55), 0 0 0 5px rgba(212,160,74,0.12);
+  box-shadow: 0 2px 8px rgba(224,148,44,0.45), 0 0 0 5px rgba(224,148,44,0.12);
   transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 
 .pricing-right input[type="range"]::-webkit-slider-thumb:hover {
   transform: scale(1.15);
-  box-shadow: 0 2px 10px rgba(212,160,74,0.65), 0 0 0 7px rgba(212,160,74,0.16);
+  box-shadow: 0 2px 10px rgba(224,148,44,0.55), 0 0 0 7px rgba(224,148,44,0.16);
 }
 
 .pricing-right input[type="range"]::-moz-range-thumb {
   width: 22px;
   height: 22px;
   border-radius: 50%;
-  background: #ffffff;
-  border: 3px solid #d4a04a;
+  background: var(--white);
+  border: 3px solid var(--sun-ochre);
   cursor: pointer;
-  box-shadow: 0 2px 8px rgba(212,160,74,0.55);
+  box-shadow: 0 2px 8px rgba(224,148,44,0.45);
 }
 
 .program-label {
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 2px;
-  color: #8a9bae;
+  color: var(--ink-soft);
   text-transform: uppercase;
   margin-bottom: 10px;
 }
@@ -6685,49 +6685,46 @@ PARTNER LOGOS — FULL COLOUR (overrides grayscale)
 .program-select {
   width: 100%;
   padding: 14px 16px;
-  background-color: #1a2d3f;
-  border: 1px solid #1e3348;
+  background-color: var(--white);
+  border: 1px solid rgba(28, 26, 22, 0.15);
   border-radius: 10px;
-  color: #c8d0d8;
+  color: var(--ink);
   font-size: 15px;
   appearance: none;
   -webkit-appearance: none;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%238a9bae' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%234A463E' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: right 16px center;
   cursor: pointer;
   margin-bottom: 28px;
-}
-
-.program-select {
   transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 .program-select:hover {
-  border-color: rgba(212,160,74,0.5);
+  border-color: rgba(224,148,44,0.5);
 }
 
 .program-select:focus {
   outline: none;
-  border-color: var(--gold);
-  box-shadow: 0 0 0 3px rgba(212,160,74,0.18);
+  border-color: var(--sun-ochre);
+  box-shadow: 0 0 0 3px rgba(224,148,44,0.18);
 }
 
 .estimated-total-box {
   position: relative;
   overflow: hidden;
-  background: linear-gradient(135deg, rgba(212,160,74,0.12), rgba(13,33,55,0.4));
-  border: 1px solid rgba(212,160,74,0.3);
+  background: linear-gradient(135deg, rgba(224,148,44,0.14), var(--white));
+  border: 1px solid rgba(224,148,44,0.3);
   border-radius: 14px;
   padding: 24px 28px;
   margin-bottom: 24px;
-  box-shadow: 0 16px 32px -16px rgba(212,160,74,0.25);
+  box-shadow: 0 16px 32px -16px rgba(224,148,44,0.3);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .estimated-total-box:hover {
   transform: translateY(-2px);
-  box-shadow: 0 20px 40px -16px rgba(212,160,74,0.35);
+  box-shadow: 0 20px 40px -16px rgba(224,148,44,0.4);
 }
 
 .estimated-total-box::after {
@@ -6738,7 +6735,7 @@ PARTNER LOGOS — FULL COLOUR (overrides grayscale)
   width: 140px;
   height: 140px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(212,160,74,0.18), transparent 70%);
+  background: radial-gradient(circle, rgba(224,148,44,0.18), transparent 70%);
   pointer-events: none;
 }
 
@@ -6746,7 +6743,7 @@ PARTNER LOGOS — FULL COLOUR (overrides grayscale)
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 2px;
-  color: #8a9bae;
+  color: var(--ink-soft);
   text-transform: uppercase;
   margin-bottom: 8px;
 }
@@ -6755,7 +6752,7 @@ PARTNER LOGOS — FULL COLOUR (overrides grayscale)
   position: relative;
   font-size: 36px;
   font-weight: 700;
-  background: linear-gradient(135deg, var(--gold-light), var(--gold) 70%);
+  background: linear-gradient(135deg, var(--sun-ochre-dark), var(--sun-ochre) 70%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -6765,7 +6762,7 @@ PARTNER LOGOS — FULL COLOUR (overrides grayscale)
 
 .estimated-total-box .et-breakdown {
   font-size: 13px;
-  color: #5a6f82;
+  color: var(--ink-soft);
   font-family: 'Courier New', monospace;
 }
 
@@ -6775,15 +6772,15 @@ PARTNER LOGOS — FULL COLOUR (overrides grayscale)
   display: block;
   width: 100%;
   padding: 18px;
-  background: linear-gradient(135deg, var(--gold-light), var(--gold));
-  color: #0f1923;
+  background: linear-gradient(135deg, var(--sun-ochre), var(--sun-ochre-dark));
+  color: var(--white);
   font-size: 17px;
   font-weight: 700;
   border: none;
   border-radius: 12px;
   cursor: pointer;
   text-align: center;
-  box-shadow: 0 12px 24px -8px rgba(212,160,74,0.45);
+  box-shadow: 0 12px 24px -8px rgba(224,148,44,0.5);
   transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
 }
 
@@ -6804,9 +6801,9 @@ PARTNER LOGOS — FULL COLOUR (overrides grayscale)
 }
 
 .pricing-right .apply-btn:hover {
-  background: linear-gradient(135deg, #f2c572, #dcaa54);
+  background: linear-gradient(135deg, #e8a63e, var(--sun-ochre-dark));
   transform: translateY(-2px);
-  box-shadow: 0 16px 30px -8px rgba(212,160,74,0.6);
+  box-shadow: 0 16px 30px -8px rgba(224,148,44,0.6);
 }
 
 @media (max-width: 900px) {
@@ -6815,7 +6812,7 @@ PARTNER LOGOS — FULL COLOUR (overrides grayscale)
   }
   .pricing-left {
     border-right: none;
-    border-bottom: 1px solid #1e3348;
+    border-bottom: 1px solid rgba(28, 26, 22, 0.08);
   }
   .pricing-heading {
     font-size: 32px;
