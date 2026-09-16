@@ -49,6 +49,30 @@
   <script src="script.js" defer></script>
 </head>
 <body class="mwanza-page">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ================= HEADER ================= -->
+  <header class="site-header">
+    <div class="wrap site-header__inner">
+      <a class="logo" href="index.html" aria-label="Volunteers of Tanzania home">
+        <img src="images/logo.avif" alt="Volunteers of Tanzania logo" width="160" height="60">
+      </a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav">
+        <span></span><span class="sr-only">Menu</span>
+      </button>
+      <nav id="primary-nav" class="nav" aria-label="Primary navigation">
+        <a href="index.html#home">Home</a>
+        <a href="index.html#story">About</a>
+        <a href="index.html#placements">Programs</a>
+        <a href="index.html#accommodation">Accommodation</a>
+        <a href="tour.html">Tours</a>
+        <a href="index.html#prices">Prices</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
     <div class="header">
         <div class="header-content">
             <h1>Activities in Mwanza</h1>
@@ -332,6 +356,143 @@
         
         <a href="tour.html" class="back-link" style="display: block; text-align: center; margin-top: 20px;">← Back to Tours</a>
     </div>
+
+    <!-- ================= REQUIREMENTS & WHAT'S INCLUDED ================= -->
+    <section class="section">
+      <div class="wrap">
+        <div class="story-layout">
+          <div class="story-main reveal">
+            <p class="eyebrow">Good to Know</p>
+            <h2>Requirements & what's included</h2>
+            <div class="section-divider" aria-hidden="true"></div>
+
+            <div style="margin-top:1.75rem;">
+              <details class="faq-item">
+                <summary class="faq-question">
+                  Can I combine volunteering with a safari or Zanzibar trip?
+                  <span class="faq-icon" aria-hidden="true">+</span>
+                </summary>
+                <div class="faq-answer">
+                  <p>Absolutely — many volunteers add on a <a href="safari-activities.html">safari</a>, a
+                    <a href="zanzibar.html">Zanzibar</a> beach trip, or these local Mwanza activities
+                    before or after their placement. Let us know your interest and our team can help you
+                    plan it.</p>
+                </div>
+              </details>
+
+              <details class="faq-item">
+                <summary class="faq-question">
+                  What about malaria and mosquito protection?
+                  <span class="faq-icon" aria-hidden="true">+</span>
+                </summary>
+                <div class="faq-answer">
+                  <p>Mwanza sits on Lake Victoria in a malaria risk area, so we recommend seeing a doctor
+                    or travel clinic about antimalarial medication before you fly. Every bed at VOT Hostel
+                    is fitted with a mosquito net, and we advise using repellent and covering up in the
+                    evenings.</p>
+                </div>
+              </details>
+
+              <details class="faq-item">
+                <summary class="faq-question">
+                  How do I get from the airport to Mwanza?
+                  <span class="faq-icon" aria-hidden="true">+</span>
+                </summary>
+                <div class="faq-answer">
+                  <p>Airport pickup is included. Simply share your flight details with us after applying
+                    and our team will meet you at Mwanza Airport (MWZ).</p>
+                </div>
+              </details>
+            </div>
+
+            <h3 style="margin-top:2.25rem;">What's included</h3>
+            <div class="features-grid" style="margin-top:1rem;">
+              <div class="feature-item"><span class="check">✓</span> Local guide for each activity</div>
+              <div class="feature-item"><span class="check">✓</span> Return transport around Mwanza</div>
+              <div class="feature-item"><span class="check">✓</span> Entry fees where listed</div>
+              <div class="feature-item"><span class="check">✓</span> Flexible booking around your placement</div>
+              <div class="feature-item"><span class="check">✓</span> WiFi & 24/7 staff support</div>
+              <div class="feature-item"><span class="check">✓</span> Trip planning help from local staff</div>
+            </div>
+          </div>
+
+          <aside class="story-side reveal">
+            <div class="story-stat-card">
+              <div class="story-stat-card__icon" aria-hidden="true">🗺️</div>
+              <div>
+                <span class="story-stat-card__num">6</span>
+                <span class="story-stat-card__label">Mwanza excursions to choose from</span>
+              </div>
+            </div>
+            <div class="story-stat-card">
+              <div class="story-stat-card__icon" aria-hidden="true">📅</div>
+              <div>
+                <span class="story-stat-card__num">Flexible</span>
+                <span class="story-stat-card__label">Add before or after your placement</span>
+              </div>
+            </div>
+            <div class="story-stat-card">
+              <div class="story-stat-card__icon" aria-hidden="true">🏠</div>
+              <div>
+                <span class="story-stat-card__num">VOT Hostel</span>
+                <span class="story-stat-card__label">Nyegezi, Mwanza</span>
+              </div>
+            </div>
+            <a class="btn story-side__cta" href="index.html#contact">Book a Mwanza Activity</a>
+            <a class="card-link" style="margin-top:0.75rem;" href="prices.html">See full pricing</a>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= REVIEWS ================= -->
+    <section class="section section--tight" style="background: var(--savanna-dim);">
+      <div class="wrap">
+        <div class="section-heading reveal">
+          <p class="eyebrow">In Their Words</p>
+          <h2>What volunteers say</h2>
+        </div>
+        <div class="programs-grid reveal">
+          <article class="program-card">
+            <div class="program-card__body">
+              <div class="testimonial-stars" style="margin-bottom:0.75rem;">★★★★★</div>
+              <p>"Protecting Lake Victoria's ecosystem alongside the local community was a profound
+                experience. The VOT hostel was a great place to relax and meet other volunteers from
+                around the world."</p>
+              <p style="margin-top:1rem;"><strong>Lucas Silva</strong> — Brazil, Environmental Conservation</p>
+            </div>
+          </article>
+          <article class="program-card">
+            <div class="program-card__body">
+              <div class="testimonial-stars" style="margin-bottom:0.75rem;">★★★★★</div>
+              <p>"The environmental conservation project around Lake Victoria was incredible. I loved
+                that VOT organized weekend safaris to the Serengeti. It was the perfect balance of work
+                and adventure!"</p>
+              <p style="margin-top:1rem;"><strong>Michael Brown</strong> — Australia, Wildlife & Environment</p>
+            </div>
+          </article>
+        </div>
+        <p style="text-align:center;margin-top:2rem;">
+          <a class="card-link" href="index.html#testimonials">Read more volunteer stories</a>
+        </p>
+      </div>
+    </section>
+
+    <!-- ================= YOU MIGHT ALSO LIKE ================= -->
+    <section class="section section--tight" style="background: var(--white);">
+      <div class="wrap">
+        <div class="section-heading reveal">
+          <h2>You might also be interested in</h2>
+        </div>
+        <div class="reveal" style="display:flex;flex-wrap:wrap;gap:0.75rem 2.25rem;">
+          <a class="card-link" href="tour.html">Tanzania Tours & Safaris</a>
+          <a class="card-link" href="zanzibar.html">Zanzibar Island Getaways</a>
+          <a class="card-link" href="safari-activities.html">Safari Activities</a>
+          <a class="card-link" href="index.html#placements">All Volunteer Programs</a>
+        </div>
+      </div>
+    </section>
+
     <!-- ================= CONTACT ================= -->
     <section class="section section--deep" id="contact">
       <div class="wrap contact-grid">
@@ -654,7 +815,7 @@
   </main>
   <footer class="site-footer">
     <div class="wrap footer-inner">
- <pre>© <span id="year"></span> Volunteers of Tanzania. All rights reserved.</pre>
+ <pre class="footer-copyright">© <span id="year"></span> Volunteers of Tanzania. All rights reserved.</pre>
       <nav class="footer-links" aria-label="Footer navigation">
      
       </nav>
