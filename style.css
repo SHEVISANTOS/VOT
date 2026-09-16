@@ -716,6 +716,17 @@ textarea:focus-visible {
   font-size: 1.5rem;
 }
 
+.story-stat-card__kicker {
+  display: block;
+  margin-bottom: 0.2rem;
+  font-family: var(--font-utility);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--granite-light);
+}
+
 .story-stat-card__num {
   display: block;
   font-family: var(--font-display);
