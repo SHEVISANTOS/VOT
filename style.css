@@ -1993,13 +1993,17 @@ textarea:focus-visible {
   border-radius: var(--radius-soft);
   padding: clamp(2rem, 5vw, 3.5rem);
   color: var(--ink);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(260px, 320px);
+  gap: clamp(2rem, 4vw, 3.5rem);
+  align-items: center;
 }
 
 .acc-shared h3 {
   font-size: var(--step2);
 }
 
-.acc-shared>p {
+.acc-shared__main > p {
   max-width: 70ch;
   margin-top: 1rem;
 }
@@ -2010,6 +2014,27 @@ textarea:focus-visible {
   gap: 1.5rem;
   margin-top: 2rem;
   max-width: 760px;
+}
+
+/* Rating badge fills the empty space beside the gallery */
+.acc-shared__badge {
+  text-align: center;
+  padding: 2rem 1.75rem;
+  background: linear-gradient(135deg, #0F3D46 0%, #1a5260 100%);
+  border-radius: 16px;
+  color: var(--white);
+  box-shadow: 0 16px 36px rgba(28, 26, 22, 0.22);
+}
+
+@media (max-width: 900px) {
+  .acc-shared {
+    grid-template-columns: 1fr;
+  }
+
+  .acc-shared__badge {
+    max-width: 320px;
+    margin-inline: auto;
+  }
 }
 
 .acc-shared__gallery img {
