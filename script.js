@@ -881,8 +881,8 @@ function sendEmail(e) {
   };
 
   /* =========================================================
-     PLACEMENTS "SHOW MORE" (mobile only — CSS hides the button
-     and re-shows cards above the 768px breakpoint)
+     PLACEMENTS "SHOW MORE" (reveals cards in batches of 4 on
+     every screen size)
      ========================================================= */
   const initPlacementsShowMore = () => {
     const grid = document.getElementById('placement-grid');
@@ -895,9 +895,10 @@ function sendEmail(e) {
 
     const render = () => {
       cards.forEach((card, i) => {
-        card.classList.toggle('is-hidden-mobile', i >= visibleCount);
+        card.classList.toggle('is-hidden', i >= visibleCount);
       });
-      button.hidden = visibleCount >= cards.length;
+      // Inline style takes priority over any class-based display rule.
+      button.style.display = visibleCount >= cards.length ? 'none' : '';
     };
 
     button.addEventListener('click', () => {
