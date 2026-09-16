@@ -9,8 +9,6 @@ document.addEventListener("DOMContentLoaded", () => {
   initScrollReveal();
   initTestimonialCarousel();
   initContactForm();
-  initHeaderScroll();
-  initActiveNav();
   initStatCounters();
 });
 
@@ -449,43 +447,6 @@ if (backLink) {
     });
 }
 
-function initHeaderScroll() {
-  const header = document.querySelector('.site-header');
-  if (!header) return;
-
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 20) {
-      header.classList.add('is-scrolled');
-    } else {
-      header.classList.remove('is-scrolled');
-    }
-  });
-}
-
-function initActiveNav() {
-  const sections = document.querySelectorAll('section[id]');
-  const navLinks = document.querySelectorAll('.nav a[href^="#"]');
-
-  if (!sections.length || !navLinks.length) return;
-
-  window.addEventListener('scroll', () => {
-    let current = '';
-    sections.forEach(section => {
-      const sectionTop = section.offsetTop;
-      const sectionHeight = section.clientHeight;
-      if (scrollY >= (sectionTop - 150)) {
-        current = section.getAttribute('id');
-      }
-    });
-
-    navLinks.forEach(link => {
-      link.classList.remove('is-active');
-      if (current && link.getAttribute('href').substring(1) === current) {
-        link.classList.add('is-active');
-      }
-    });
-  });
-}
 
 function initStatCounters() {
   const stats = document.querySelectorAll('.stat dt');
@@ -663,16 +624,41 @@ function sendEmail(e) {
   const initHeaderScroll = () => {
     if (!DOM.header) return;
 
-    const handleScroll = throttle(() => {
-      if (window.scrollY > 100) {
-        DOM.header.classList.add('is-scrolled');
-      } else {
-        DOM.header.classList.remove('is-scrolled');
-      }
-    }, 100);
+    const SCROLLED_AT = 20;   // background/shadow kick in
+    const GROW_AT = 30;       // only allow the "grow" state once scrolled past this
+    const DIRECTION_DELTA = 4; // ignore tiny sub-pixel scroll jitter
 
-    window.addEventListener('scroll', handleScroll);
-    handleScroll(); // Check on load
+    let lastY = window.scrollY;
+    let ticking = false;
+
+    const update = () => {
+      const y = window.scrollY;
+      const delta = y - lastY;
+
+      DOM.header.classList.toggle('is-scrolled', y > SCROLLED_AT);
+
+      if (Math.abs(delta) > DIRECTION_DELTA) {
+        if (delta < 0 && y > GROW_AT) {
+          // scrolling up, past the top — grow the bar
+          DOM.header.classList.add('is-grown');
+        } else {
+          // scrolling down, or back near the top — shrink to base size
+          DOM.header.classList.remove('is-grown');
+        }
+        lastY = y;
+      }
+
+      ticking = false;
+    };
+
+    window.addEventListener('scroll', () => {
+      if (!ticking) {
+        requestAnimationFrame(update);
+        ticking = true;
+      }
+    }, { passive: true });
+
+    update(); // Check on load
   };
 
   /* =========================================================

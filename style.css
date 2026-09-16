@@ -40,6 +40,7 @@
 
   /* ── Navbar ── */
   --nav-height: 84px;
+  --nav-height-grown: 140px;
   --nav-height-mobile: 64px;
 
   /* ── Layout ── */
@@ -358,13 +359,20 @@ textarea:focus-visible {
   backdrop-filter: blur(16px) saturate(1.8);
   -webkit-backdrop-filter: blur(16px) saturate(1.8);
   border-bottom: 1px solid rgba(28, 26, 22, 0.07);
-  /* Only background/shadow animate — never a size or position property. */
-  transition: box-shadow var(--transition), background var(--transition);
+  /* height only ever changes on the deliberate is-grown toggle (scroll
+     direction, throttled via rAF) — never on hover/active, so it can't
+     shake the way the old scroll-linked logo-shrink used to. */
+  transition: box-shadow var(--transition), background var(--transition), height 0.35s ease;
 }
 
 .site-header.is-scrolled {
   background: rgba(242, 235, 221, 0.98);
   box-shadow: 0 2px 20px rgba(28,26,22,0.07);
+}
+
+/* Scrolling up past the top reveals a slightly larger bar, capped here. */
+.site-header.is-grown {
+  height: var(--nav-height-grown);
 }
 
 .site-header__inner {
@@ -381,17 +389,40 @@ textarea:focus-visible {
   height: 100%;
 }
 
-/* Fixed size at all times — no scroll-triggered shrink, so the header
-   never has to reflow when .is-scrolled toggles. */
 .logo img {
   height: 56px;
   width: auto;
   border-radius: 40%;
+  transition: height 0.35s ease;
+  animation: logo-spin 16s linear infinite;
+  will-change: transform;
+}
+
+.site-header.is-grown .logo img {
+  height: 96px;
+}
+
+.site-header.is-grown .nav {
+  font-size: calc(var(--step-1) * 1.05);
+}
+
+@keyframes logo-spin {
+  to { transform: rotate(360deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .logo img {
+    animation: none;
+  }
 }
 
 @media (max-width: 768px) {
   .logo img {
     height: 40px;
+  }
+
+  .site-header.is-grown .logo img {
+    height: 48px;
   }
 }
 
