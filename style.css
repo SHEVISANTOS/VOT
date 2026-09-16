@@ -1460,6 +1460,14 @@ textarea:focus-visible {
   font-size: var(--step-1);
 }
 
+.footer-copyright {
+  grid-column: 1 / -1;
+  text-align: center;
+  font-family: inherit;
+  white-space: normal;
+  margin: 0;
+}
+
 @media (max-width: 900px) {
   .footer-inner {
     grid-template-columns: 1fr 1fr;
@@ -1866,7 +1874,7 @@ textarea:focus-visible {
 }
 
 .acc-intro__panel {
-  background: #E4572E;
+  background: var(--sun-ochre);
   color: var(--ink);
   padding: clamp(2rem, 5vw, 3.5rem);
 }
@@ -1966,17 +1974,17 @@ textarea:focus-visible {
 }
 
 .acc-bedrooms__col--dark {
-  background: #101010;
+  background: var(--lake-deep);
   color: var(--savanna-dim);
 }
 
 .acc-bedrooms__col--dark h3 {
-  color: #E4572E;
+  color: var(--sun-ochre);
 }
 
 .acc-bedrooms__col--blue {
-  background: #7EB2D9;
-  color: var(--ink);
+  background: var(--acacia);
+  color: var(--white);
 }
 
 .acc-bedrooms__col--blue h3::before {
@@ -1984,7 +1992,7 @@ textarea:focus-visible {
   display: block;
   width: 56px;
   height: 4px;
-  background: #E4572E;
+  background: var(--sun-ochre);
   margin-bottom: 1rem;
 }
 
@@ -6383,7 +6391,7 @@ PARTNER LOGOS — FULL COLOUR (overrides grayscale)
   border: 1px solid rgba(28, 26, 22, 0.08);
   border-radius: 20px;
   overflow: hidden;
-  box-shadow: 0 30px 60px -24px rgba(28, 26, 22, 0.22);
+  box-shadow: 0 16px 32px -18px rgba(28, 26, 22, 0.2);
 }
 
 /* thin accent bar across the top of the card, same device as .story-main/#placements */
