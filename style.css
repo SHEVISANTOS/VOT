@@ -1395,6 +1395,118 @@ textarea:focus-visible {
   box-shadow: 0 18px 45px rgba(4, 22, 27, 0.2);
 }
 
+/* =========================================================
+   APPLY MODAL — pops the contact form up over the page
+   ========================================================= */
+.apply-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  display: none;
+  align-items: flex-start;
+  justify-content: center;
+  padding: clamp(1rem, 4vw, 3rem) 1rem;
+  overflow-y: auto;
+}
+
+.apply-modal.is-open {
+  display: flex;
+}
+
+.apply-modal__backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 20, 18, 0.6);
+  backdrop-filter: blur(2px);
+}
+
+.apply-modal__dialog {
+  position: relative;
+  width: 100%;
+  max-width: 560px;
+  margin: auto;
+  animation: apply-modal-in 220ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes apply-modal-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.apply-modal__dialog .form-card {
+  box-shadow: var(--shadow-xl);
+  padding-top: clamp(2.5rem, 5vw, 3.25rem);
+}
+
+.apply-modal__close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 40px;
+  height: 40px;
+  min-height: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: none;
+  background: var(--white);
+  color: var(--ink);
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+  box-shadow: var(--shadow-sm);
+  transition: background var(--transition), transform var(--transition);
+  z-index: 1;
+}
+
+.apply-modal__close:hover {
+  background: var(--savanna-dim);
+  transform: rotate(90deg);
+}
+
+.apply-modal__cancel {
+  display: block;
+  width: 100%;
+  margin-top: 0.75rem;
+  text-align: center;
+  background: transparent;
+  border: 1.5px solid rgba(28, 26, 22, 0.15);
+  color: var(--ink-soft);
+}
+
+.apply-modal__cancel:hover {
+  background: rgba(28, 26, 22, 0.05);
+  border-color: rgba(28, 26, 22, 0.25);
+}
+
+body.modal-open {
+  overflow: hidden;
+}
+
+@media (max-width: 640px) {
+  .apply-modal {
+    padding: 0;
+    align-items: flex-end;
+  }
+
+  .apply-modal__dialog {
+    max-width: 100%;
+  }
+
+  .apply-modal__dialog .form-card {
+    border-radius: var(--radius-soft) var(--radius-soft) 0 0;
+    max-height: 92vh;
+    overflow-y: auto;
+  }
+}
+
 .field {
   margin-bottom: 1.25rem;
 }

@@ -1322,3 +1322,73 @@ function initPlacementApplyPrefill() {
 
 document.addEventListener("DOMContentLoaded", initPlacementApplyPrefill);
 
+/* =========================================================
+   APPLY MODAL — pop the contact form up over the page instead
+   of scrolling to it. Cancel/close returns it to the page so
+   visitors can keep browsing and apply later.
+   ========================================================= */
+function initApplyModal() {
+  const contactSection = document.getElementById('contact');
+  const formCard = contactSection ? contactSection.querySelector('.form-card') : null;
+  if (!formCard) return;
+
+  const originalParent = formCard.parentNode;
+  const originalNext = formCard.nextSibling;
+
+  const overlay = document.createElement('div');
+  overlay.className = 'apply-modal';
+  overlay.innerHTML =
+    '<div class="apply-modal__backdrop"></div>' +
+    '<div class="apply-modal__dialog" role="dialog" aria-modal="true" aria-label="Apply to volunteer">' +
+    '<button type="button" class="apply-modal__close" aria-label="Close">&times;</button>' +
+    '<div class="apply-modal__body"></div>' +
+    '<button type="button" class="apply-modal__cancel">Cancel</button>' +
+    '</div>';
+  document.body.appendChild(overlay);
+
+  const dialogBody = overlay.querySelector('.apply-modal__body');
+  const closeBtn = overlay.querySelector('.apply-modal__close');
+  const cancelBtn = overlay.querySelector('.apply-modal__cancel');
+  const backdrop = overlay.querySelector('.apply-modal__backdrop');
+
+  let isOpen = false;
+
+  function openModal() {
+    if (isOpen) return;
+    dialogBody.appendChild(formCard);
+    overlay.classList.add('is-open');
+    document.body.classList.add('modal-open');
+    isOpen = true;
+    const firstField = formCard.querySelector('input, select, textarea');
+    if (firstField) firstField.focus({ preventScroll: true });
+  }
+
+  function closeModal() {
+    if (!isOpen) return;
+    originalParent.insertBefore(formCard, originalNext);
+    overlay.classList.remove('is-open');
+    document.body.classList.remove('modal-open');
+    isOpen = false;
+  }
+
+  document.querySelectorAll('a[href="#contact"]').forEach((link) => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      openModal();
+    });
+  });
+
+  closeBtn.addEventListener('click', closeModal);
+  cancelBtn.addEventListener('click', closeModal);
+  backdrop.addEventListener('click', closeModal);
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeModal();
+  });
+
+  if (window.location.hash === '#contact') {
+    openModal();
+  }
+}
+
+document.addEventListener("DOMContentLoaded", initApplyModal);
+

@@ -1,0 +1,46 @@
+<!DOCTYPE html><html><body>
+<iframe id="f" src="index.html" style="width:1200px;height:900px;"></iframe>
+<div id="result">not-run</div>
+<script>
+  const frame = document.getElementById('f');
+  frame.addEventListener('load', () => {
+    setTimeout(() => {
+      try {
+        const doc = frame.contentDocument;
+        const win = frame.contentWindow;
+        const applyNow = Array.from(doc.querySelectorAll('a[href="#contact"]'))
+          .find(a => a.textContent.trim() === 'Apply Now' && a.closest('.nav'));
+        if (!applyNow) throw new Error('Apply Now nav link not found');
+        applyNow.click();
+
+        setTimeout(() => {
+          const overlay = doc.querySelector('.apply-modal');
+          const isOpenAfterClick = overlay.classList.contains('is-open');
+          const formInModal = overlay.querySelector('#contact-form') !== null;
+          const bodyLocked = doc.body.classList.contains('modal-open');
+
+          // now cancel
+          const cancelBtn = overlay.querySelector('.apply-modal__cancel');
+          cancelBtn.click();
+
+          setTimeout(() => {
+            const isOpenAfterCancel = overlay.classList.contains('is-open');
+            const formBackInSection = doc.querySelector('#contact .form-card #contact-form') !== null;
+            const bodyUnlocked = !doc.body.classList.contains('modal-open');
+
+            document.getElementById('result').textContent =
+              'openAfterClick=' + isOpenAfterClick +
+              '|formInModal=' + formInModal +
+              '|bodyLocked=' + bodyLocked +
+              '|openAfterCancel=' + isOpenAfterCancel +
+              '|formBackInSection=' + formBackInSection +
+              '|bodyUnlocked=' + bodyUnlocked;
+          }, 300);
+        }, 300);
+      } catch (e) {
+        document.getElementById('result').textContent = 'ERR:' + e.message;
+      }
+    }, 700);
+  });
+</script>
+</body></html>
