@@ -4494,6 +4494,10 @@ video[preload="none"] {
   height: 240px;
 }
 
+.help-grid:has(> :nth-child(7):last-child) > :last-child .help-card__icon img {
+  object-fit: contain;
+}
+
 /* Partner Cards (Community page — organizations volunteers work with) */
 .partner-grid {
   display: grid;
