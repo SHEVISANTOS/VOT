@@ -1220,6 +1220,17 @@ textarea:focus-visible {
 
 .testimonials .section-heading {
   margin-inline: auto;
+  max-width: none;
+}
+
+.testimonials .section-heading h2 {
+  white-space: nowrap;
+}
+
+@media (max-width: 640px) {
+  .testimonials .section-heading h2 {
+    white-space: normal;
+  }
 }
 
 .testimonial-track {
@@ -1998,6 +2009,7 @@ textarea:focus-visible {
   grid-template-columns: 1fr 1fr;
   gap: 1.5rem;
   margin-top: 2rem;
+  max-width: 760px;
 }
 
 .acc-shared__gallery img {
@@ -4663,7 +4675,7 @@ video[preload="none"] {
   align-items: center;
   justify-content: center;
   gap: 1.5rem;
-  max-width: 900px;
+  max-width: none;
   margin: 0 auto;
 }
 
