@@ -1,0 +1,27 @@
+<!DOCTYPE html><html><body>
+<iframe id="f" src="index.html" style="width:1200px;height:900px;"></iframe>
+<div id="result">not-run</div>
+<script>
+  const frame = document.getElementById('f');
+  frame.addEventListener('load', () => {
+    setTimeout(() => {
+      try {
+        const doc = frame.contentDocument;
+        const select = doc.getElementById('program');
+        const optionCount = select.options.length;
+        const btn = Array.from(doc.querySelectorAll('.placement-card__body a[href="#contact"]'))
+          .find(a => a.textContent.trim() === 'Apply for wildlife conservation');
+        btn.click();
+        setTimeout(() => {
+          document.getElementById('result').textContent =
+            'optionsBefore=' + optionCount +
+            '|optionsAfter=' + select.options.length +
+            '|selected=' + select.value;
+        }, 300);
+      } catch (e) {
+        document.getElementById('result').textContent = 'ERR:' + e.message;
+      }
+    }, 500);
+  });
+</script>
+</body></html>
