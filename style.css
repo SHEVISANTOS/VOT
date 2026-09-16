@@ -1988,24 +1988,58 @@ textarea:focus-visible {
 }
 
 .acc-shared {
+  position: relative;
+  overflow: hidden;
   margin-top: 3rem;
-  background: #F0932B;
+  background:
+    radial-gradient(ellipse 520px 420px at 105% -10%, rgba(255, 255, 255, 0.22), transparent 65%),
+    linear-gradient(135deg, #F2A13E 0%, #E0842A 55%, #C56A18 100%);
   border-radius: var(--radius-soft);
   padding: clamp(2rem, 5vw, 3.5rem);
   color: var(--ink);
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(260px, 320px);
-  gap: clamp(2rem, 4vw, 3.5rem);
+  grid-template-columns: fit-content(760px) minmax(220px, 1fr) minmax(240px, 300px);
+  gap: clamp(2rem, 4vw, 3rem);
   align-items: center;
+}
+
+/* Subtle decorative ring, purely for depth */
+.acc-shared::after {
+  content: "";
+  position: absolute;
+  top: -80px;
+  right: -80px;
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  pointer-events: none;
 }
 
 .acc-shared h3 {
   font-size: var(--step2);
+  position: relative;
+  display: inline-block;
+  padding-bottom: 0.6rem;
+}
+
+.acc-shared h3::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 56px;
+  height: 4px;
+  border-radius: 999px;
+  background: var(--ink);
+  opacity: 0.85;
 }
 
 .acc-shared__main > p {
-  max-width: 70ch;
-  margin-top: 1rem;
+  max-width: 60ch;
+  margin-top: 1.1rem;
+  color: rgba(28, 26, 22, 0.85);
+  line-height: 1.7;
 }
 
 .acc-shared__gallery {
@@ -2016,33 +2050,126 @@ textarea:focus-visible {
   max-width: 760px;
 }
 
-/* Rating badge fills the empty space beside the gallery */
+.acc-shared__gallery img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 16px;
+  border: 3px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 14px 32px rgba(28, 26, 22, 0.25);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.acc-shared__gallery img:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(28, 26, 22, 0.3);
+}
+
+/* Amenities — fills the gap between the gallery and the rating badge */
+.acc-shared__amenities {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.acc-shared__amenities li {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.85rem 1.4rem;
+  background: rgba(255, 255, 255, 0.28);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 999px;
+  font-family: var(--font-utility);
+  font-size: var(--step-1);
+  font-weight: 600;
+  color: var(--ink);
+  backdrop-filter: blur(6px);
+  white-space: nowrap;
+  transition: background var(--transition), transform var(--transition);
+}
+
+.acc-shared__amenities li:hover {
+  background: rgba(255, 255, 255, 0.4);
+  transform: translateX(4px);
+}
+
+.acc-shared__amenities-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: var(--white);
+  font-size: 0.95rem;
+  box-shadow: 0 4px 10px rgba(28, 26, 22, 0.15);
+}
+
+/* Rating badge fills the empty space to the right */
 .acc-shared__badge {
   text-align: center;
-  padding: 2rem 1.75rem;
-  background: linear-gradient(135deg, #0F3D46 0%, #1a5260 100%);
-  border-radius: 16px;
+  padding: 2.25rem 1.75rem;
+  background: linear-gradient(160deg, #124751 0%, #0F3D46 55%, #082830 100%);
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
   color: var(--white);
-  box-shadow: 0 16px 36px rgba(28, 26, 22, 0.22);
+  box-shadow: 0 20px 44px rgba(8, 40, 48, 0.35);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.acc-shared__badge:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 26px 52px rgba(8, 40, 48, 0.4);
+}
+
+@media (max-width: 1100px) {
+  .acc-shared {
+    grid-template-columns: minmax(0, 1fr) minmax(240px, 300px);
+  }
+
+  .acc-shared__amenities {
+    grid-column: 1 / -1;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 }
 
 @media (max-width: 900px) {
   .acc-shared {
     grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .acc-shared h3 {
+    padding-bottom: 0.6rem;
+  }
+
+  .acc-shared h3::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .acc-shared__main > p {
+    margin-inline: auto;
+  }
+
+  .acc-shared__gallery {
+    margin-inline: auto;
+  }
+
+  .acc-shared__amenities {
+    align-items: center;
   }
 
   .acc-shared__badge {
     max-width: 320px;
     margin-inline: auto;
   }
-}
-
-.acc-shared__gallery img {
-  width: 100%;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
-  border-radius: 16px;
-  box-shadow: 0 12px 28px rgba(28, 26, 22, 0.2);
 }
 
 @media (max-width: 900px) {
