@@ -528,7 +528,7 @@ function sendEmail(e) {
     revealElements: document.querySelectorAll('.reveal'),
     yearSpan: document.getElementById('year'),
     header: document.querySelector('.site-header'),
-    smoothLinks: document.querySelectorAll('a[href^="#"]')
+    smoothLinks: document.querySelectorAll('a[href^="#"]:not([href="#contact"])')
   };
 
   // Utility: Debounce function for performance
