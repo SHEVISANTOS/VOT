@@ -838,6 +838,7 @@ textarea:focus-visible {
 .placement-card__pill--engineering   { background: var(--primary-dark); }
 .placement-card__pill--tourism       { background: var(--lake-deep); }
 .placement-card__pill--wildlife      { background: var(--sun-ochre); }
+.placement-card__pill--excursion     { background: var(--acacia); }
 
 .placement-card .btn {
   margin-top: 0.5rem;
