@@ -6441,7 +6441,7 @@ PARTNER LOGOS — FULL COLOUR (overrides grayscale)
 }
 
 .rate-table .rate-row {
-  border-bottom: 1px solid #1e3348;
+  border-bottom: 1px solid rgba(28, 26, 22, 0.08);
   transition: background-color 0.2s ease;
 }
 
@@ -6450,7 +6450,7 @@ PARTNER LOGOS — FULL COLOUR (overrides grayscale)
 }
 
 .rate-table tbody .rate-row:hover {
-  background-color: rgba(255,255,255,0.02);
+  background-color: rgba(28, 26, 22, 0.03);
 }
 
 .rate-table .duration,
@@ -6462,21 +6462,21 @@ PARTNER LOGOS — FULL COLOUR (overrides grayscale)
   text-align: left;
   font-size: 16px;
   font-weight: 400;
-  color: #c8d0d8;
+  color: var(--ink);
 }
 
 .rate-table .price {
   text-align: right;
   font-size: 20px;
   font-weight: 700;
-  color: #d4a04a;
+  color: var(--sun-ochre-dark);
   font-family: 'Courier New', monospace;
 }
 
 .rate-table .rate-row--best {
-  background: linear-gradient(90deg, rgba(212,160,74,0.16), rgba(212,160,74,0.02));
-  border-bottom: 1px solid rgba(212,160,74,0.3);
-  box-shadow: inset 3px 0 0 var(--gold);
+  background: linear-gradient(90deg, rgba(224,148,44,0.16), rgba(224,148,44,0.02));
+  border-bottom: 1px solid rgba(224,148,44,0.3);
+  box-shadow: inset 3px 0 0 var(--sun-ochre);
 }
 
 .rate-table .rate-row--best .duration {
@@ -6485,7 +6485,7 @@ PARTNER LOGOS — FULL COLOUR (overrides grayscale)
 
 .rate-table .rate-row--best .price {
   border-radius: 0 10px 10px 0;
-  color: #eabb6c;
+  color: var(--sun-ochre-dark);
 }
 
 .best-value-badge {
@@ -6493,15 +6493,15 @@ PARTNER LOGOS — FULL COLOUR (overrides grayscale)
   margin-left: 10px;
   padding: 3px 10px;
   border-radius: 999px;
-  background: linear-gradient(135deg, var(--gold-light), var(--gold) 60%, var(--gold-dark));
-  color: #0f1923;
+  background: linear-gradient(135deg, var(--sun-ochre), var(--sun-ochre-dark));
+  color: var(--white);
   font-family: var(--font-utility);
   font-size: 11px;
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.04em;
   vertical-align: middle;
-  box-shadow: 0 2px 8px rgba(212,160,74,0.4);
+  box-shadow: 0 2px 8px rgba(224,148,44,0.4);
 }
 
 .rate-table thead .duration,
@@ -6511,16 +6511,16 @@ PARTNER LOGOS — FULL COLOUR (overrides grayscale)
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  color: #8a9bae;
+  color: var(--ink-soft);
   padding-bottom: 10px;
 }
 
 .no-fees-box {
-  border: 1px solid rgba(76,175,80,0.4);
+  border: 1px solid rgba(92,122,92,0.4);
   border-radius: 14px;
   padding: 22px 24px;
   margin-bottom: 32px;
-  background: linear-gradient(135deg, rgba(45,106,79,0.16), rgba(45,106,79,0.03));
+  background: linear-gradient(135deg, rgba(92,122,92,0.14), rgba(92,122,92,0.03));
 }
 
 .no-fees-box .check-title {
@@ -6529,7 +6529,7 @@ PARTNER LOGOS — FULL COLOUR (overrides grayscale)
   gap: 12px;
   font-size: 16px;
   font-weight: 700;
-  color: #ffffff;
+  color: var(--ink);
   margin-bottom: 10px;
 }
 
@@ -6541,16 +6541,16 @@ PARTNER LOGOS — FULL COLOUR (overrides grayscale)
   width: 24px;
   height: 24px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #6fcf73, var(--emerald));
-  color: #0f1923;
+  background: linear-gradient(135deg, #7c9c7c, var(--acacia));
+  color: var(--white);
   font-size: 13px;
   font-weight: 900;
-  box-shadow: 0 0 0 4px rgba(76,175,80,0.15), 0 4px 10px rgba(76,175,80,0.35);
+  box-shadow: 0 0 0 4px rgba(92,122,92,0.15), 0 4px 10px rgba(92,122,92,0.3);
 }
 
 .no-fees-box p {
   font-size: 14px;
-  color: #8a9bae;
+  color: var(--ink-soft);
   line-height: 1.6;
   padding-left: 36px;
   margin: 0;
@@ -6568,7 +6568,7 @@ PARTNER LOGOS — FULL COLOUR (overrides grayscale)
   align-items: center;
   gap: 12px;
   font-size: 15px;
-  color: #c8d0d8;
+  color: var(--ink);
 }
 
 .feature-item .check {
@@ -6579,15 +6579,15 @@ PARTNER LOGOS — FULL COLOUR (overrides grayscale)
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  background: rgba(76,175,80,0.16);
-  color: #4caf50;
+  background: rgba(92,122,92,0.16);
+  color: var(--acacia);
   font-size: 12px;
   font-weight: 900;
 }
 
 .disclaimer {
   font-size: 13px;
-  color: #5a6f82;
+  color: var(--ink-soft);
   line-height: 1.7;
 }
 
