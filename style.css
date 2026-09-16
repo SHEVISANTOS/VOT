@@ -38,6 +38,10 @@
   --step3:  clamp(2.5rem, 2rem + 2vw, 4rem);
   --step4:  clamp(2.5rem, 2.4rem + 3.5vw, 5.5rem);
 
+  /* ── Navbar ── */
+  --nav-height: 84px;
+  --nav-height-mobile: 64px;
+
   /* ── Layout ── */
   --content-width: 1180px;
   --gutter:        clamp(1.25rem, 4vw, 2.5rem);
@@ -348,11 +352,13 @@ textarea:focus-visible {
 .site-header {
   position: sticky;
   top: 0;
-  z-index: 100;
+  z-index: 1000;
+  height: var(--nav-height);
   background: rgba(242, 235, 221, 0.94);
   backdrop-filter: blur(16px) saturate(1.8);
   -webkit-backdrop-filter: blur(16px) saturate(1.8);
   border-bottom: 1px solid rgba(28, 26, 22, 0.07);
+  /* Only background/shadow animate — never a size or position property. */
   transition: box-shadow var(--transition), background var(--transition);
 }
 
@@ -362,63 +368,78 @@ textarea:focus-visible {
 }
 
 .site-header__inner {
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  padding-block: 0.75rem;
 }
 
 .logo {
   display: inline-flex;
   align-items: center;
+  height: 100%;
 }
 
+/* Fixed size at all times — no scroll-triggered shrink, so the header
+   never has to reflow when .is-scrolled toggles. */
 .logo img {
-  height: 130px;
+  height: 56px;
   width: auto;
   border-radius: 40%;
-  animation: logo-sway 5s ease-in-out infinite;
 }
 
 @media (max-width: 768px) {
   .logo img {
-    height: 50px;
-  }
-}
-
-@keyframes logo-sway {
-
-  0%,
-  100% {
-    transform: rotate(-8deg);
-  }
-
-  50% {
-    transform: rotate(8deg);
+    height: 40px;
   }
 }
 
 .nav {
   display: flex;
   align-items: center;
+  height: 100%;
   gap: clamp(1rem, 2vw, 2rem);
   font-family: var(--font-utility);
   font-size: var(--step-1);
   font-weight: 600;
 }
 
+/* Padding is constant across every state (rest/hover/active) — it never
+   changes, so it can never shift surrounding layout. The underline lives
+   entirely in an absolutely-positioned ::after, outside document flow. */
 .nav a {
-  padding: 0.45rem 0.2rem;
-  border-bottom: 2px solid transparent;
-  transition: border-color var(--transition), color var(--transition);
   position: relative;
+  display: inline-block;
+  padding: 0.45rem 0.2rem;
+  color: var(--ink);
+  text-decoration: none;
+  transition: color var(--transition);
+}
+
+.nav a:not(.btn)::after {
+  content: "";
+  position: absolute;
+  left: 0.2rem;
+  right: 0.2rem;
+  bottom: 0.15rem;
+  height: 2px;
+  background: var(--sun-ochre);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.25s ease;
+  will-change: transform;
+  pointer-events: none;
 }
 
 .nav a:hover,
 .nav a.is-active {
-  border-color: var(--sun-ochre);
   color: var(--lake-deep);
+}
+
+.nav a:not(.btn):hover::after,
+.nav a:not(.btn).is-active::after {
+  transform: scaleX(1);
 }
 
 .nav-toggle {
@@ -5841,23 +5862,10 @@ summary {
   }
 }
 
-/* ===== Header: always sticky on desktop ===== */
-.site-header {
-  position: sticky !important;
-  top: 0 !important;
-  left: 0;
-  right: 0;
-  z-index: 1000;
-}
-
 /* overflow-x: hidden breaks position:sticky — clip doesn't */
 html, body {
   overflow-x: clip;
 }
-
-/* optional: slim the header down once you scroll (nicer sticky bar) */
-.site-header .logo img { transition: height 0.3s ease; }
-.site-header.is-scrolled .logo img { height: 64px; }
 
 /* ===== Hero text polish ===== */
 .hero h1,
