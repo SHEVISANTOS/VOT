@@ -4483,6 +4483,16 @@ video[preload="none"] {
   line-height: 1.6;
 }
 
+/* "Ways volunteers can help" has 7 cards — let the trailing card
+   span the full row instead of leaving empty slots beside it. */
+.help-grid:has(> :nth-child(7):last-child) > :last-child {
+  grid-column: 1 / -1;
+}
+
+.help-grid:has(> :nth-child(7):last-child) > :last-child .help-card__icon {
+  height: 240px;
+}
+
 /* Partner Cards (Community page — organizations volunteers work with) */
 .partner-grid {
   display: grid;
@@ -6069,7 +6079,6 @@ body {
 }
 
 /* Prevent intrinsic content from forcing grid/flex containers wider. */
-.wrap,
 main,
 section,
 article,
