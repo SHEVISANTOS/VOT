@@ -5136,7 +5136,7 @@ video[preload="none"] {
   display: flex;
   align-items: center;
   gap: 1rem;
-  max-width: 900px;
+  max-width: none;
   margin: 0 auto;
 }
 
