@@ -1289,3 +1289,36 @@ function initGalleryFilter() {
 
 document.addEventListener("DOMContentLoaded", initGalleryFilter);
 
+/* =========================================================
+   PLACEMENT CARDS — pre-fill the contact form's "Program of
+   interest" field with the program the visitor clicked "Apply" on
+   ========================================================= */
+function initPlacementApplyPrefill() {
+  const programSelect = document.getElementById('program');
+  const applyButtons = document.querySelectorAll('.placement-card__body a[href="#contact"]');
+  if (!programSelect || !applyButtons.length) return;
+
+  applyButtons.forEach((button) => {
+    button.addEventListener('click', () => {
+      const card = button.closest('.placement-card');
+      const title = card ? card.querySelector('h3').textContent.trim() : '';
+      if (!title) return;
+
+      let option = Array.from(programSelect.options).find(
+        (o) => o.value === title || o.textContent.trim() === title
+      );
+
+      if (!option) {
+        option = document.createElement('option');
+        option.value = title;
+        option.textContent = title;
+        programSelect.appendChild(option);
+      }
+
+      programSelect.value = title;
+    });
+  });
+}
+
+document.addEventListener("DOMContentLoaded", initPlacementApplyPrefill);
+
