@@ -394,7 +394,7 @@ textarea:focus-visible {
   width: auto;
   border-radius: 40%;
   transition: height 0.35s ease;
-  animation: logo-spin 16s linear infinite;
+  animation: logo-spin 4s ease-in-out infinite;
   will-change: transform;
 }
 
@@ -407,7 +407,8 @@ textarea:focus-visible {
 }
 
 @keyframes logo-spin {
-  to { transform: rotate(360deg); }
+  0%, 100% { transform: rotate(-12deg); }
+  50%      { transform: rotate(12deg); }
 }
 
 @media (prefers-reduced-motion: reduce) {
