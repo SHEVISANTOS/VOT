@@ -4965,12 +4965,11 @@ video[preload="none"] {
 }
 
 /* ================= ACCOMMODATION QUALITY & REVIEWS ================= */
+/* Plain wrapper — .guest-reviews-slider inside is the actual visible
+   card, so this no longer carries its own padding/background/shadow
+   (that used to double up as a card-inside-a-card). */
 .accommodation-quality {
   margin-top: 3rem;
-  padding: 2.5rem;
-  background: linear-gradient(135deg, #f8faf9 0%, #ffffff 100%);
-  border-radius: 16px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
 }
 
 /* Quality Badge Section */
@@ -5110,7 +5109,6 @@ video[preload="none"] {
 
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
-  .accommodation-quality { padding: 1.5rem; }
   .quality-badge { padding: 1.5rem; }
   .rating-stars { font-size: 2rem; letter-spacing: 6px; }
   .rating-score { font-size: 2.5rem; }
@@ -5809,7 +5807,7 @@ FINAL OVERRIDES — paste at the VERY END of style.css
 .testimonial-track    { margin-top: 1.5rem; min-height: 220px; }
 
 /* ===== Tighten Accommodation reviews area ===== */
-.accommodation-quality   { margin-top: 1.5rem; padding: 1.5rem; }
+.accommodation-quality   { margin-top: 1.5rem; }
 .quality-badge           { padding: 1.25rem; margin-bottom: 1.5rem; }
 .guest-reviews-slider    { margin-top: 1.5rem; padding: 1.5rem; }
 .guest-reviews-slider h3 { margin-bottom: 1.25rem; }
@@ -6139,8 +6137,7 @@ summary {
   }
 
   .review-card,
-  .guest-reviews-slider,
-  .accommodation-quality {
+  .guest-reviews-slider {
     padding: 1rem;
   }
 }
