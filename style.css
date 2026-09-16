@@ -265,6 +265,16 @@ textarea:focus-visible {
   margin-top: 0.45rem;
 }
 
+#placements .section-heading {
+  max-width: none;
+  background: var(--white);
+  border-top: 4px solid;
+  border-image: linear-gradient(90deg, var(--sun-ochre), var(--sun-ochre-dark)) 1;
+  border-radius: var(--radius-soft);
+  padding: clamp(1.75rem, 3vw, 2.5rem);
+  box-shadow: 0 18px 40px rgba(28, 26, 22, 0.08);
+}
+
 /* ---------- Buttons ---------- */
 
 .btn {
@@ -617,6 +627,15 @@ textarea:focus-visible {
 
 #story .story-body p:first-child {
   margin-top: 0;
+}
+
+.story-main {
+  background: var(--white);
+  border-top: 4px solid;
+  border-image: linear-gradient(90deg, var(--sun-ochre), var(--sun-ochre-dark)) 1;
+  border-radius: var(--radius-soft);
+  padding: clamp(1.75rem, 3vw, 2.5rem);
+  box-shadow: 0 18px 40px rgba(28, 26, 22, 0.08);
 }
 
 .story-side {
