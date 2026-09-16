@@ -819,6 +819,23 @@ textarea:focus-visible {
   margin-top: 2.5rem;
 }
 
+.placement-load-more {
+  display: none;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+  /* Mobile only: reveal placement cards in batches via #placements-show-more. */
+  .placement-card.is-hidden-mobile {
+    display: none;
+  }
+
+  .placement-load-more {
+    display: flex;
+  }
+}
+
 .placement-card {
   display: flex;
   flex-direction: column;

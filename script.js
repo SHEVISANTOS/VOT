@@ -881,6 +881,34 @@ function sendEmail(e) {
   };
 
   /* =========================================================
+     PLACEMENTS "SHOW MORE" (mobile only — CSS hides the button
+     and re-shows cards above the 768px breakpoint)
+     ========================================================= */
+  const initPlacementsShowMore = () => {
+    const grid = document.getElementById('placement-grid');
+    const button = document.getElementById('placements-show-more');
+    if (!grid || !button) return;
+
+    const cards = Array.from(grid.querySelectorAll('.placement-card'));
+    const STEP = 4;
+    let visibleCount = STEP;
+
+    const render = () => {
+      cards.forEach((card, i) => {
+        card.classList.toggle('is-hidden-mobile', i >= visibleCount);
+      });
+      button.hidden = visibleCount >= cards.length;
+    };
+
+    button.addEventListener('click', () => {
+      visibleCount = Math.min(visibleCount + STEP, cards.length);
+      render();
+    });
+
+    render();
+  };
+
+  /* =========================================================
      INITIALIZE ALL FUNCTIONS
      ========================================================= */
   const init = () => {
@@ -892,7 +920,8 @@ function sendEmail(e) {
     initFormValidation();
     initLazyLoading();
     initProgressBars();
-    
+    initPlacementsShowMore();
+
     console.log('✅ VOT Website initialized successfully');
   };
 
