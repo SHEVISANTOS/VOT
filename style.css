@@ -856,6 +856,7 @@ textarea:focus-visible {
 
 .placement-card__fallback--communication { background: var(--granite-light); }
 .placement-card__fallback--engineering   { background: var(--primary-dark); }
+.placement-card__fallback--education     { background: var(--sun-ochre); }
 
 /* ---------- Programs ---------- */
 
