@@ -639,7 +639,7 @@ textarea:focus-visible {
   display: grid;
   grid-template-columns: 1.6fr 1fr;
   gap: clamp(2.5rem, 5vw, 4.5rem);
-  align-items: start;
+  align-items: stretch;
 }
 
 #story .story-lede {
@@ -738,6 +738,7 @@ textarea:focus-visible {
   background: var(--sun-ochre);
   border-color: var(--sun-ochre);
   color: var(--white);
+  margin-top: auto;
 }
 
 .story-side__cta:hover {
