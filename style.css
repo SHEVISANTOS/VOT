@@ -6339,6 +6339,21 @@ PARTNER LOGOS — FULL COLOUR (overrides grayscale)
   background: linear-gradient(90deg, transparent, rgba(224,148,44,0.5), transparent);
 }
 
+/* Heading on the left, subtitle on the right — fills the row instead of
+   leaving a dead gap between a short heading and a narrow paragraph. */
+.pricing-intro {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: clamp(2rem, 5vw, 4rem);
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.pricing-intro-main {
+  flex: 1 1 420px;
+}
+
 .pricing-label {
   display: flex;
   align-items: center;
@@ -6363,16 +6378,16 @@ PARTNER LOGOS — FULL COLOUR (overrides grayscale)
   font-size: 48px;
   font-weight: 700;
   color: var(--ink);
-  margin-bottom: 20px;
   line-height: 1.15;
 }
 
 .pricing-subtitle {
+  flex: 1 1 380px;
   font-size: 17px;
   color: var(--ink-soft);
-  max-width: 620px;
+  max-width: 480px;
   line-height: 1.6;
-  margin-bottom: 40px;
+  margin: 0;
 }
 
 .pricing-card {
