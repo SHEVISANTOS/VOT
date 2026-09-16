@@ -624,30 +624,11 @@ function sendEmail(e) {
   const initHeaderScroll = () => {
     if (!DOM.header) return;
 
-    const SCROLLED_AT = 20;   // background/shadow kick in
-    const GROW_AT = 30;       // only allow the "grow" state once scrolled past this
-    const DIRECTION_DELTA = 4; // ignore tiny sub-pixel scroll jitter
-
-    let lastY = window.scrollY;
+    const SCROLLED_AT = 20;
     let ticking = false;
 
     const update = () => {
-      const y = window.scrollY;
-      const delta = y - lastY;
-
-      DOM.header.classList.toggle('is-scrolled', y > SCROLLED_AT);
-
-      if (Math.abs(delta) > DIRECTION_DELTA) {
-        if (delta < 0 && y > GROW_AT) {
-          // scrolling up, past the top — grow the bar
-          DOM.header.classList.add('is-grown');
-        } else {
-          // scrolling down, or back near the top — shrink to base size
-          DOM.header.classList.remove('is-grown');
-        }
-        lastY = y;
-      }
-
+      DOM.header.classList.toggle('is-scrolled', window.scrollY > SCROLLED_AT);
       ticking = false;
     };
 
