@@ -881,33 +881,46 @@ function sendEmail(e) {
   };
 
   /* =========================================================
-     PLACEMENTS "SHOW MORE" (reveals cards in batches of 4 on
-     every screen size)
+     GENERIC "SHOW MORE" (reveals items in batches on every
+     screen size — used for the placements grid and the FAQ list)
      ========================================================= */
-  const initPlacementsShowMore = () => {
-    const grid = document.getElementById('placement-grid');
-    const button = document.getElementById('placements-show-more');
-    if (!grid || !button) return;
+  const initShowMore = ({ containerId, buttonId, itemSelector, step }) => {
+    const container = document.getElementById(containerId);
+    const button = document.getElementById(buttonId);
+    if (!container || !button) return;
 
-    const cards = Array.from(grid.querySelectorAll('.placement-card'));
-    const STEP = 4;
-    let visibleCount = STEP;
+    const items = Array.from(container.querySelectorAll(itemSelector));
+    let visibleCount = step;
 
     const render = () => {
-      cards.forEach((card, i) => {
-        card.classList.toggle('is-hidden', i >= visibleCount);
+      items.forEach((item, i) => {
+        item.classList.toggle('is-hidden', i >= visibleCount);
       });
       // Inline style takes priority over any class-based display rule.
-      button.style.display = visibleCount >= cards.length ? 'none' : '';
+      button.style.display = visibleCount >= items.length ? 'none' : '';
     };
 
     button.addEventListener('click', () => {
-      visibleCount = Math.min(visibleCount + STEP, cards.length);
+      visibleCount = Math.min(visibleCount + step, items.length);
       render();
     });
 
     render();
   };
+
+  const initPlacementsShowMore = () => initShowMore({
+    containerId: 'placement-grid',
+    buttonId: 'placements-show-more',
+    itemSelector: '.placement-card',
+    step: 4
+  });
+
+  const initFaqShowMore = () => initShowMore({
+    containerId: 'faq-grid',
+    buttonId: 'faq-show-more',
+    itemSelector: '.faq-item',
+    step: 6
+  });
 
   /* =========================================================
      INITIALIZE ALL FUNCTIONS
@@ -922,6 +935,7 @@ function sendEmail(e) {
     initLazyLoading();
     initProgressBars();
     initPlacementsShowMore();
+    initFaqShowMore();
 
     console.log('✅ VOT Website initialized successfully');
   };

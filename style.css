@@ -837,8 +837,9 @@ textarea:focus-visible {
   }
 }
 
-/* Placement cards reveal in batches on every screen size via #placements-show-more. */
-.placement-card.is-hidden {
+/* Items reveal in batches via a "show more" button (placements grid, FAQ list). */
+.placement-card.is-hidden,
+.faq-item.is-hidden {
   display: none;
 }
 
