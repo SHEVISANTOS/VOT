@@ -1221,25 +1221,23 @@ document.head.appendChild(formspreeScript);
 function initPricingCalculator() {
   const slider = document.getElementById('durationSlider');
   const durationValue = document.getElementById('durationValue');
+  const durationPrice = document.getElementById('durationPrice');
   const totalAmount = document.getElementById('totalAmount');
   const totalBreakdown = document.getElementById('totalBreakdown');
 
   if (!slider || !durationValue || !totalAmount || !totalBreakdown) return;
 
-  function getRate(weeks) {
-    if (weeks <= 4) return 340;
-    if (weeks <= 8) return 315;
-    return 295;
-  }
+  const FLAT_RATE = 295;
 
   function updateEstimate() {
     const weeks = parseInt(slider.value);
-    const rate = getRate(weeks);
+    const rate = FLAT_RATE;
     const total = rate * weeks;
 
     durationValue.textContent = weeks + ' week' + (weeks !== 1 ? 's' : '');
+    if (durationPrice) durationPrice.textContent = '· USD ' + total.toLocaleString();
     totalAmount.textContent = 'USD ' + total.toLocaleString();
-    totalBreakdown.textContent = 'USD ' + rate + ' / week · ' + weeks + ' week' + (weeks !== 1 ? 's' : '');
+    totalBreakdown.textContent = 'USD ' + rate + ' per week · ' + weeks + ' week' + (weeks !== 1 ? 's' : '');
 
     // Update slider track fill
     const pct = ((weeks - slider.min) / (slider.max - slider.min)) * 100;

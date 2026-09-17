@@ -6891,6 +6891,14 @@ PARTNER LOGOS — FULL COLOUR (overrides grayscale)
   margin-bottom: 14px;
 }
 
+.duration-price {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--sun-ochre-dark);
+  font-family: 'Courier New', monospace;
+  margin-bottom: 14px;
+}
+
 .slider-container {
   margin-bottom: 30px;
 }
@@ -7047,6 +7055,12 @@ PARTNER LOGOS — FULL COLOUR (overrides grayscale)
   font-size: 13px;
   color: var(--ink-soft);
   font-family: 'Courier New', monospace;
+}
+
+.pricing-right__note {
+  font-size: 12.5px;
+  line-height: 1.6;
+  margin: 0 0 18px;
 }
 
 .pricing-right .apply-btn {

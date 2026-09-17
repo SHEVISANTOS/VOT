@@ -1140,7 +1140,7 @@
             <div class="section-label">Cost of Living — Weekly Rate</div>
 
             <table class="rate-table">
-              <caption class="sr-only">Weekly cost of living by length of stay</caption>
+              <caption class="sr-only">Weekly cost of living, any length of stay</caption>
               <thead>
                 <tr class="rate-row">
                   <th scope="col" class="duration">Length of stay</th>
@@ -1148,17 +1148,9 @@
                 </tr>
               </thead>
               <tbody>
-                <tr class="rate-row">
-                  <td class="duration">1–4 weeks</td>
-                  <td class="price">USD 340 / week</td>
-                </tr>
-                <tr class="rate-row">
-                  <td class="duration">5–8 weeks</td>
-                  <td class="price">USD 315 / week</td>
-                </tr>
                 <tr class="rate-row rate-row--best">
-                  <td class="duration">9+ weeks <span class="best-value-badge">Best Value</span></td>
-                  <td class="price">USD 295 / week</td>
+                  <td class="duration">Any length of stay <span class="best-value-badge">Flat Rate</span></td>
+                  <td class="price">USD 295 per week</td>
                 </tr>
               </tbody>
             </table>
@@ -1182,23 +1174,37 @@
             <div class="section-label">Estimate Your Trip</div>
 
             <div class="slider-container">
-              <div class="duration-label">Duration: <span class="duration-value" id="durationValue">24 weeks</span></div>
+              <div class="duration-label">Duration: <span class="duration-value" id="durationValue">24 weeks</span> <span class="duration-price" id="durationPrice">· USD 7,080</span></div>
               <input type="range" id="durationSlider" min="1" max="52" value="24" />
             </div>
 
             <div class="program-label">Program</div>
             <select class="program-select" id="programSelect">
-              <option value="healthcare">Healthcare</option>
-              <option value="education">Education</option>
-              <option value="community">Community Development</option>
-              <option value="wildlife">Wildlife Conservation</option>
+              <option value="Hospital &amp; Clinic Internship">Hospital &amp; Clinic Internship</option>
+              <option value="Teaching in Local Schools">Teaching in Local Schools</option>
+              <option value="Daycare &amp; Community Children">Daycare &amp; Community Children</option>
+              <option value="Community Development">Community Development</option>
+              <option value="Conservation &amp; Lake Victoria">Conservation &amp; Lake Victoria</option>
+              <option value="Geology &amp; Earth Science Internship">Geology &amp; Earth Science Internship</option>
+              <option value="Mass Communication Internship">Mass Communication Internship</option>
+              <option value="Engineering Support Internship">Engineering Support Internship</option>
+              <option value="Tourism &amp; Hospitality Internship">Tourism &amp; Hospitality Internship</option>
+              <option value="Wildlife Conservation">Wildlife Conservation</option>
+              <option value="Shekina Primary School (TECEC)">Shekina Primary School (TECEC)</option>
+              <option value="BMCC Day Care">BMCC Day Care</option>
+              <option value="Bright Destiny Primary School">Bright Destiny Primary School</option>
+              <option value="Not sure yet">Not sure yet</option>
             </select>
 
             <div class="estimated-total-box">
-              <div class="et-label">Estimated Total</div>
+              <div class="et-label">Estimated Cost of Living</div>
               <div class="et-amount" id="totalAmount">USD 7,080</div>
-              <div class="et-breakdown" id="totalBreakdown">USD 295 / week · 24 weeks</div>
+              <div class="et-breakdown" id="totalBreakdown">USD 295 per week · 24 weeks</div>
             </div>
+            <p class="disclaimer pricing-right__note">
+              This covers your accommodation, meals, transport and in-country support during your stay —
+              it is not a fee to volunteer or to be placed.
+            </p>
 
             <a href="#contact" class="apply-btn" style="text-decoration: none;">Apply for this program</a>
           </div>
