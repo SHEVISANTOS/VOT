@@ -1238,8 +1238,8 @@ function initPricingCalculator() {
     const total = rate * weeks;
 
     durationValue.textContent = weeks + ' week' + (weeks !== 1 ? 's' : '');
-    totalAmount.textContent = '$' + total.toLocaleString();
-    totalBreakdown.textContent = '$' + rate + ' / week · ' + weeks + ' week' + (weeks !== 1 ? 's' : '');
+    totalAmount.textContent = 'USD ' + total.toLocaleString();
+    totalBreakdown.textContent = 'USD ' + rate + ' / week · ' + weeks + ' week' + (weeks !== 1 ? 's' : '');
 
     // Update slider track fill
     const pct = ((weeks - slider.min) / (slider.max - slider.min)) * 100;
