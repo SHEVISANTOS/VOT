@@ -1251,19 +1251,24 @@ function initPricingCalculator() {
 document.addEventListener("DOMContentLoaded", initPricingCalculator);
 
 /* =========================================================
-   GALLERY FILTER (with "Show more" on mobile)
+   GALLERY FILTER (with "Show more" — 2 rows on desktop, 4 on phone)
    ========================================================= */
 function initGalleryFilter() {
   const filters = document.querySelectorAll('.gallery-filter');
   const items = Array.from(document.querySelectorAll('.gallery-item'));
+  const grid = document.querySelector('.gallery-grid');
   const showMoreBtn = document.querySelector('.gallery-show-more');
 
-  if (!filters.length || !items.length) return;
+  if (!filters.length || !items.length || !grid) return;
 
-  const MOBILE_LIMIT = 6;
-  const isMobile = function () {
-    return window.matchMedia('(max-width: 640px)').matches;
+  const isPhone = function () {
+    return window.matchMedia('(max-width: 900px)').matches;
   };
+
+  function getColumnCount() {
+    const cols = window.getComputedStyle(grid).gridTemplateColumns.split(' ').filter(Boolean);
+    return cols.length || 1;
+  }
 
   let currentFilter = 'all';
   let expanded = false;
@@ -1272,7 +1277,9 @@ function initGalleryFilter() {
     const matching = items.filter(function (item) {
       return currentFilter === 'all' || item.dataset.category === currentFilter;
     });
-    const limit = (isMobile() && !expanded) ? MOBILE_LIMIT : matching.length;
+
+    const rows = isPhone() ? 4 : 2;
+    const limit = expanded ? matching.length : getColumnCount() * rows;
 
     items.forEach(function (item) {
       const matches = currentFilter === 'all' || item.dataset.category === currentFilter;
@@ -1284,7 +1291,7 @@ function initGalleryFilter() {
     });
 
     if (showMoreBtn) {
-      const hasMore = isMobile() && !expanded && matching.length > MOBILE_LIMIT;
+      const hasMore = !expanded && matching.length > limit;
       showMoreBtn.hidden = !hasMore;
     }
   }
