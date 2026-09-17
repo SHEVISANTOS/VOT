@@ -1279,7 +1279,9 @@ function initGalleryFilter() {
     });
 
     const rows = isPhone() ? 4 : 2;
-    const limit = expanded ? matching.length : getColumnCount() * rows;
+    const baseLimit = getColumnCount() * rows;
+    const hasMore = matching.length > baseLimit;
+    const limit = (expanded && hasMore) ? matching.length : baseLimit;
 
     items.forEach(function (item) {
       const matches = currentFilter === 'all' || item.dataset.category === currentFilter;
@@ -1291,8 +1293,8 @@ function initGalleryFilter() {
     });
 
     if (showMoreBtn) {
-      const hasMore = !expanded && matching.length > limit;
       showMoreBtn.hidden = !hasMore;
+      showMoreBtn.textContent = expanded ? 'Show less' : 'Show more';
     }
   }
 
@@ -1312,8 +1314,11 @@ function initGalleryFilter() {
 
   if (showMoreBtn) {
     showMoreBtn.addEventListener('click', function () {
-      expanded = true;
+      expanded = !expanded;
       render();
+      if (!expanded) {
+        grid.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }
     });
   }
 
