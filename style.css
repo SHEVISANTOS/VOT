@@ -1127,6 +1127,14 @@ textarea:focus-visible {
   background: #00A3DD;
 }
 
+.program-card__top--environment {
+  background: var(--granite);
+}
+
+.program-card__top--geology {
+  background: var(--lake-deep-light);
+}
+
 /* Tanzania Blue */
 
 .program-card__body {
