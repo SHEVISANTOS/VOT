@@ -530,7 +530,7 @@ function sendEmail(e) {
     yearSpan: document.getElementById('year'),
     header: document.querySelector('.site-header'),
     scrollProgress: document.getElementById('scrollProgress'),
-    smoothLinks: document.querySelectorAll('a[href^="#"]:not([href="#contact"])')
+    smoothLinks: document.querySelectorAll('a[href^="#"]:not([href="#contact"]), a.nav-link--contact')
   };
 
   // Utility: Debounce function for performance
@@ -1403,7 +1403,7 @@ function initApplyModal() {
     isOpen = false;
   }
 
-  document.querySelectorAll('a[href="#contact"]').forEach((link) => {
+  document.querySelectorAll('a[href="#contact"]:not(.nav-link--contact)').forEach((link) => {
     link.addEventListener('click', (e) => {
       e.preventDefault();
       openModal();
