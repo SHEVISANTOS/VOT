@@ -361,6 +361,17 @@ textarea:focus-visible {
   transition: box-shadow var(--transition), background var(--transition);
 }
 
+.scroll-progress {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 3px;
+  background: linear-gradient(90deg, var(--sun-ochre), var(--sun-ochre-dark));
+  z-index: 1001;
+  will-change: width;
+}
+
 .site-header.is-scrolled {
   background: rgba(242, 235, 221, 0.98);
   box-shadow: 0 2px 20px rgba(28,26,22,0.07);
