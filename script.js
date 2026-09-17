@@ -1325,28 +1325,37 @@ document.addEventListener("DOMContentLoaded", initGalleryFilter);
    ========================================================= */
 function initPlacementApplyPrefill() {
   const programSelect = document.getElementById('program');
-  const applyButtons = document.querySelectorAll('.placement-card__body a[href="#contact"]');
-  if (!programSelect || !applyButtons.length) return;
+  if (!programSelect) return;
 
-  applyButtons.forEach((button) => {
+  const setProgram = (title) => {
+    if (!title) return;
+
+    let option = Array.from(programSelect.options).find(
+      (o) => o.value === title || o.textContent.trim() === title
+    );
+
+    if (!option) {
+      option = document.createElement('option');
+      option.value = title;
+      option.textContent = title;
+      programSelect.appendChild(option);
+    }
+
+    programSelect.value = title;
+  };
+
+  document.querySelectorAll('.placement-card__body a[href="#contact"]').forEach((button) => {
     button.addEventListener('click', () => {
       const card = button.closest('.placement-card');
       const title = card ? card.querySelector('h3').textContent.trim() : '';
-      if (!title) return;
-
-      let option = Array.from(programSelect.options).find(
-        (o) => o.value === title || o.textContent.trim() === title
-      );
-
-      if (!option) {
-        option = document.createElement('option');
-        option.value = title;
-        option.textContent = title;
-        programSelect.appendChild(option);
-      }
-
-      programSelect.value = title;
+      setProgram(title);
     });
+  });
+
+  // Any other apply link can name its program explicitly, e.g. CTA banners
+  // on a program's own page: <a href="#contact" data-program="Education">
+  document.querySelectorAll('a[href="#contact"][data-program]').forEach((button) => {
+    button.addEventListener('click', () => setProgram(button.dataset.program));
   });
 }
 
