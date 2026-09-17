@@ -1450,6 +1450,17 @@ textarea:focus-visible {
   box-shadow: none;
 }
 
+.apply-modal.is-submitted .field,
+.apply-modal.is-submitted .field-row,
+.apply-modal.is-submitted button[type="submit"] {
+  display: none;
+}
+
+.apply-modal.is-submitted .form-note {
+  margin-top: 0;
+  font-size: var(--step-2, 1.15rem);
+}
+
 .apply-modal__close {
   position: absolute;
   top: 1rem;

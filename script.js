@@ -284,6 +284,7 @@ function initContactForm() {
         appendWhatsAppFollowUp(note, firstName, lastName);
 
         form.reset();
+        form.dispatchEvent(new CustomEvent("vot:form-submitted", { bubbles: true }));
       } else {
         let errorMessage =
           "Sorry, something went wrong. Please try again or contact us on WhatsApp.";
@@ -1356,6 +1357,8 @@ function initApplyModal() {
   function openModal() {
     if (isOpen) return;
     dialogBody.appendChild(formCard);
+    overlay.classList.remove('is-submitted');
+    cancelBtn.textContent = 'Cancel';
     overlay.classList.add('is-open');
     document.body.classList.add('modal-open');
     isOpen = true;
@@ -1376,6 +1379,11 @@ function initApplyModal() {
       e.preventDefault();
       openModal();
     });
+  });
+
+  formCard.addEventListener('vot:form-submitted', () => {
+    overlay.classList.add('is-submitted');
+    cancelBtn.textContent = 'Close';
   });
 
   closeBtn.addEventListener('click', closeModal);
