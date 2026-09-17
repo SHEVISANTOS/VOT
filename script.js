@@ -529,6 +529,7 @@ function sendEmail(e) {
     revealElements: document.querySelectorAll('.reveal'),
     yearSpan: document.getElementById('year'),
     header: document.querySelector('.site-header'),
+    scrollProgress: document.getElementById('scrollProgress'),
     smoothLinks: document.querySelectorAll('a[href^="#"]:not([href="#contact"])')
   };
 
@@ -639,6 +640,33 @@ function sendEmail(e) {
         ticking = true;
       }
     }, { passive: true });
+
+    update(); // Check on load
+  };
+
+  /* =========================================================
+     SCROLL PROGRESS BAR
+     ========================================================= */
+  const initScrollProgress = () => {
+    if (!DOM.scrollProgress) return;
+
+    let ticking = false;
+
+    const update = () => {
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const pct = docHeight > 0 ? (window.scrollY / docHeight) * 100 : 0;
+      DOM.scrollProgress.style.width = Math.min(Math.max(pct, 0), 100) + '%';
+      ticking = false;
+    };
+
+    window.addEventListener('scroll', () => {
+      if (!ticking) {
+        requestAnimationFrame(update);
+        ticking = true;
+      }
+    }, { passive: true });
+
+    window.addEventListener('resize', update);
 
     update(); // Check on load
   };
@@ -930,6 +958,7 @@ function sendEmail(e) {
     initScrollReveal();
     initDynamicYear();
     initHeaderScroll();
+    initScrollProgress();
     initSmoothScroll();
     initActiveNavHighlight();
     initFormValidation();
