@@ -2169,6 +2169,10 @@ body.modal-open {
   align-items: center;
 }
 
+.acc-shared > * {
+  min-width: 0;
+}
+
 /* Subtle decorative ring, purely for depth */
 .acc-shared::after {
   content: "";
@@ -2239,6 +2243,7 @@ body.modal-open {
   padding: 0;
   margin: 0;
   list-style: none;
+  min-width: 0;
 }
 
 .acc-shared__amenities li {
@@ -2277,6 +2282,20 @@ body.modal-open {
   background: var(--white);
   font-size: 0.95rem;
   box-shadow: 0 4px 10px rgba(28, 26, 22, 0.15);
+}
+
+@media (max-width: 380px) {
+  .acc-shared__amenities li {
+    gap: 0.5rem;
+    padding: 0.7rem 1rem;
+    font-size: 0.82rem;
+  }
+
+  .acc-shared__amenities-icon {
+    width: 24px;
+    height: 24px;
+    font-size: 0.8rem;
+  }
 }
 
 /* Rating badge fills the empty space to the right */
