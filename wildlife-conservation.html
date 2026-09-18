@@ -40,6 +40,38 @@
   <meta name="geo.position" content="-2.5164;32.9174">
   <meta name="ICBM" content="-2.5164, 32.9174">
 
+  <!-- 5. STRUCTURED DATA (Schema.org) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "name": "Volunteers of Tanzania",
+        "alternateName": "VOT Mwanza",
+        "url": "https://www.volunteertotanzania.com/",
+        "email": "samlugema@volunteertotanzania.com",
+        "telephone": "+255765883202",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "SAUT Road, Igubinya Street, House No. 2, Nyegezi",
+          "addressLocality": "Mwanza",
+          "addressCountry": "TZ",
+          "postOfficeBoxNumber": "4127"
+        },
+        "areaServed": "Tanzania"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.volunteertotanzania.com/"},
+          {"@type": "ListItem", "position": 2, "name": "Wildlife Conservation Program", "item": "https://www.volunteertotanzania.com/wildlife-conservation.html"}
+        ]
+      }
+    ]
+  }
+  </script>
+
   <!-- Fonts & Styles -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
