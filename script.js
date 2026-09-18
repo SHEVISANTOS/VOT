@@ -1222,6 +1222,7 @@ function initPricingCalculator() {
   const slider = document.getElementById('durationSlider');
   const durationValue = document.getElementById('durationValue');
   const durationPrice = document.getElementById('durationPrice');
+  const groupSizeSelect = document.getElementById('groupSizeSelect');
   const totalAmount = document.getElementById('totalAmount');
   const totalBreakdown = document.getElementById('totalBreakdown');
 
@@ -1229,15 +1230,25 @@ function initPricingCalculator() {
 
   const FLAT_RATE = 295;
 
+  // Groups of 5-7 save 5% per person, groups of 8+ save 10%.
+  function getGroupDiscount(groupSize) {
+    if (groupSize >= 8) return 0.10;
+    if (groupSize >= 5) return 0.05;
+    return 0;
+  }
+
   function updateEstimate() {
     const weeks = parseInt(slider.value);
-    const rate = FLAT_RATE;
+    const groupSize = groupSizeSelect ? parseInt(groupSizeSelect.value) : 1;
+    const discount = getGroupDiscount(groupSize);
+    const rate = FLAT_RATE * (1 - discount);
     const total = rate * weeks;
+    const discountNote = discount > 0 ? ' (' + (discount * 100) + '% group discount applied)' : '';
 
     durationValue.textContent = weeks + ' week' + (weeks !== 1 ? 's' : '');
-    if (durationPrice) durationPrice.textContent = '· USD ' + total.toLocaleString();
-    totalAmount.textContent = 'USD ' + total.toLocaleString();
-    totalBreakdown.textContent = 'USD ' + rate + ' per week · ' + weeks + ' week' + (weeks !== 1 ? 's' : '');
+    if (durationPrice) durationPrice.textContent = '· USD ' + total.toLocaleString(undefined, { maximumFractionDigits: 0 });
+    totalAmount.textContent = 'USD ' + total.toLocaleString(undefined, { maximumFractionDigits: 0 });
+    totalBreakdown.textContent = 'USD ' + rate.toLocaleString(undefined, { maximumFractionDigits: 2 }) + ' per week' + discountNote + ' · ' + weeks + ' week' + (weeks !== 1 ? 's' : '');
 
     // Update slider track fill
     const pct = ((weeks - slider.min) / (slider.max - slider.min)) * 100;
@@ -1245,6 +1256,7 @@ function initPricingCalculator() {
   }
 
   slider.addEventListener('input', updateEstimate);
+  if (groupSizeSelect) groupSizeSelect.addEventListener('change', updateEstimate);
   updateEstimate();
 }
 
