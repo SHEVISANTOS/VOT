@@ -548,11 +548,15 @@ textarea:focus-visible {
     top: 100%;
     left: 0;
     right: 0;
+    height: auto;
+    max-height: calc(100vh - var(--nav-height));
+    overflow-y: auto;
     background: var(--savanna);
     padding: 1.5rem clamp(1.25rem, 4vw, 2.5rem);
     border-bottom: 1px solid rgba(28, 26, 22, 0.08);
     gap: 1rem;
     box-shadow: 0 20px 30px rgba(28, 26, 22, 0.08);
+    z-index: 1;
   }
 
   .nav.is-open a {
