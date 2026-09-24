@@ -10,6 +10,11 @@
   <link rel="apple-touch-icon" href="images/logo.avif">
   <meta name="theme-color" content="#0F3D46">
 
+  <!-- Preload the hero image so it starts downloading immediately -->
+  <link rel="preload" as="image" type="image/webp" fetchpriority="high"
+        imagesrcset="images/hero-768.webp 768w, images/hero-1280.webp 1280w, images/hero-1920.webp 1920w"
+        imagesizes="100vw">
+
   <!-- 1. PRIMARY SEO  -->
   <title>Volunteer and Internship Programs in Tanzania</title>
   <meta name="description" content="Volunteers of Tanzania (VOT-Mwanza) came to life in 2018, the year we were legally registered as an organization that assists interns, students, and volunteers who want to come to Africa and find suitable placements to help the community.">
@@ -88,8 +93,13 @@
     <section class="hero hero--photo" id="home">
       <!-- Background photo -->
       <div class="hero__background">
-       <img src="images/A.jpg.jpeg" alt="VOT volunteers working with local community in Mwanza, Tanzania"
-     width="800" height="500" loading="eager" fetchpriority="high">
+       <picture>
+         <source type="image/webp"
+                 srcset="images/hero-768.webp 768w, images/hero-1280.webp 1280w, images/hero-1920.webp 1920w"
+                 sizes="100vw">
+         <img src="images/A.jpg.jpeg" alt="VOT volunteers working with local community in Mwanza, Tanzania"
+              width="1920" height="1080" loading="eager" fetchpriority="high" decoding="async">
+       </picture>
       </div>
 
       <!-- Dark overlay -->
@@ -1224,7 +1234,7 @@
             <div class="hiw-step-number">1</div>
             <h3 class="hiw-step-title">CHOOSE YOUR PROGRAM</h3>
             <div class="hiw-step-image">
-              <img src="images/chooseprogram.jpeg" alt="Choose your volunteer program in Tanzania">
+              <img loading="lazy" decoding="async" src="images/chooseprogram.jpeg" alt="Choose your volunteer program in Tanzania">
             </div>
             <p class="hiw-step-description">
               Browse our diverse volunteer opportunities and select the placement that best matches your interests,
@@ -1248,7 +1258,7 @@
             <div class="hiw-step-number">2</div>
             <h3 class="hiw-step-title">APPLY ONLINE</h3>
             <div class="hiw-step-image">
-              <img src="images/applyonline.png" alt="Apply online for volunteer program">
+              <img loading="lazy" decoding="async" src="images/applyonline.jpg" alt="Apply online for volunteer program">
             </div>
             <p class="hiw-step-description">
               Complete our simple application form. Once we receive it, we shall review your application and contact you
@@ -1269,7 +1279,7 @@
             <div class="hiw-step-number">3</div>
             <h3 class="hiw-step-title">PREPARE FOR TANZANIA</h3>
             <div class="hiw-step-image">
-              <img src="images/experience_in_Tanzania.jpeg" alt="Prepare for your Tanzania journey">
+              <img loading="lazy" decoding="async" src="images/experience_in_Tanzania.jpeg" alt="Prepare for your Tanzania journey">
             </div>
             <p class="hiw-step-description">
               After your placement is confirmed, we'll guide you through everything you need, including visa
@@ -1330,68 +1340,68 @@
       <!-- ===== Logo Set 1 ===== -->
       <div class="logo-set">
         <a href="https://tecec.or.tz/" target="_blank" rel="noopener noreferrer" class="partner-logo">
-          <img src="images/partners/tecec.png" alt="TECEC - Early Childhood Development">
+          <img loading="lazy" decoding="async" src="images/partners/tecec.png" alt="TECEC - Early Childhood Development">
         </a>
         <a href="https://beaconhomecare.com/" target="_blank" rel="noopener noreferrer" class="partner-logo">
-          <img src="images/partners/beacon.jpg" alt="Beacon Home Care">
+          <img loading="lazy" decoding="async" src="images/partners/beacon.jpg" alt="Beacon Home Care">
         </a>
         <a href="https://www.bmccchurch.or.tz/" target="_blank" rel="noopener noreferrer" class="partner-logo">
-          <img src="images/partners/bmcc.jpg" alt="BMCC Church">
+          <img loading="lazy" decoding="async" src="images/partners/bmcc.jpg" alt="BMCC Church">
         </a>
         <a href="https://www.volunteertotanzania.com/" target="_blank" rel="noopener noreferrer" class="partner-logo">
-          <img src="images/partners/Votconsulting.jpg" alt="Volunteer Consulting Services">
+          <img loading="lazy" decoding="async" src="images/partners/Votconsulting.jpg" alt="Volunteer Consulting Services">
         </a>
         <a href="https://www.volunteertotanzania.com/" target="_blank" rel="noopener noreferrer" class="partner-logo">
-          <img src="images/partners/vot_media.png" alt="VOT Media">
+          <img loading="lazy" decoding="async" src="images/partners/vot_media.png" alt="VOT Media">
         </a>
         <a href="https://leadersofgreatdestiny.org/" target="_blank" rel="noopener noreferrer" class="partner-logo">
-          <img src="images/partners/Leaders_of_Greate_Destiny.jpg" alt="Leaders of Great Destiny">
+          <img loading="lazy" decoding="async" src="images/partners/Leaders_of_Greate_Destiny.jpg" alt="Leaders of Great Destiny">
         </a>
         <a href="https://www.wotesawa.or.tz/" target="_blank" rel="noopener noreferrer" class="partner-logo">
-          <img src="images/partners/wote_sawa.png" alt="WoteSawa - Domestic Workers Organization">
+          <img loading="lazy" decoding="async" src="images/partners/wote_sawa.png" alt="WoteSawa - Domestic Workers Organization">
         </a>
         <a href="https://waghill.co.tz/" target="_blank" rel="noopener noreferrer" class="partner-logo">
-          <img src="images/partners/wag_hill_lodge.png" alt="Wag Hill Lodge & Spa">
+          <img loading="lazy" decoding="async" src="images/partners/wag_hill_lodge.png" alt="Wag Hill Lodge & Spa">
         </a>
         <a href="https://raphaafrica-travel.com/" target="_blank" rel="noopener noreferrer" class="partner-logo">
-          <img src="images/partners/rapha_africa.png" alt="Rapha Africa Travel">
+          <img loading="lazy" decoding="async" src="images/partners/rapha_africa.png" alt="Rapha Africa Travel">
         </a>
         <a href="https://hike-kilimanjaro.com/" target="_blank" rel="noopener noreferrer" class="partner-logo">
-          <img src="images/partners/hk.png" alt="Hike Kilimanjaro">
+          <img loading="lazy" decoding="async" src="images/partners/hk.png" alt="Hike Kilimanjaro">
         </a>
       </div>
 
       <!-- ===== Logo Set 2 (duplicate = seamless infinite loop) ===== -->
       <div class="logo-set" aria-hidden="true">
         <a href="https://tecec.or.tz/" target="_blank" rel="noopener noreferrer" class="partner-logo" tabindex="-1">
-          <img src="images/partners/tecec.png" alt="">
+          <img loading="lazy" decoding="async" src="images/partners/tecec.png" alt="">
         </a>
         <a href="https://beaconhomecare.com/" target="_blank" rel="noopener noreferrer" class="partner-logo" tabindex="-1">
-          <img src="images/partners/beacon.jpg" alt="">
+          <img loading="lazy" decoding="async" src="images/partners/beacon.jpg" alt="">
         </a>
         <a href="https://www.bmccchurch.or.tz/" target="_blank" rel="noopener noreferrer" class="partner-logo" tabindex="-1">
-          <img src="images/partners/bmcc.jpg" alt="">
+          <img loading="lazy" decoding="async" src="images/partners/bmcc.jpg" alt="">
         </a>
         <a href="https://www.volunteertotanzania.com/" target="_blank" rel="noopener noreferrer" class="partner-logo" tabindex="-1">
-          <img src="images/partners/Votconsulting.jpg" alt="">
+          <img loading="lazy" decoding="async" src="images/partners/Votconsulting.jpg" alt="">
         </a>
         <a href="https://www.volunteertotanzania.com/" target="_blank" rel="noopener noreferrer" class="partner-logo" tabindex="-1">
-          <img src="images/partners/vot_media.png" alt="">
+          <img loading="lazy" decoding="async" src="images/partners/vot_media.png" alt="">
         </a>
         <a href="https://leadersofgreatdestiny.org/" target="_blank" rel="noopener noreferrer" class="partner-logo" tabindex="-1">
-          <img src="images/partners/Leaders_of_Greate_Destiny.jpg" alt="">
+          <img loading="lazy" decoding="async" src="images/partners/Leaders_of_Greate_Destiny.jpg" alt="">
         </a>
         <a href="https://www.wotesawa.or.tz/" target="_blank" rel="noopener noreferrer" class="partner-logo" tabindex="-1">
-          <img src="images/partners/wote_sawa.png" alt="">
+          <img loading="lazy" decoding="async" src="images/partners/wote_sawa.png" alt="">
         </a>
         <a href="https://waghill.co.tz/" target="_blank" rel="noopener noreferrer" class="partner-logo" tabindex="-1">
-          <img src="images/partners/wag_hill_lodge.png" alt="">
+          <img loading="lazy" decoding="async" src="images/partners/wag_hill_lodge.png" alt="">
         </a>
         <a href="https://raphaafrica-travel.com/" target="_blank" rel="noopener noreferrer" class="partner-logo" tabindex="-1">
-          <img src="images/partners/rapha_africa.png" alt="">
+          <img loading="lazy" decoding="async" src="images/partners/rapha_africa.png" alt="">
         </a>
         <a href="https://hike-kilimanjaro.com/" target="_blank" rel="noopener noreferrer" class="partner-logo" tabindex="-1">
-          <img src="images/partners/hk.png" alt="">
+          <img loading="lazy" decoding="async" src="images/partners/hk.png" alt="">
         </a>
       </div>
 
