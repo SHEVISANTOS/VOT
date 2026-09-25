@@ -667,7 +667,7 @@ textarea:focus-visible {
 
 .stats {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(140px, 100%), 1fr));
   /* tighter gap for compact layout */
   gap: 1rem;
   text-align: center;
@@ -888,7 +888,7 @@ textarea:focus-visible {
 
 .why-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr));
   /* reduce gap and allow dense packing */
   gap: 0.5rem;
   grid-auto-flow: dense;
@@ -1095,7 +1095,7 @@ textarea:focus-visible {
 
 .programs-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
   /* tighter gap and dense packing to fill empty slots */
   gap: 0.5rem;
   grid-auto-flow: dense;
@@ -1801,6 +1801,7 @@ body.modal-open {
 
 .footer-links {
   display: flex;
+  flex-wrap: wrap;
   gap: 1.5rem;
 }
 .footer-links a:hover { color: var(--sun-ochre); }
@@ -2546,7 +2547,7 @@ body.modal-open {
 
 .detail-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr));
   gap: 1.5rem;
   margin-top: 2.75rem;
 }
@@ -2633,7 +2634,7 @@ body.modal-open {
 
 .mwanza-page .activities-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr));
   gap: 30px;
   margin-bottom: 40px;
 }
@@ -3116,7 +3117,7 @@ video[preload="none"] {
 
 .activities-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr));
   gap: 30px;
   margin-bottom: 40px;
 }
@@ -3306,19 +3307,32 @@ video[preload="none"] {
   overflow: hidden;
 }
 
+.acc-hero-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .acc-page-hero-overlay {
   position: absolute;
   inset: 0;
-  background: url('images/a_1.jpeg') center/cover;
-  /* Uses first image as subtle background */
-  opacity: 0.15;
+  /* Darkens the video so the white text stays readable */
+  background: linear-gradient(180deg, rgba(10, 42, 49, 0.55), rgba(10, 42, 49, 0.75));
 }
 
 .acc-page-hero-content {
   position: relative;
   z-index: 2;
+  box-sizing: border-box;
   padding: 20px;
   max-width: 800px;
+}
+
+.acc-page-hero-content .btn--ghost {
+  color: var(--white);
+  border-color: rgba(255, 255, 255, 0.7);
 }
 
 .acc-page-hero-content h1 {
@@ -3329,6 +3343,8 @@ video[preload="none"] {
 
 .acc-page-hero-content p {
   color: var(--savanna-dim);
+  text-align: center;
+  hyphens: manual;
   font-size: var(--step1);
   margin-bottom: 2rem;
   max-width: 600px;
@@ -3730,7 +3746,7 @@ video[preload="none"] {
 /* Enhanced Stats Section */
 .stats {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(140px, 100%), 1fr));
   gap: 2rem;
   text-align: center;
   position: relative;
@@ -3917,7 +3933,7 @@ video[preload="none"] {
    ========================================================= */
 .stats {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(140px, 100%), 1fr));
   gap: 1.5rem;
   text-align: center;
 }
@@ -4075,7 +4091,7 @@ video[preload="none"] {
 
 .partner-logos-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(180px, 100%), 1fr));
   gap: 2.5rem;
   align-items: center;
   justify-items: center;
@@ -4113,7 +4129,7 @@ video[preload="none"] {
 
 @media (max-width: 768px) {
   .partner-logos-grid {
-    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(140px, 100%), 1fr));
     gap: 1.5rem;
   }
 
@@ -4523,7 +4539,7 @@ video[preload="none"] {
 .why-grid,
 .detail-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
   gap: 2rem;
   margin-top: 2.5rem;
 }
@@ -4686,7 +4702,7 @@ video[preload="none"] {
 /* Help Cards (Community page — "your experience" + "ways to help") */
 .help-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
   gap: 2rem;
   margin-top: 2.5rem;
 }
@@ -4749,7 +4765,7 @@ video[preload="none"] {
 /* Partner Cards (Community page — organizations volunteers work with) */
 .partner-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
   gap: 2rem;
   margin-top: 2.5rem;
 }
@@ -4829,7 +4845,7 @@ video[preload="none"] {
 
 .mv-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr));
   gap: 2rem;
 }
 
@@ -4916,7 +4932,7 @@ video[preload="none"] {
 
 .culture-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr));
   gap: 1.5rem;
 }
 
@@ -5402,7 +5418,7 @@ video[preload="none"] {
 /* ===== Quick Stats — small/medium ===== */
 .accommodation-stats {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(110px, 100%), 1fr));
   gap: 0.5rem;
   margin-bottom: 1rem;
 }
@@ -6182,7 +6198,7 @@ FINAL OVERRIDES — paste at the VERY END of style.css
 
 /* Stat cards: small/medium on all screens */
 .accommodation-stats {
-  grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(110px, 100%), 1fr));
   gap: 0.5rem;
   margin-bottom: 1rem;
 }
