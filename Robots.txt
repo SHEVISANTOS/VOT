@@ -1,0 +1,8 @@
+# Global rule: Allow all search engines and AI chatbots to read the site
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /includes/
+
+# Link to the website map to guide bots quickly through your pages
+Sitemap: https://www.volunteertotanzania.com/sitemap.xml
