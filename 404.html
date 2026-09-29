@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex">
+  <title>Page Not Found | Volunteers of Tanzania</title>
+  <link rel="icon" type="image/avif" href="/images/logo.avif">
+  <meta name="theme-color" content="#0F3D46">
+  <link rel="stylesheet" href="/style.css">
+  <script>
+    // Old or mistyped URLs (e.g. from Google) -> send visitors to the closest real page.
+    (function () {
+      var pages = [
+        'accommodation', 'bmcc-day-care', 'bujora-cultural-museum', 'community',
+        'conservation-lake-victoria', 'daycare-children', 'education', 'engineering',
+        'geology', 'healthcare', 'kageye-historical-site', 'mass-communication',
+        'mwanza-activities', 'mwanza-city-tour', 'our_team', 'prices',
+        'safari-activities', 'saut-visit', 'serengeti-day-trip', 'tecec-early-childhood',
+        'tour', 'ukerewe-island', 'wildlife-conservation', 'zanzibar'
+      ];
+      var slug = location.pathname.toLowerCase().split('/').pop().replace(/\.html?$/, '');
+      var words = slug.split(/[^a-z0-9]+/).filter(function (w) { return w.length > 2; });
+      var best = null, bestScore = 0;
+      pages.forEach(function (p) {
+        var score = 0;
+        p.split(/[-_]/).forEach(function (w) { if (words.indexOf(w) !== -1) score++; });
+        if (score > bestScore) { best = p; bestScore = score; }
+      });
+      if (best) location.replace('/' + best + '.html');
+    })();
+  </script>
+  <style>
+    .nf { max-width: 640px; margin: 0 auto; padding: 96px 16px; text-align: center; }
+    .nf h1 { margin-bottom: 12px; }
+    .nf ul { list-style: none; padding: 0; margin: 24px 0 0; display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
+    .nf a { color: #0F3D46; font-weight: 600; }
+  </style>
+</head>
+<body>
+  <main class="nf">
+    <a href="/"><img src="/images/logo.avif" alt="VOT Logo" width="96"></a>
+    <h1>Page not found</h1>
+    <p>This page has moved or no longer exists. Try one of these:</p>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/tour.html">Tours</a></li>
+      <li><a href="/zanzibar.html">Zanzibar</a></li>
+      <li><a href="/prices.html">Prices</a></li>
+      <li><a href="/accommodation.html">Accommodation</a></li>
+      <li><a href="/index.html#placements">Programs</a></li>
+      <li><a href="/index.html#contact">Contact</a></li>
+    </ul>
+  </main>
+</body>
+</html>
