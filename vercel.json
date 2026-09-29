@@ -1,0 +1,9 @@
+{
+  "redirects": [
+    {
+      "source": "/:page([a-zA-Z0-9_-]+)",
+      "destination": "/:page.html",
+      "permanent": true
+    }
+  ]
+}
