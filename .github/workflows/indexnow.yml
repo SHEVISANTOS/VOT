@@ -10,17 +10,22 @@ jobs:
   ping:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           fetch-depth: 0
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v5
         with:
-          node-version: 20
+          node-version: 24
       # Give Vercel time to finish deploying before search engines come crawling.
       - run: sleep 120
-      - name: Submit changed pages
-        if: github.event_name == 'push' && github.event.before != '0000000000000000000000000000000000000000'
-        run: node scripts/indexnow.mjs --changed ${{ github.event.before }}
-      - name: Submit full sitemap (manual run)
-        if: github.event_name == 'workflow_dispatch'
-        run: node scripts/indexnow.mjs
+      - name: Submit pages
+        env:
+          BEFORE: ${{ github.event.before }}
+        run: |
+          # Only changed pages when the previous commit is known; otherwise
+          # (manual run, first push, force-push) submit the whole sitemap.
+          if [ "${{ github.event_name }}" = "push" ] && git cat-file -e "$BEFORE^{commit}" 2>/dev/null; then
+            node scripts/indexnow.mjs --changed "$BEFORE"
+          else
+            node scripts/indexnow.mjs
+          fi
