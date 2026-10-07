@@ -6,6 +6,41 @@
       "permanent": true
     },
     {
+      "source": "/(about-us|about|aboutus)(.html)?",
+      "destination": "/#about",
+      "permanent": true
+    },
+    {
+      "source": "/(opportunities|programs|programmes|placements)(.html)?",
+      "destination": "/#placements",
+      "permanent": true
+    },
+    {
+      "source": "/(contact-us|contact|contactus)(.html)?",
+      "destination": "/#contact",
+      "permanent": true
+    },
+    {
+      "source": "/(tours|day-trips|national-parks|tourism-hospitality|tourism-and-hospitality)(.html)?",
+      "destination": "/tour.html",
+      "permanent": true
+    },
+    {
+      "source": "/(our-team|team|ourteam)(.html)?",
+      "destination": "/our_team.html",
+      "permanent": true
+    },
+    {
+      "source": "/(gallery|faq)(.html)?",
+      "destination": "/#$1",
+      "permanent": true
+    },
+    {
+      "source": "/(home|index)(.php|.htm)?",
+      "destination": "/",
+      "permanent": true
+    },
+    {
       "source": "/:page([a-zA-Z0-9_-]+)",
       "destination": "/:page.html",
       "permanent": true
