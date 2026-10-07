@@ -7,7 +7,7 @@
     },
     {
       "source": "/(about-us|about|aboutus)(.html)?",
-      "destination": "/#about",
+      "destination": "/#story",
       "permanent": true
     },
     {
