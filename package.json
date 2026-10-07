@@ -1,5 +1,9 @@
 {
   "dependencies": {
     "@vercel/analytics": "^2.0.1"
+  },
+  "scripts": {
+    "indexnow": "node scripts/indexnow.mjs",
+    "indexnow:changed": "node scripts/indexnow.mjs --changed"
   }
 }
