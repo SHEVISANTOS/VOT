@@ -7431,16 +7431,24 @@ PARTNER LOGOS — FULL COLOUR (overrides grayscale)
   }
 
   .hero--photo h1 {
-    font-size: clamp(2.6rem, 1.6rem + 3vw, 4.4rem);
-    line-height: 1.06;
+    font-size: clamp(2.4rem, 1.3rem + 2.6vw, 3.8rem);
+    line-height: 1.1;
+    max-width: none;
+    text-wrap: balance;
     text-shadow: 0 2px 18px rgba(0, 0, 0, 0.45);
+  }
+
+  .hero--photo h1 em {
+    display: inline-block;
+    margin-top: 0.35rem;
   }
 
   .hero--photo p.lede {
     font-size: clamp(1.05rem, 0.95rem + 0.4vw, 1.25rem);
     line-height: 1.65;
-    max-width: 48ch;
+    max-width: 52ch;
     margin-top: 1.5rem;
+    text-wrap: pretty;
     color: rgba(255, 255, 255, 0.88);
   }
 
