@@ -7457,3 +7457,11 @@ PARTNER LOGOS — FULL COLOUR (overrides grayscale)
     gap: 0.9rem;
   }
 }
+
+/* Detail links inside hub cards: wrap on narrow screens */
+.activity-content .card-link,
+.help-card .card-link {
+  width: auto;
+  max-width: 100%;
+  margin-top: 1rem;
+}
