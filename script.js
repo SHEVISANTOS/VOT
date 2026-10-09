@@ -1246,9 +1246,16 @@ function initPricingCalculator() {
     const discountNote = discount > 0 ? ' (' + (discount * 100) + '% group discount applied)' : '';
 
     durationValue.textContent = weeks + ' week' + (weeks !== 1 ? 's' : '');
-    if (durationPrice) durationPrice.textContent = '· USD ' + total.toLocaleString(undefined, { maximumFractionDigits: 0 });
+    const perPerson = groupSize > 1 ? ' per person' : '';
+    if (durationPrice) durationPrice.textContent = '· USD ' + total.toLocaleString(undefined, { maximumFractionDigits: 0 }) + perPerson;
     totalAmount.textContent = 'USD ' + total.toLocaleString(undefined, { maximumFractionDigits: 0 });
-    totalBreakdown.textContent = 'USD ' + rate.toLocaleString(undefined, { maximumFractionDigits: 2 }) + ' per week' + discountNote + ' · ' + weeks + ' week' + (weeks !== 1 ? 's' : '');
+    if (perPerson) {
+      const unit = document.createElement('span');
+      unit.className = 'et-unit';
+      unit.textContent = perPerson;
+      totalAmount.appendChild(unit);
+    }
+    totalBreakdown.textContent = 'USD ' + rate.toLocaleString(undefined, { maximumFractionDigits: 2 }) + perPerson + ' per week' + discountNote + ' · ' + weeks + ' week' + (weeks !== 1 ? 's' : '');
 
     // Update slider track fill
     const pct = ((weeks - slider.min) / (slider.max - slider.min)) * 100;
