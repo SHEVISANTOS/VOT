@@ -7466,13 +7466,16 @@ PARTNER LOGOS — FULL COLOUR (overrides grayscale)
   margin-top: 1rem;
 }
 
-/* Email links in program cards: shrink to fit and wrap instead of overflowing */
+/* Email links in program cards: scale text down so the address fits on one line */
+.program-card__body:has(.card-link[href^="mailto:"]) {
+  container-type: inline-size;
+}
+
 .program-card__body .card-link[href^="mailto:"] {
   display: inline-block;
   align-self: flex-start;
-  width: auto;
+  margin-inline: 0;
   max-width: 100%;
-  font-size: clamp(0.8rem, 0.75rem + 0.3vw, 0.95rem);
-  overflow-wrap: anywhere;
-  word-break: break-word;
+  white-space: nowrap;
+  font-size: min(0.9rem, 4.8cqi);
 }
