@@ -7465,3 +7465,14 @@ PARTNER LOGOS — FULL COLOUR (overrides grayscale)
   max-width: 100%;
   margin-top: 1rem;
 }
+
+/* Email links in program cards: shrink to fit and wrap instead of overflowing */
+.program-card__body .card-link[href^="mailto:"] {
+  display: inline-block;
+  align-self: flex-start;
+  width: auto;
+  max-width: 100%;
+  font-size: clamp(0.8rem, 0.75rem + 0.3vw, 0.95rem);
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
