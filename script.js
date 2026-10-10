@@ -944,6 +944,13 @@ function sendEmail(e) {
     step: 4
   });
 
+  const initToursShowMore = () => initShowMore({
+    containerId: 'tour-grid',
+    buttonId: 'tours-show-more',
+    itemSelector: '.placement-card',
+    step: 4
+  });
+
   const initFaqShowMore = () => initShowMore({
     containerId: 'faq-grid',
     buttonId: 'faq-show-more',
@@ -965,6 +972,7 @@ function sendEmail(e) {
     initLazyLoading();
     initProgressBars();
     initPlacementsShowMore();
+    initToursShowMore();
     initFaqShowMore();
 
     console.log('✅ VOT Website initialized successfully');
