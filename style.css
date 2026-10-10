@@ -7586,3 +7586,61 @@ PARTNER LOGOS — FULL COLOUR (overrides grayscale)
     aspect-ratio: 4 / 3;
   }
 }
+
+/* =========================================================
+   BACK TO TOP BUTTON
+   ========================================================= */
+.back-to-top {
+  position: fixed;
+  left: 1.25rem;
+  bottom: 1.25rem;
+  z-index: 110;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.7rem 1.15rem 0.7rem 0.95rem;
+  border-radius: 999px;
+  font-family: var(--font-utility);
+  font-size: var(--step-1);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  background: var(--lake-deep);
+  color: var(--white);
+  border: 2px solid var(--sun-ochre);
+  box-shadow: var(--shadow-md);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(12px);
+  transition: opacity var(--transition), transform var(--transition),
+              visibility var(--transition), background var(--transition);
+}
+
+.back-to-top svg {
+  width: 1.15rem;
+  height: 1.15rem;
+  flex-shrink: 0;
+}
+
+.back-to-top.is-visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.back-to-top:hover {
+  background: var(--sun-ochre);
+  color: var(--ink);
+}
+
+.back-to-top:focus-visible {
+  outline: 3px solid var(--sun-ochre);
+  outline-offset: 3px;
+}
+
+@media (max-width: 680px) {
+  .back-to-top {
+    left: 0.75rem;
+    bottom: 6rem; /* clears the sticky Apply Now bar */
+    padding: 0.6rem 0.95rem 0.6rem 0.8rem;
+  }
+}

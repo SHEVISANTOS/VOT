@@ -959,6 +959,39 @@ function sendEmail(e) {
   });
 
   /* =========================================================
+     BACK TO TOP BUTTON
+     ========================================================= */
+  const initBackToTop = () => {
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.className = 'back-to-top';
+    button.setAttribute('aria-label', 'Back to top');
+    button.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Top</span>';
+    document.body.appendChild(button);
+
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    let ticking = false;
+
+    const update = () => {
+      button.classList.toggle('is-visible', window.scrollY > 400);
+      ticking = false;
+    };
+
+    window.addEventListener('scroll', () => {
+      if (!ticking) {
+        requestAnimationFrame(update);
+        ticking = true;
+      }
+    }, { passive: true });
+
+    button.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: reduceMotion ? 'auto' : 'smooth' });
+    });
+
+    update();
+  };
+
+  /* =========================================================
      INITIALIZE ALL FUNCTIONS
      ========================================================= */
   const init = () => {
@@ -974,6 +1007,7 @@ function sendEmail(e) {
     initPlacementsShowMore();
     initToursShowMore();
     initFaqShowMore();
+    initBackToTop();
 
     console.log('✅ VOT Website initialized successfully');
   };
