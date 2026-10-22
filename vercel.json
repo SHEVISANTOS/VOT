@@ -1,49 +1,65 @@
 {
+  "trailingSlash": false,
   "redirects": [
+    {
+      "source": "/index.html",
+      "destination": "/",
+      "statusCode": 301
+    },
     {
       "source": "/zanzibar-island(.html)?",
       "destination": "/zanzibar.html",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/(about-us|about|aboutus)(.html)?",
       "destination": "/#story",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/(opportunities|programs|programmes|placements)(.html)?",
       "destination": "/#placements",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/(contact-us|contact|contactus)(.html)?",
       "destination": "/#contact",
-      "permanent": true
+      "statusCode": 301
     },
     {
-      "source": "/(tours|day-trips|national-parks|tourism-hospitality|tourism-and-hospitality)(.html)?",
+      "source": "/(tours|day-trips|national-parks)(.html)?",
       "destination": "/tour.html",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/(our-team|team|ourteam)(.html)?",
       "destination": "/our_team.html",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/(gallery|faq)(.html)?",
       "destination": "/#$1",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/(home|index)(.php|.htm)?",
       "destination": "/",
-      "permanent": true
+      "statusCode": 301
+    },
+    {
+      "source": "/day-trip(.html)?",
+      "destination": "/tour.html#day-trips",
+      "statusCode": 301
+    },
+    {
+      "source": "/(tourism-hospitality|tourism-and-hospitality)(.html)?",
+      "destination": "/tourism-hospitality-internship.html",
+      "statusCode": 301
     },
     {
       "source": "/:page([a-zA-Z0-9_-]+)",
       "destination": "/:page.html",
-      "permanent": true
+      "statusCode": 301
     }
   ]
 }

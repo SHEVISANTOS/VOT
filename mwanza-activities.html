@@ -14,8 +14,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Favicon & Theme -->
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png">
   <link rel="icon" type="image/avif" href="images/logo.avif">
-  <link rel="apple-touch-icon" href="images/logo.avif">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <meta name="theme-color" content="#0F3D46">
 
   <!--  1. PRIMARY SEO (CHANGE THESE 3 LINES PER PAGE) -->
@@ -34,15 +36,15 @@
   <meta property="og:title" content="Things to Do in Mwanza, Tanzania | Volunteers of Tanzania">
   <meta property="og:description" content="Things to do in Mwanza, Tanzania: city tours, Bismark Rock, Saanane Island, Bujora Sukuma Museum, Ukerewe Island and Lake Victoria trips arranged by VOT.">
   <meta property="og:url" content="https://www.volunteertotanzania.com/mwanza-activities.html">
-  <meta property="og:image" content="https://www.volunteertotanzania.com/images/logo.jpeg"> 
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
+  <meta property="og:image" content="https://www.volunteertotanzania.com/images/og/mwanza-activities.jpg"> 
+  <meta property="og:image:width" content="900">
+  <meta property="og:image:height" content="472">
 
   <!-- 3. TWITTER CARD -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Things to Do in Mwanza, Tanzania | Volunteers of Tanzania">
   <meta name="twitter:description" content="Things to do in Mwanza, Tanzania: city tours, Bismark Rock, Saanane Island, Bujora Sukuma Museum, Ukerewe Island and Lake Victoria trips arranged by VOT.">
-  <meta name="twitter:image" content="https://www.volunteertotanzania.com/images/logo.jpeg">
+  <meta name="twitter:image" content="https://www.volunteertotanzania.com/images/og/mwanza-activities.jpg">
 
   <!-- 4. LOCAL SEO (Crucial for Mwanza Search Results) -->
   <meta name="geo.region" content="TZ-18">
@@ -56,7 +58,8 @@
     "@context": "https://schema.org",
     "@graph": [
       {
-        "@type": "Organization",
+        "@type": "NGO",
+        "@id": "https://www.volunteertotanzania.com/#organization",
         "name": "Volunteers of Tanzania",
         "alternateName": "VOT Mwanza",
         "url": "https://www.volunteertotanzania.com/",
@@ -70,14 +73,106 @@
           "postOfficeBoxNumber": "4127"
         },
         "areaServed": "Tanzania",
-        "sameAs": ["https://www.youtube.com/@volunteersoftanzania", "https://www.instagram.com/volunteersoftanzania_/", "https://www.facebook.com/volunteertotanzania"]
+        "sameAs": [
+          "https://www.youtube.com/@volunteersoftanzania",
+          "https://www.instagram.com/volunteersoftanzania_/",
+          "https://www.facebook.com/volunteertotanzania"
+        ],
+        "logo": "https://www.volunteertotanzania.com/images/logo.jpeg"
       },
       {
         "@type": "BreadcrumbList",
         "itemListElement": [
-          {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.volunteertotanzania.com/"},
-          {"@type": "ListItem", "position": 2, "name": "Tours", "item": "https://www.volunteertotanzania.com/tour.html"},
-          {"@type": "ListItem", "position": 3, "name": "Activities in Mwanza", "item": "https://www.volunteertotanzania.com/mwanza-activities.html"}
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.volunteertotanzania.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Tours",
+            "item": "https://www.volunteertotanzania.com/tour.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Activities in Mwanza",
+            "item": "https://www.volunteertotanzania.com/mwanza-activities.html"
+          }
+        ]
+      },
+      {
+        "@type": "CollectionPage",
+        "@id": "https://www.volunteertotanzania.com/mwanza-activities.html#page",
+        "name": "Activities in Mwanza",
+        "description": "Things to do in Mwanza, Tanzania: city tours, Bismark Rock, Saanane Island, Bujora Sukuma Museum, Ukerewe Island and Lake Victoria trips arranged by VOT.",
+        "url": "https://www.volunteertotanzania.com/mwanza-activities.html",
+        "mainEntity": {
+          "@type": "ItemList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "url": "https://www.volunteertotanzania.com/mwanza-city-tour.html"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "url": "https://www.volunteertotanzania.com/bujora-cultural-museum.html"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "url": "https://www.volunteertotanzania.com/kageye-historical-site.html"
+            },
+            {
+              "@type": "ListItem",
+              "position": 4,
+              "url": "https://www.volunteertotanzania.com/saut-visit.html"
+            },
+            {
+              "@type": "ListItem",
+              "position": 5,
+              "url": "https://www.volunteertotanzania.com/ukerewe-island.html"
+            },
+            {
+              "@type": "ListItem",
+              "position": 6,
+              "url": "https://www.volunteertotanzania.com/serengeti-day-trip.html"
+            }
+          ]
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://www.volunteertotanzania.com/mwanza-activities.html#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Can I combine volunteering with a safari or Zanzibar trip?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Absolutely — many volunteers add on a safari , a Zanzibar beach trip, or these local Mwanza activities before or after their placement. Let us know your interest and our team can help you plan it."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What about malaria and mosquito protection?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Mwanza sits on Lake Victoria in a malaria risk area, so we recommend seeing a doctor or travel clinic about antimalarial medication before you fly. Every bed at VOT Hostel is fitted with a mosquito net, and we advise using repellent and covering up in the evenings."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do I get from the airport to Mwanza?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Airport pickup is included. Simply share your flight details with us after applying and our team will meet you at Mwanza Airport (MWZ)."
+            }
+          }
         ]
       }
     ]
@@ -88,8 +183,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400&family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" type="image/webp" href="images/webp/mwanza_icon-jpg.webp" fetchpriority="high">
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
+  <script src="country-codes.js" defer></script>
   <!-- Vercel Web Analytics -->
   <script>
     window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
@@ -103,7 +200,7 @@
   <header class="site-header">
     <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
     <div class="wrap site-header__inner">
-      <a class="logo" href="index.html" aria-label="Volunteers of Tanzania home">
+      <a class="logo" href="/" aria-label="Volunteers of Tanzania home">
         <img src="images/logo.avif" alt="Volunteers of Tanzania logo" width="160" height="60">
       </a>
 
@@ -113,13 +210,13 @@
       </button>
 
       <nav id="primary-nav" class="nav" aria-label="Primary navigation">
-        <a href="index.html#story">About Us</a>
-        <a href="index.html#placements">Programs</a>
-        <a href="index.html#accommodation">Accommodation</a>
-        <a href="index.html#tours">Tours</a>
-        <a href="index.html#prices">Prices</a>
-        <a href="index.html#faq">FAQ</a>
-        <a href="index.html#gallery">Our Gallery</a>
+        <a href="/#story">About Us</a>
+        <a href="/#placements">Programs</a>
+        <a href="/#accommodation">Accommodation</a>
+        <a href="/#tours">Tours</a>
+        <a href="/#prices">Prices</a>
+        <a href="/#faq">FAQ</a>
+        <a href="/#gallery">Our Gallery</a>
         <a href="#contact" class="nav-link--contact">Contact Us</a>
         <a href="#contact" class="btn btn--primary nav-link--apply">Apply Now</a>
       </nav>
@@ -136,15 +233,15 @@
 
     <div class="container">
         <!-- Hero Image -->
-        <img src="images/mwanza_icon.jpg" alt="Mwanza City Overview - Lake Victoria" class="hero-image">
+        <picture><source type="image/webp" srcset="images/webp/mwanza_icon-jpg.webp"><img width="612" height="409" src="images/mwanza_icon.jpg" alt="Mwanza City Overview - Lake Victoria" class="hero-image"></picture>
 
-        <a href="tour.html" class="back-link">← Back to Day Trips</a>
+        <a href="/tour.html" class="back-link">← Back to Day Trips</a>
 
         <div class="activities-grid">
             <!-- Mwanza City Tour -->
             <div class="activity-card">
                 <div class="activity-image">
-                    <img loading="lazy" decoding="async" src="images/mwanza_bismark_rock.avif" alt="Bismark Rock - Mwanza">
+                    <img width="954" height="533" loading="lazy" decoding="async" src="images/mwanza_bismark_rock.avif" alt="Bismark Rock - Mwanza">
                 </div>
                 <div class="activity-content">
                     <div class="activity-icon">️</div>
@@ -152,8 +249,8 @@
                     <p>Experience the vibrant city of Mwanza with arrangements made by VOT management.</p>
                     
                     <div class="photo-gallery">
-                        <img loading="lazy" decoding="async" src="images/capri point.jpeg" alt="Capri Point Peninsula">
-                        <img loading="lazy" decoding="async" src="images/Rock_City_Mall.jpg" alt="Rock City Mall">
+                        <img width="547" height="365" loading="lazy" decoding="async" src="images/capri point.jpeg" alt="Capri Point Peninsula">
+                        <picture><source type="image/webp" srcset="images/webp/Rock_City_Mall-jpg.webp"><img width="736" height="982" loading="lazy" decoding="async" src="images/Rock_City_Mall.jpg" alt="Rock City Mall"></picture>
                     </div>
 
                     <h3>Highlights Include:</h3>
@@ -183,14 +280,14 @@
                         <span class="tag">Shopping</span>
                         <span class="tag">History</span>
                     </div>
-                    <a class="card-link" href="mwanza-city-tour.html">Full Mwanza City Tour details →</a>
+                    <a class="card-link" href="/mwanza-city-tour.html">Full Mwanza City Tour details →</a>
                 </div>
             </div>
 
             <!-- Bujora Cultural Museum -->
             <div class="activity-card">
                 <div class="activity-image">
-                    <img loading="lazy" decoding="async" src="images/bujora_museum.avif" alt="Bujora Cultural Museum">
+                    <img width="502" height="374" loading="lazy" decoding="async" src="images/bujora_museum.avif" alt="Bujora Cultural Museum">
                 </div>
                 <div class="activity-content">
                     <div class="activity-icon">️</div>
@@ -198,8 +295,8 @@
                     <p>The Sukuma Museum is a community-oriented organization committed to promoting and honoring the traditional and contemporary arts of the Sukuma culture.</p>
                     
                     <div class="photo-gallery">
-                        <img loading="lazy" decoding="async" src="images/bujora_2.jpeg" alt="Sukuma Traditional Dance">
-                        <img loading="lazy" decoding="async" src="images/bujora_3.jpeg" alt="Traditional Healer's House">
+                        <img width="387" height="516" loading="lazy" decoding="async" src="images/bujora_2.jpeg" alt="Sukuma Traditional Dance">
+                        <img width="452" height="678" loading="lazy" decoding="async" src="images/bujora_3.jpeg" alt="Traditional Healer's House">
                     </div>
 
                     <div class="highlight">
@@ -227,14 +324,14 @@
                         <span class="tag">Traditional Arts</span>
                         <span class="tag">Workshops</span>
                     </div>
-                    <a class="card-link" href="bujora-cultural-museum.html">Full Bujora Cultural Museum details →</a>
+                    <a class="card-link" href="/bujora-cultural-museum.html">Full Bujora Cultural Museum details →</a>
                 </div>
             </div>
 
             <!-- Kageye Historical Site -->
             <div class="activity-card">
                 <div class="activity-image">
-                    <img loading="lazy" decoding="async" src="images/kageye.jpeg" alt="Kageye Historical Site">
+                    <img width="299" height="168" loading="lazy" decoding="async" src="images/kageye.jpeg" alt="Kageye Historical Site">
                 </div>
                 <div class="activity-content">
                     <div class="activity-icon">🏛️</div>
@@ -262,14 +359,14 @@
                         <span class="tag">Heritage</span>
                         <span class="tag">Cultural Site</span>
                     </div>
-                    <a class="card-link" href="kageye-historical-site.html">Full Kageye Historical Site details →</a>
+                    <a class="card-link" href="/kageye-historical-site.html">Full Kageye Historical Site details →</a>
                 </div>
             </div>
 
             <!-- St. Augustine University -->
             <div class="activity-card">
                 <div class="activity-image">
-                    <img loading="lazy" decoding="async" src="images/SAUT.jpg" alt="St. Augustine University Campus">
+                    <img width="677" height="510" loading="lazy" decoding="async" src="images/SAUT.jpg" alt="St. Augustine University Campus">
                 </div>
                 <div class="activity-content">
                     <div class="activity-icon">🎓</div>
@@ -277,8 +374,8 @@
                     <p>Visit SAUT - the largest private university and third largest overall in Tanzania, located just 3 km from VOT Hostel.</p>
                     
                     <div class="photo-gallery">
-                        <img loading="lazy" decoding="async" src="images/SAUT_2.jpeg" alt="SAUT Library">
-                        <img loading="lazy" decoding="async" src="images/SAUT_1.jpeg" alt="SAUT Students">
+                        <img width="597" height="335" loading="lazy" decoding="async" src="images/SAUT_2.jpeg" alt="SAUT Library">
+                        <picture><source type="image/webp" srcset="images/webp/SAUT_1-jpeg.webp"><img width="594" height="336" loading="lazy" decoding="async" src="images/SAUT_1.jpeg" alt="SAUT Students"></picture>
                     </div>
 
                     <h3>University Facts:</h3>
@@ -303,14 +400,14 @@
                         <span class="tag">Campus Tour</span>
                         <span class="tag">Cultural Exchange</span>
                     </div>
-                    <a class="card-link" href="saut-visit.html">Full St. Augustine University Visit details →</a>
+                    <a class="card-link" href="/saut-visit.html">Full St. Augustine University Visit details →</a>
                 </div>
             </div>
 
             <!-- Serengeti Day Trip -->
             <div class="activity-card">
                 <div class="activity-image">
-                    <img loading="lazy" decoding="async" src="images/tour_3.jpg" alt="Serengeti National Park Wildlife">
+                    <picture><source type="image/webp" srcset="images/webp/tour_3-jpg.webp"><img width="314" height="314" loading="lazy" decoding="async" src="images/tour_3.jpg" alt="Serengeti National Park Wildlife"></picture>
                 </div>
                 <div class="activity-content">
                     <div class="activity-icon">🦁</div>
@@ -318,8 +415,8 @@
                     <p>Recognized as one of the 'Seven New Wonders of the World', Serengeti National Park is globally renowned for the spectacular wildebeest and zebra migration.</p>
                     
                     <div class="photo-gallery">
-                        <img loading="lazy" decoding="async" src="images/serengeti_1.jpeg" alt="Wildebeest Migration">
-                        <img loading="lazy" decoding="async" src="images/serengeti_2.jpeg" alt="Serengeti Sunset">
+                        <img width="738" height="330" loading="lazy" decoding="async" src="images/serengeti_1.jpeg" alt="Wildebeest Migration">
+                        <img width="638" height="480" loading="lazy" decoding="async" src="images/serengeti_2.jpeg" alt="Serengeti Sunset">
                     </div>
 
                     <div class="highlight">
@@ -349,14 +446,14 @@
                         <span class="tag">Adventure</span>
                         <span class="tag">Nature</span>
                     </div>
-                    <a class="card-link" href="serengeti-day-trip.html">Serengeti day trip from Mwanza →</a>
+                    <a class="card-link" href="/serengeti-day-trip.html">Serengeti day trip from Mwanza →</a>
                 </div>
             </div>
 
             <!-- Ukerewe Island -->
             <div class="activity-card">
                 <div class="activity-image">
-                    <img loading="lazy" decoding="async" src="images/ukerewe.jpeg" alt="Ukerewe Island">
+                    <picture><source type="image/webp" srcset="images/webp/ukerewe-jpeg.webp"><img width="399" height="501" loading="lazy" decoding="async" src="images/ukerewe.jpeg" alt="Ukerewe Island"></picture>
                 </div>
                 <div class="activity-content">
                     <div class="activity-icon">🏝️</div>
@@ -364,10 +461,10 @@
                     <p>Visit Africa's largest inland island covering 530 km², located 50 km north of Mwanza in Lake Victoria.</p>
                     
                     <div class="photo-gallery">
-                        <img loading="lazy" decoding="async" src="images/ukerewe_1.jpeg" alt="Kagunguli Church">
-                        <img loading="lazy" decoding="async" src="images/ukerewe_2.jpeg" alt="Chief's Palace">
-                        <img loading="lazy" decoding="async" src="images/ukerewe_3.jpeg" alt="Forest of Rubya">
-                        <img loading="lazy" decoding="async" src="images/ukerewe_4.jpeg" alt="Ferry to Ukerewe">
+                        <img width="204" height="192" loading="lazy" decoding="async" src="images/ukerewe_1.jpeg" alt="Kagunguli Church">
+                        <picture><source type="image/webp" srcset="images/webp/ukerewe_2-jpeg.webp"><img width="195" height="183" loading="lazy" decoding="async" src="images/ukerewe_2.jpeg" alt="Chief's Palace"></picture>
+                        <img width="389" height="261" loading="lazy" decoding="async" src="images/ukerewe_3.jpeg" alt="Forest of Rubya">
+                        <img width="547" height="365" loading="lazy" decoding="async" src="images/ukerewe_4.jpeg" alt="Ferry to Ukerewe">
                     </div>
 
                     <h3>Journey:</h3>
@@ -402,7 +499,7 @@
                         <span class="tag">Culture</span>
                         <span class="tag">Nature</span>
                     </div>
-                    <a class="card-link" href="ukerewe-island.html">Full Ukerewe Island Boat Trip details →</a>
+                    <a class="card-link" href="/ukerewe-island.html">Full Ukerewe Island Boat Trip details →</a>
                 </div>
             </div>
         </div>
@@ -414,7 +511,7 @@
             <a href="mailto:samlugema@volunteertotanzania.com?subject=Day%20Trip%20Booking%20Inquiry" class="cta-button">Book Your Tour Now</a>
         </div>
         
-        <a href="tour.html" class="back-link" style="display: block; text-align: center; margin-top: 20px;">← Back to Tours</a>
+        <a href="/tour.html" class="back-link" style="display: block; text-align: center; margin-top: 20px;">← Back to Tours</a>
     </div>
 
     <!-- ================= REQUIREMENTS & WHAT'S INCLUDED ================= -->
@@ -433,8 +530,8 @@
                   <span class="faq-icon" aria-hidden="true">+</span>
                 </summary>
                 <div class="faq-answer">
-                  <p>Absolutely — many volunteers add on a <a href="safari-activities.html">safari</a>, a
-                    <a href="zanzibar.html">Zanzibar</a> beach trip, or these local Mwanza activities
+                  <p>Absolutely — many volunteers add on a <a href="/safari-activities.html">safari</a>, a
+                    <a href="/zanzibar.html">Zanzibar</a> beach trip, or these local Mwanza activities
                     before or after their placement. Let us know your interest and our team can help you
                     plan it.</p>
                 </div>
@@ -498,8 +595,8 @@
                 <span class="story-stat-card__label">Nyegezi, Mwanza</span>
               </div>
             </div>
-            <a class="btn story-side__cta" href="index.html#contact">Book a Mwanza Activity</a>
-            <a class="card-link" style="margin-top:0.75rem;" href="prices.html">See full pricing</a>
+            <a class="btn story-side__cta" href="/#contact">Book a Mwanza Activity</a>
+            <a class="card-link" style="margin-top:0.75rem;" href="/prices.html">See full pricing</a>
           </aside>
         </div>
       </div>
@@ -533,7 +630,7 @@
           </article>
         </div>
         <p style="text-align:center;margin-top:2rem;">
-          <a class="card-link" href="index.html#testimonials">Read more volunteer stories</a>
+          <a class="card-link" href="/#testimonials">Read more volunteer stories</a>
         </p>
       </div>
     </section>
@@ -545,11 +642,12 @@
           <h2>You might also be interested in</h2>
         </div>
         <div class="reveal" style="display:flex;flex-wrap:wrap;gap:0.75rem 2.25rem;">
-          <a class="card-link" href="mwanza-city-tour.html">Mwanza City Tour</a>
-          <a class="card-link" href="serengeti-day-trip.html">Serengeti Day Trip</a>
-          <a class="card-link" href="ukerewe-island.html">Ukerewe Island Boat Trip</a>
-          <a class="card-link" href="tour.html">All Tours &amp; Excursions</a>
-          <a class="card-link" href="index.html#placements">All Programs</a>
+          <a class="card-link" href="/mwanza-city-tour.html">Mwanza City Tour</a>
+          <a class="card-link" href="/serengeti-day-trip.html">Serengeti Day Trip</a>
+          <a class="card-link" href="/ukerewe-island.html">Ukerewe Island Boat Trip</a>
+          <a class="card-link" href="/tour.html">All Tours &amp; Excursions</a>
+          <a class="card-link" href="/#placements">All Programs</a>
+          <a class="card-link" href="/volunteer-mwanza.html">Volunteer in Mwanza: Guide</a>
         </div>
       </div>
     </section>
@@ -610,238 +708,22 @@
     <label for="phone">Phone *</label>
     <div class="phone-row">
         <select id="country-code" name="country-code" aria-label="Country code" required>
-            <option value="+255" selected>🇹🇿 +255 — Tanzania</option>
-            <option value="+93">🇦🇫 +93 — Afghanistan</option>
-            <option value="+355">🇦🇱 +355 — Albania</option>
-            <option value="+213">🇩🇿 +213 — Algeria</option>
-            <option value="+1684">🇦🇸 +1684 — American Samoa</option>
-            <option value="+376">🇦🇩 +376 — Andorra</option>
-            <option value="+244">🇦🇴 +244 — Angola</option>
-            <option value="+1264">🇦🇮 +1264 — Anguilla</option>
-            <option value="+1268">🇦🇬 +1268 — Antigua and Barbuda</option>
-            <option value="+54">🇦🇷 +54 — Argentina</option>
-            <option value="+374">🇦🇲 +374 — Armenia</option>
-            <option value="+297">🇦🇼 +297 — Aruba</option>
-            <option value="+61">🇦🇺 +61 — Australia</option>
-            <option value="+43">🇦🇹 +43 — Austria</option>
-            <option value="+994">🇦🇿 +994 — Azerbaijan</option>
-            <option value="+1242">🇧🇸 +1242 — Bahamas</option>
-            <option value="+973">🇧🇭 +973 — Bahrain</option>
-            <option value="+880">🇧🇩 +880 — Bangladesh</option>
-            <option value="+1246">🇧🇧 +1246 — Barbados</option>
-            <option value="+375">🇧🇾 +375 — Belarus</option>
-            <option value="+32">🇧🇪 +32 — Belgium</option>
-            <option value="+501">🇧🇿 +501 — Belize</option>
-            <option value="+229">🇧🇯 +229 — Benin</option>
-            <option value="+1441">🇧🇲 +1441 — Bermuda</option>
-            <option value="+975">🇧🇹 +975 — Bhutan</option>
-            <option value="+591">🇧🇴 +591 — Bolivia</option>
-            <option value="+387">🇧🇦 +387 — Bosnia and Herzegovina</option>
-            <option value="+267">🇧🇼 +267 — Botswana</option>
-            <option value="+55">🇧🇷 +55 — Brazil</option>
-            <option value="+246">🇮🇴 +246 — British Indian Ocean Territory</option>
-            <option value="+1284">🇻🇬 +1284 — British Virgin Islands</option>
-            <option value="+673">🇧🇳 +673 — Brunei</option>
-            <option value="+359">🇧🇬 +359 — Bulgaria</option>
-            <option value="+226">🇧🇫 +226 — Burkina Faso</option>
-            <option value="+257">🇧🇮 +257 — Burundi</option>
-            <option value="+238">🇨🇻 +238 — Cabo Verde</option>
-            <option value="+855">🇰🇭 +855 — Cambodia</option>
-            <option value="+237">🇨🇲 +237 — Cameroon</option>
-            <option value="+1">🇨🇦 +1 — Canada</option>
-            <option value="+236">🇨🇫 +236 — Central African Republic</option>
-            <option value="+235">🇹🇩 +235 — Chad</option>
-            <option value="+56">🇨🇱 +56 — Chile</option>
-            <option value="+86">🇨🇳 +86 — China</option>
-            <option value="+57">🇨🇴 +57 — Colombia</option>
-            <option value="+269">🇰🇲 +269 — Comoros</option>
-            <option value="+242">🇨🇬 +242 — Republic of the Congo</option>
-            <option value="+243">🇨🇩 +243 — Democratic Republic of the Congo</option>
-            <option value="+682">🇨🇰 +682 — Cook Islands</option>
-            <option value="+506">🇨🇷 +506 — Costa Rica</option>
-            <option value="+385">🇭🇷 +385 — Croatia</option>
-            <option value="+53">🇨🇺 +53 — Cuba</option>
-            <option value="+599">🇨🇼 +599 — Curaçao</option>
-            <option value="+357">🇨🇾 +357 — Cyprus</option>
-            <option value="+420">🇨🇿 +420 — Czechia</option>
-            <option value="+45">🇩🇰 +45 — Denmark</option>
-            <option value="+253">🇩🇯 +253 — Djibouti</option>
-            <option value="+1767">🇩🇲 +1767 — Dominica</option>
-            <option value="+1809">🇩🇴 +1809 — Dominican Republic</option>
-            <option value="+593">🇪🇨 +593 — Ecuador</option>
-            <option value="+20">🇪🇬 +20 — Egypt</option>
-            <option value="+503">🇸🇻 +503 — El Salvador</option>
-            <option value="+240">🇬🇶 +240 — Equatorial Guinea</option>
-            <option value="+291">🇪🇷 +291 — Eritrea</option>
-            <option value="+372">🇪🇪 +372 — Estonia</option>
-            <option value="+268">🇸🇿 +268 — Eswatini</option>
-            <option value="+251">🇪🇹 +251 — Ethiopia</option>
-            <option value="+500">🇫🇰 +500 — Falkland Islands</option>
-            <option value="+298">🇫🇴 +298 — Faroe Islands</option>
-            <option value="+679">🇫🇯 +679 — Fiji</option>
-            <option value="+358">🇫🇮 +358 — Finland</option>
-            <option value="+33">🇫🇷 +33 — France</option>
-            <option value="+594">🇬🇫 +594 — French Guiana</option>
-            <option value="+689">🇵🇫 +689 — French Polynesia</option>
-            <option value="+241">🇬🇦 +241 — Gabon</option>
-            <option value="+220">🇬🇲 +220 — Gambia</option>
-            <option value="+995">🇬🇪 +995 — Georgia</option>
-            <option value="+49">🇩🇪 +49 — Germany</option>
-            <option value="+233">🇬🇭 +233 — Ghana</option>
-            <option value="+350">🇬🇮 +350 — Gibraltar</option>
-            <option value="+30">🇬🇷 +30 — Greece</option>
-            <option value="+299">🇬🇱 +299 — Greenland</option>
-            <option value="+1473">🇬🇩 +1473 — Grenada</option>
-            <option value="+590">🇬🇵 +590 — Guadeloupe</option>
-            <option value="+1671">🇬🇺 +1671 — Guam</option>
-            <option value="+502">🇬🇹 +502 — Guatemala</option>
-            <option value="+44">🇬🇬 +44 — Guernsey</option>
-            <option value="+224">🇬🇳 +224 — Guinea</option>
-            <option value="+245">🇬🇼 +245 — Guinea-Bissau</option>
-            <option value="+592">🇬🇾 +592 — Guyana</option>
-            <option value="+509">🇭🇹 +509 — Haiti</option>
-            <option value="+504">🇭🇳 +504 — Honduras</option>
-            <option value="+852">🇭🇰 +852 — Hong Kong</option>
-            <option value="+36">🇭🇺 +36 — Hungary</option>
-            <option value="+354">🇮🇸 +354 — Iceland</option>
-            <option value="+91">🇮🇳 +91 — India</option>
-            <option value="+62">🇮🇩 +62 — Indonesia</option>
-            <option value="+98">🇮🇷 +98 — Iran</option>
-            <option value="+964">🇮🇶 +964 — Iraq</option>
-            <option value="+353">🇮🇪 +353 — Ireland</option>
-            <option value="+44">🇮🇲 +44 — Isle of Man</option>
-            <option value="+972">🇮🇱 +972 — Israel</option>
-            <option value="+39">🇮🇹 +39 — Italy</option>
-            <option value="+225">🇨🇮 +225 — Côte d'Ivoire</option>
-            <option value="+1876">🇯🇲 +1876 — Jamaica</option>
-            <option value="+81">🇯🇵 +81 — Japan</option>
-            <option value="+44">🇯🇪 +44 — Jersey</option>
-            <option value="+962">🇯🇴 +962 — Jordan</option>
-            <option value="+7">🇰🇿 +7 — Kazakhstan</option>
-            <option value="+254">🇰🇪 +254 — Kenya</option>
-            <option value="+686">🇰🇮 +686 — Kiribati</option>
-            <option value="+965">🇰🇼 +965 — Kuwait</option>
-            <option value="+996">🇰🇬 +996 — Kyrgyzstan</option>
-            <option value="+856">🇱🇦 +856 — Laos</option>
-            <option value="+371">🇱🇻 +371 — Latvia</option>
-            <option value="+961">🇱🇧 +961 — Lebanon</option>
-            <option value="+266">🇱🇸 +266 — Lesotho</option>
-            <option value="+231">🇱🇷 +231 — Liberia</option>
-            <option value="+218">🇱🇾 +218 — Libya</option>
-            <option value="+423">🇱🇮 +423 — Liechtenstein</option>
-            <option value="+370">🇱🇹 +370 — Lithuania</option>
-            <option value="+352">🇱🇺 +352 — Luxembourg</option>
-            <option value="+853">🇲🇴 +853 — Macao</option>
-            <option value="+261">🇲🇬 +261 — Madagascar</option>
-            <option value="+265">🇲🇼 +265 — Malawi</option>
-            <option value="+60">🇲🇾 +60 — Malaysia</option>
-            <option value="+960">🇲🇻 +960 — Maldives</option>
-            <option value="+223">🇲🇱 +223 — Mali</option>
-            <option value="+356">🇲🇹 +356 — Malta</option>
-            <option value="+692">🇲🇭 +692 — Marshall Islands</option>
-            <option value="+596">🇲🇶 +596 — Martinique</option>
-            <option value="+222">🇲🇷 +222 — Mauritania</option>
-            <option value="+230">🇲🇺 +230 — Mauritius</option>
-            <option value="+262">🇾🇹 +262 — Mayotte</option>
-            <option value="+52">🇲🇽 +52 — Mexico</option>
-            <option value="+691">🇫🇲 +691 — Micronesia</option>
-            <option value="+373">🇲🇩 +373 — Moldova</option>
-            <option value="+377">🇲🇨 +377 — Monaco</option>
-            <option value="+976">🇲🇳 +976 — Mongolia</option>
-            <option value="+382">🇲🇪 +382 — Montenegro</option>
-            <option value="+1664">🇲🇸 +1664 — Montserrat</option>
-            <option value="+212">🇲🇦 +212 — Morocco</option>
-            <option value="+258">🇲🇿 +258 — Mozambique</option>
-            <option value="+95">🇲🇲 +95 — Myanmar</option>
-            <option value="+264">🇳🇦 +264 — Namibia</option>
-            <option value="+674">🇳🇷 +674 — Nauru</option>
-            <option value="+977">🇳🇵 +977 — Nepal</option>
-            <option value="+31">🇳🇱 +31 — Netherlands</option>
-            <option value="+687">🇳🇨 +687 — New Caledonia</option>
-            <option value="+64">🇳🇿 +64 — New Zealand</option>
-            <option value="+505">🇳🇮 +505 — Nicaragua</option>
-            <option value="+227">🇳🇪 +227 — Niger</option>
-            <option value="+234">🇳🇬 +234 — Nigeria</option>
-            <option value="+683">🇳🇺 +683 — Niue</option>
-            <option value="+850">🇰🇵 +850 — North Korea</option>
-            <option value="+389">🇲🇰 +389 — North Macedonia</option>
-            <option value="+1670">🇲🇵 +1670 — Northern Mariana Islands</option>
-            <option value="+47">🇳🇴 +47 — Norway</option>
-            <option value="+968">🇴🇲 +968 — Oman</option>
-            <option value="+92">🇵🇰 +92 — Pakistan</option>
-            <option value="+680">🇵🇼 +680 — Palau</option>
-            <option value="+970">🇵🇸 +970 — Palestine</option>
-            <option value="+507">🇵🇦 +507 — Panama</option>
-            <option value="+675">🇵🇬 +675 — Papua New Guinea</option>
-            <option value="+595">🇵🇾 +595 — Paraguay</option>
-            <option value="+51">🇵🇪 +51 — Peru</option>
-            <option value="+63">🇵🇭 +63 — Philippines</option>
-            <option value="+48">🇵🇱 +48 — Poland</option>
-            <option value="+351">🇵🇹 +351 — Portugal</option>
-            <option value="+1787">🇵🇷 +1787 — Puerto Rico</option>
-            <option value="+974">🇶🇦 +974 — Qatar</option>
-            <option value="+262">🇷🇪 +262 — Réunion</option>
-            <option value="+40">🇷🇴 +40 — Romania</option>
-            <option value="+7">🇷🇺 +7 — Russia</option>
-            <option value="+250">🇷🇼 +250 — Rwanda</option>
-            <option value="+290">🇸🇭 +290 — Saint Helena</option>
-            <option value="+1869">🇰🇳 +1869 — Saint Kitts and Nevis</option>
-            <option value="+1758">🇱🇨 +1758 — Saint Lucia</option>
-            <option value="+508">🇵🇲 +508 — Saint Pierre and Miquelon</option>
-            <option value="+1784">🇻🇨 +1784 — Saint Vincent and the Grenadines</option>
-            <option value="+685">🇼🇸 +685 — Samoa</option>
-            <option value="+378">🇸🇲 +378 — San Marino</option>
-            <option value="+239">🇸🇹 +239 — São Tomé and Príncipe</option>
-            <option value="+966">🇸🇦 +966 — Saudi Arabia</option>
-            <option value="+221">🇸🇳 +221 — Senegal</option>
-            <option value="+381">🇷🇸 +381 — Serbia</option>
-            <option value="+248">🇸🇨 +248 — Seychelles</option>
-            <option value="+232">🇸🇱 +232 — Sierra Leone</option>
-            <option value="+65">🇸🇬 +65 — Singapore</option>
-            <option value="+1721">🇸🇽 +1721 — Sint Maarten</option>
-            <option value="+421">🇸🇰 +421 — Slovakia</option>
-            <option value="+386">🇸🇮 +386 — Slovenia</option>
-            <option value="+677">🇸🇧 +677 — Solomon Islands</option>
-            <option value="+252">🇸🇴 +252 — Somalia</option>
-            <option value="+27">🇿🇦 +27 — South Africa</option>
-            <option value="+82">🇰🇷 +82 — South Korea</option>
-            <option value="+211">🇸🇸 +211 — South Sudan</option>
-            <option value="+34">🇪🇸 +34 — Spain</option>
-            <option value="+94">🇱🇰 +94 — Sri Lanka</option>
-            <option value="+249">🇸🇩 +249 — Sudan</option>
-            <option value="+597">🇸🇷 +597 — Suriname</option>
-            <option value="+46">🇸🇪 +46 — Sweden</option>
-            <option value="+41">🇨🇭 +41 — Switzerland</option>
-            <option value="+963">🇸🇾 +963 — Syria</option>
-            <option value="+886">🇹🇼 +886 — Taiwan</option>
-            <option value="+992">🇹🇯 +992 — Tajikistan</option>
-            <option value="+66">🇹🇭 +66 — Thailand</option>
-            <option value="+670">🇹🇱 +670 — Timor-Leste</option>
-            <option value="+228">🇹🇬 +228 — Togo</option>
-            <option value="+690">🇹🇰 +690 — Tokelau</option>
-            <option value="+676">🇹🇴 +676 — Tonga</option>
-            <option value="+1868">🇹🇹 +1868 — Trinidad and Tobago</option>
-            <option value="+216">🇹🇳 +216 — Tunisia</option>
-            <option value="+90">🇹🇷 +90 — Türkiye</option>
-            <option value="+993">🇹🇲 +993 — Turkmenistan</option>
-            <option value="+1649">🇹🇨 +1649 — Turks and Caicos Islands</option>
-            <option value="+688">🇹🇻 +688 — Tuvalu</option>
-            <option value="+256">🇺🇬 +256 — Uganda</option>
-            <option value="+380">🇺🇦 +380 — Ukraine</option>
-            <option value="+971">🇦🇪 +971 — United Arab Emirates</option>
-            <option value="+44">🇬🇧 +44 — United Kingdom</option>
-            <option value="+1">🇺🇸 +1 — United States</option>
-            <option value="+598">🇺🇾 +598 — Uruguay</option>
-            <option value="+998">🇺🇿 +998 — Uzbekistan</option>
-            <option value="+678">🇻🇺 +678 — Vanuatu</option>
-            <option value="+379">🇻🇦 +379 — Vatican City</option>
-            <option value="+58">🇻🇪 +58 — Venezuela</option>
-            <option value="+84">🇻🇳 +84 — Vietnam</option>
-            <option value="+1340">🇻🇮 +1340 — U.S. Virgin Islands</option>
-            <option value="+681">🇼🇫 +681 — Wallis and Futuna</option>
-            <option value="+967">🇾🇪 +967 — Yemen</option>
-            <option value="+260">🇿🇲 +260 — Zambia</option>
-            <option value="+263">🇿🇼 +263 — Zimbabwe</option>
+          <option value="+255" selected>🇹🇿 +255 — Tanzania</option>
+          <option value="+254">🇰🇪 +254 — Kenya</option>
+          <option value="+27">🇿🇦 +27 — South Africa</option>
+          <option value="+44">🇬🇧 +44 — United Kingdom</option>
+          <option value="+49">🇩🇪 +49 — Germany</option>
+          <option value="+33">🇫🇷 +33 — France</option>
+          <option value="+39">🇮🇹 +39 — Italy</option>
+          <option value="+31">🇳🇱 +31 — Netherlands</option>
+          <option value="+46">🇸🇪 +46 — Sweden</option>
+          <option value="+41">🇨🇭 +41 — Switzerland</option>
+          <option value="+1">🇺🇸 +1 — United States</option>
+          <option value="+1">🇨🇦 +1 — Canada</option>
+          <option value="+61">🇦🇺 +61 — Australia</option>
+          <option value="+91">🇮🇳 +91 — India</option>
+          <option value="+86">🇨🇳 +86 — China</option>
+          <option value="+81">🇯🇵 +81 — Japan</option>
         </select>
         <input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="765 883 202" required>
     </div>
@@ -878,13 +760,13 @@
     <div class="wrap footer-inner">
  <pre class="footer-copyright">© <span id="year"></span> Volunteers of Tanzania. All rights reserved.</pre>
       <nav class="footer-links" aria-label="Footer navigation">
-        <a href="index.html#placements">Programs</a>
-        <a href="prices.html">Prices</a>
-        <a href="accommodation.html">Accommodation</a>
-        <a href="tour.html">Tours</a>
-        <a href="zanzibar.html">Zanzibar</a>
-        <a href="our_team.html">Our Team</a>
-        <a href="index.html#contact">Contact</a>
+        <a href="/#placements">Programs</a>
+        <a href="/prices.html">Prices</a>
+        <a href="/accommodation.html">Accommodation</a>
+        <a href="/tour.html">Tours</a>
+        <a href="/zanzibar.html">Zanzibar</a>
+        <a href="/our_team.html">Our Team</a>
+        <a href="/#contact">Contact</a>
       </nav>
       <div class="social-links site-social">
         <a class="social-link social-link--youtube" href="https://www.youtube.com/@volunteersoftanzania" target="_blank" rel="noopener" aria-label="YouTube channel" title="YouTube"> <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg> </a>

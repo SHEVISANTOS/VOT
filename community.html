@@ -14,13 +14,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Favicon & Theme -->
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png">
   <link rel="icon" type="image/avif" href="images/logo.avif">
-  <link rel="apple-touch-icon" href="images/logo.avif">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <meta name="theme-color" content="#0F3D46">
 
   <!-- 1. PRIMARY SEO (CHANGE THESE 3 LINES PER PAGE) -->
-  <title>Community Volunteer Programs in Mwanza, Tanzania | Volunteers of Tanzania</title>
-  <meta name="description" content="Volunteer with local communities in Mwanza, Tanzania — daycare, early childhood, conservation and community projects run with trusted local partners since 2018.">
+  <title>Community Volunteer Programs in Mwanza, Tanzania | VOT</title>
+  <meta name="description" content="Volunteer with local communities in Mwanza, Tanzania: daycare, early childhood, conservation and community projects with trusted partners since 2018.">
 <link rel="canonical" href="https://www.volunteertotanzania.com/community.html">
 
   <!-- Robots & Language -->
@@ -31,18 +33,18 @@
   <!-- 2. OPEN GRAPH (Facebook, WhatsApp, LinkedIn Previews) -->
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Volunteers of Tanzania">
-  <meta property="og:title" content="Community Volunteer Programs in Mwanza, Tanzania | Volunteers of Tanzania">
-  <meta property="og:description" content="Volunteer with local communities in Mwanza, Tanzania — daycare, early childhood, conservation and community projects run with trusted local partners since 2018.">
+  <meta property="og:title" content="Community Volunteer Programs in Mwanza, Tanzania | VOT">
+  <meta property="og:description" content="Volunteer with local communities in Mwanza, Tanzania: daycare, early childhood, conservation and community projects with trusted partners since 2018.">
   <meta property="og:url" content="https://www.volunteertotanzania.com/community.html">
-  <meta property="og:image" content="https://www.volunteertotanzania.com/images/logo.jpeg"> <!-- Change image if you have specific ones -->
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
+  <meta property="og:image" content="https://www.volunteertotanzania.com/images/og/community.jpg"> <!-- Change image if you have specific ones -->
+  <meta property="og:image:width" content="647">
+  <meta property="og:image:height" content="340">
 
   <!-- 3. TWITTER CARD -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Community Volunteer Programs in Mwanza, Tanzania | Volunteers of Tanzania">
-  <meta name="twitter:description" content="Volunteer with local communities in Mwanza, Tanzania — daycare, early childhood, conservation and community projects run with trusted local partners since 2018.">
-  <meta name="twitter:image" content="https://www.volunteertotanzania.com/images/logo.jpeg">
+  <meta name="twitter:title" content="Community Volunteer Programs in Mwanza, Tanzania | VOT">
+  <meta name="twitter:description" content="Volunteer with local communities in Mwanza, Tanzania: daycare, early childhood, conservation and community projects with trusted partners since 2018.">
+  <meta name="twitter:image" content="https://www.volunteertotanzania.com/images/og/community.jpg">
 
   <!-- 4. LOCAL SEO (Crucial for Mwanza Search Results) -->
   <meta name="geo.region" content="TZ-18">
@@ -56,7 +58,8 @@
     "@context": "https://schema.org",
     "@graph": [
       {
-        "@type": "Organization",
+        "@type": "NGO",
+        "@id": "https://www.volunteertotanzania.com/#organization",
         "name": "Volunteers of Tanzania",
         "alternateName": "VOT Mwanza",
         "url": "https://www.volunteertotanzania.com/",
@@ -70,13 +73,96 @@
           "postOfficeBoxNumber": "4127"
         },
         "areaServed": "Tanzania",
-        "sameAs": ["https://www.youtube.com/@volunteersoftanzania", "https://www.instagram.com/volunteersoftanzania_/", "https://www.facebook.com/volunteertotanzania"]
+        "sameAs": [
+          "https://www.youtube.com/@volunteersoftanzania",
+          "https://www.instagram.com/volunteersoftanzania_/",
+          "https://www.facebook.com/volunteertotanzania"
+        ],
+        "logo": "https://www.volunteertotanzania.com/images/logo.jpeg"
       },
       {
         "@type": "BreadcrumbList",
         "itemListElement": [
-          {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.volunteertotanzania.com/"},
-          {"@type": "ListItem", "position": 2, "name": "Community Volunteer Programs", "item": "https://www.volunteertotanzania.com/community.html"}
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.volunteertotanzania.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Community Volunteer Programs",
+            "item": "https://www.volunteertotanzania.com/community.html"
+          }
+        ]
+      },
+      {
+        "@type": "Service",
+        "@id": "https://www.volunteertotanzania.com/community.html#service",
+        "name": "Community Volunteer Programs in Tanzania",
+        "serviceType": "Community volunteer programs",
+        "description": "Volunteer with local communities in Mwanza, Tanzania: daycare, early childhood, conservation and community projects with trusted partners since 2018.",
+        "url": "https://www.volunteertotanzania.com/community.html",
+        "image": "https://www.volunteertotanzania.com/images/og/community.jpg",
+        "provider": {
+          "@id": "https://www.volunteertotanzania.com/#organization"
+        },
+        "areaServed": {
+          "@type": "City",
+          "name": "Mwanza",
+          "containedInPlace": {
+            "@type": "Country",
+            "name": "Tanzania"
+          }
+        },
+        "offers": {
+          "@type": "Offer",
+          "priceCurrency": "USD",
+          "price": "295",
+          "url": "https://www.volunteertotanzania.com/prices.html",
+          "priceSpecification": {
+            "@type": "UnitPriceSpecification",
+            "price": "295",
+            "priceCurrency": "USD",
+            "unitText": "week",
+            "referenceQuantity": {
+              "@type": "QuantitativeValue",
+              "value": 1,
+              "unitCode": "WEE"
+            }
+          },
+          "description": "Weekly fee covering accommodation at VOT Hostel, meals and local support. No placement fee."
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://www.volunteertotanzania.com/community.html#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Do I need previous experience?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Most programs welcome volunteers regardless of experience level. We match you with a placement that fits your skills, interests and availability."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I volunteer alone?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes — most of our volunteers travel solo. You'll live at VOT Hostel alongside other volunteers from around the world and a full-time local team, so you're never really on your own, and lasting friendships form fast."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How long can I volunteer?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "We accept volunteers for as little as 1 week up to 24 weeks (about 6 months). The minimum recommended stay for meaningful impact is 2–4 weeks."
+            }
+          }
         ]
       }
     ]
@@ -89,6 +175,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400&family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
+  <script src="country-codes.js" defer></script>
   <!-- Vercel Web Analytics -->
   <script>
     window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
@@ -102,7 +189,7 @@
   <header class="site-header">
     <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
     <div class="wrap site-header__inner">
-      <a class="logo" href="index.html" aria-label="Volunteers of Tanzania home">
+      <a class="logo" href="/" aria-label="Volunteers of Tanzania home">
         <img src="images/logo.avif" alt="Volunteers of Tanzania logo" width="160" height="60">
       </a>
 
@@ -112,13 +199,13 @@
       </button>
 
       <nav id="primary-nav" class="nav" aria-label="Primary navigation">
-        <a href="index.html#story">About Us</a>
-        <a href="index.html#placements">Programs</a>
-        <a href="index.html#accommodation">Accommodation</a>
-        <a href="index.html#tours">Tours</a>
-        <a href="index.html#prices">Prices</a>
-        <a href="index.html#faq">FAQ</a>
-        <a href="index.html#gallery">Our Gallery</a>
+        <a href="/#story">About Us</a>
+        <a href="/#placements">Programs</a>
+        <a href="/#accommodation">Accommodation</a>
+        <a href="/#tours">Tours</a>
+        <a href="/#prices">Prices</a>
+        <a href="/#faq">FAQ</a>
+        <a href="/#gallery">Our Gallery</a>
         <a href="#contact" class="nav-link--contact">Contact Us</a>
         <a href="#contact" class="btn btn--primary nav-link--apply">Apply Now</a>
       </nav>
@@ -130,9 +217,9 @@
 <section class="page-hero">
   <div class="wrap">
     <p class="eyebrow">
-      <a href="index.html">Home</a>
+      <a href="/">Home</a>
       &rarr;
-      <a href="index.html#placements">Programs</a>
+      <a href="/#placements">Programs</a>
       &rarr;
       Community
     </p>
@@ -152,7 +239,7 @@
       </a>
       <a
         class="btn btn--ghost"
-        href="index.html#placements"
+        href="/#placements"
       >
         Explore All Programs
       </a>
@@ -299,13 +386,13 @@
           class="help-card__icon"
           aria-hidden="true"
         >
-          <img
+          <picture><source type="image/webp" srcset="images/webp/education-jpg.webp"><img
             src="images/education.jpg"
             alt="Two young children in Mwanza learning numbers and shapes with handmade cardboard teaching aids during an early childhood education session"
             loading="lazy"
             width="720"
             height="254"
-          >
+          ></picture>
         </div>
         <h3>
           Education and Teaching
@@ -317,7 +404,7 @@
           activities and the collection or organization of learning
           materials for schools.
         </p>
-        <a class="card-link" href="education.html">Teaching in Local Schools →</a>
+        <a class="card-link" href="/education.html">Teaching in Local Schools →</a>
       </article>
      <!-- HEALTHCARE -->
       <article class="help-card reveal">
@@ -342,7 +429,7 @@
           with community health education, hygiene awareness,
           sanitation initiatives and health promotion activities.
         </p>
-        <a class="card-link" href="healthcare.html">Healthcare Placements →</a>
+        <a class="card-link" href="/healthcare.html">Healthcare Placements →</a>
       </article>
       <!-- WOMEN -->
       <article class="help-card reveal">
@@ -399,13 +486,13 @@
           class="help-card__icon"
           aria-hidden="true"
         >
-          <img
+          <picture><source type="image/webp" srcset="images/webp/education-jpg.webp"><img
             src="images/education.jpg"
             alt="Young children learning with handmade teaching materials, part of community education support in Mwanza"
             loading="lazy"
             width="720"
             height="254"
-          >
+          ></picture>
         </div>
         <h3>
           Youth Empowerment and Skills Development
@@ -449,13 +536,13 @@
           class="help-card__icon"
           aria-hidden="true"
         >
-          <img
+          <picture><source type="image/webp" srcset="images/webp/tour_1-jpg.webp"><img
             src="images/tour_1.jpg"
             alt="Cheetahs climbing onto a safari vehicle in the Serengeti National Park, Tanzania, during a wildlife conservation trip"
             loading="lazy"
             width="720"
             height="254"
-          >
+          ></picture>
         </div>
         <h3>
           Wildlife and Environmental Conservation
@@ -467,8 +554,8 @@
           sustainability campaigns, environmental education and
           community conservation efforts.
         </p>
-        <a class="card-link" href="wildlife-conservation.html">Wildlife Conservation →</a>
-        <a class="card-link" href="conservation-lake-victoria.html">Lake Victoria Conservation →</a>
+        <a class="card-link" href="/wildlife-conservation.html">Wildlife Conservation →</a>
+        <a class="card-link" href="/conservation-lake-victoria.html">Lake Victoria Conservation →</a>
       </article>
     </div>
   </div>
@@ -520,7 +607,7 @@
 
         </div>
 
-        <a class="card-link" href="tecec-early-childhood.html">Early Childhood Development (TECEC) →</a>
+        <a class="card-link" href="/tecec-early-childhood.html">Early Childhood Development (TECEC) →</a>
       </article>
 
 
@@ -528,13 +615,13 @@
 
       <article class="partner-card reveal">
 
-        <img
+        <picture><source type="image/webp" srcset="images/webp/beacon-jpg.webp"><img
           src="images/beacon.jpg"
           alt="Beacon Teens Challenge community support initiative"
           width="720"
           height="254"
           loading="lazy"
-        >
+        ></picture>
 
         <div class="partner-card__body">
 
@@ -706,7 +793,7 @@
           </div>
         </div>
         <a class="btn story-side__cta" href="#contact">Apply for this program</a>
-        <a class="card-link" style="margin-top:0.75rem;" href="prices.html">See full pricing</a>
+        <a class="card-link" style="margin-top:0.75rem;" href="/prices.html">See full pricing</a>
       </aside>
     </div>
   </div>
@@ -740,7 +827,7 @@
       </article>
     </div>
     <p style="text-align:center;margin-top:2rem;">
-      <a class="card-link" href="index.html#testimonials">Read more volunteer stories</a>
+      <a class="card-link" href="/#testimonials">Read more volunteer stories</a>
     </p>
   </div>
 </section>
@@ -763,12 +850,13 @@
       <h2>You might also be interested in</h2>
     </div>
     <div class="reveal" style="display:flex;flex-wrap:wrap;gap:0.75rem 2.25rem;">
-      <a class="card-link" href="education.html">Teaching in Local Schools</a>
-      <a class="card-link" href="healthcare.html">Healthcare Placements</a>
-      <a class="card-link" href="conservation-lake-victoria.html">Lake Victoria Conservation</a>
-      <a class="card-link" href="engineering.html">Engineering Internship</a>
-      <a class="card-link" href="tour.html">All Tours &amp; Excursions</a>
-    </div>
+      <a class="card-link" href="/education.html">Teaching in Local Schools</a>
+      <a class="card-link" href="/healthcare.html">Healthcare Placements</a>
+      <a class="card-link" href="/conservation-lake-victoria.html">Lake Victoria Conservation</a>
+      <a class="card-link" href="/engineering.html">Engineering Internship</a>
+      <a class="card-link" href="/tour.html">All Tours &amp; Excursions</a>
+      <a class="card-link" href="/volunteer-mwanza.html">Volunteer in Mwanza: Guide</a>
+        </div>
   </div>
 </section>
 
@@ -978,71 +1066,22 @@
               aria-label="Country code"
               required
             >
-
-              <option value="+255" selected>
-                🇹🇿 +255 — Tanzania
-              </option>
-
-              <option value="+254">
-                🇰🇪 +254 — Kenya
-              </option>
-
-              <option value="+27">
-                🇿🇦 +27 — South Africa
-              </option>
-
-              <option value="+44">
-                🇬🇧 +44 — United Kingdom
-              </option>
-
-              <option value="+49">
-                🇩🇪 +49 — Germany
-              </option>
-
-              <option value="+33">
-                🇫🇷 +33 — France
-              </option>
-
-              <option value="+39">
-                🇮🇹 +39 — Italy
-              </option>
-
-              <option value="+31">
-                🇳🇱 +31 — Netherlands
-              </option>
-
-              <option value="+46">
-                🇸🇪 +46 — Sweden
-              </option>
-
-              <option value="+41">
-                🇨🇭 +41 — Switzerland
-              </option>
-
-              <option value="+1">
-                🇺🇸 +1 — United States
-              </option>
-
-              <option value="+1">
-                🇨🇦 +1 — Canada
-              </option>
-
-              <option value="+61">
-                🇦🇺 +61 — Australia
-              </option>
-
-              <option value="+91">
-                🇮🇳 +91 — India
-              </option>
-
-              <option value="+86">
-                🇨🇳 +86 — China
-              </option>
-
-              <option value="+81">
-                🇯🇵 +81 — Japan
-              </option>
-
+              <option value="+255" selected>🇹🇿 +255 — Tanzania</option>
+              <option value="+254">🇰🇪 +254 — Kenya</option>
+              <option value="+27">🇿🇦 +27 — South Africa</option>
+              <option value="+44">🇬🇧 +44 — United Kingdom</option>
+              <option value="+49">🇩🇪 +49 — Germany</option>
+              <option value="+33">🇫🇷 +33 — France</option>
+              <option value="+39">🇮🇹 +39 — Italy</option>
+              <option value="+31">🇳🇱 +31 — Netherlands</option>
+              <option value="+46">🇸🇪 +46 — Sweden</option>
+              <option value="+41">🇨🇭 +41 — Switzerland</option>
+              <option value="+1">🇺🇸 +1 — United States</option>
+              <option value="+1">🇨🇦 +1 — Canada</option>
+              <option value="+61">🇦🇺 +61 — Australia</option>
+              <option value="+91">🇮🇳 +91 — India</option>
+              <option value="+86">🇨🇳 +86 — China</option>
+              <option value="+81">🇯🇵 +81 — Japan</option>
             </select>
 
 
@@ -1175,13 +1214,13 @@
     class="footer-links"
     aria-label="Footer navigation"
   >
-        <a href="index.html#placements">Programs</a>
-        <a href="prices.html">Prices</a>
-        <a href="accommodation.html">Accommodation</a>
-        <a href="tour.html">Tours</a>
-        <a href="zanzibar.html">Zanzibar</a>
-        <a href="our_team.html">Our Team</a>
-        <a href="index.html#contact">Contact</a>
+        <a href="/#placements">Programs</a>
+        <a href="/prices.html">Prices</a>
+        <a href="/accommodation.html">Accommodation</a>
+        <a href="/tour.html">Tours</a>
+        <a href="/zanzibar.html">Zanzibar</a>
+        <a href="/our_team.html">Our Team</a>
+        <a href="/#contact">Contact</a>
       </nav>
       <div class="social-links site-social">
         <a class="social-link social-link--youtube" href="https://www.youtube.com/@volunteersoftanzania" target="_blank" rel="noopener" aria-label="YouTube channel" title="YouTube"> <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg> </a>
