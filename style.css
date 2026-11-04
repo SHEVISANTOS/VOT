@@ -6779,6 +6779,61 @@ PARTNER LOGOS — auto-scrolling, scrollable strip
 
 
 
+/* Held for a few seconds after a visitor uses the arrows */
+.partner-marquee.is-held .partner-marquee-track {
+  animation-play-state: paused;
+}
+
+/* Previous / next arrows over the strip */
+.partner-carousel {
+  position: relative;
+}
+
+.partner-nav {
+  position: absolute;
+  top: 50%;
+  z-index: 2;
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--white);
+  color: var(--lake-deep);
+  border: 1px solid rgba(28, 26, 22, 0.1);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-50%);
+  transition: background var(--transition), color var(--transition), transform var(--transition);
+}
+
+.partner-nav svg {
+  width: 20px;
+  height: 20px;
+}
+
+.partner-nav--prev { left: 0.5rem; }
+.partner-nav--next { right: 0.5rem; }
+
+.partner-nav:hover {
+  background: var(--sun-ochre);
+  color: var(--ink);
+  transform: translateY(-50%) scale(1.06);
+}
+
+.partner-nav:focus-visible {
+  outline: 3px solid var(--sun-ochre);
+  outline-offset: 3px;
+}
+
+@media (max-width: 680px) {
+  .partner-nav {
+    width: 38px;
+    height: 38px;
+  }
+  .partner-nav--prev { left: 0.25rem; }
+  .partner-nav--next { right: 0.25rem; }
+}
+
 /* Accessibility: no animation for reduced-motion users */
 @media (prefers-reduced-motion: reduce) {
   .partner-marquee-track { animation: none; }

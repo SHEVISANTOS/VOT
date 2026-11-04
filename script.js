@@ -992,6 +992,63 @@ function sendEmail(e) {
   };
 
   /* =========================================================
+     PARTNER STRIP — previous / next arrows
+     ========================================================= */
+  const initPartnerNav = () => {
+    const marquee = document.querySelector('.partner-marquee');
+    const track = marquee && marquee.querySelector('.partner-marquee-track');
+    const prev = document.querySelector('.partner-nav--prev');
+    const next = document.querySelector('.partner-nav--next');
+    if (!marquee || !track || !prev || !next) return;
+
+    let holdTimer = null;
+    let tween = null;
+
+    // One step = one logo card plus the gap between cards
+    const stepWidth = () => {
+      const logo = track.querySelector('.partner-logo');
+      const gap = parseFloat(getComputedStyle(track.querySelector('.logo-set')).columnGap) || 0;
+      return logo ? logo.getBoundingClientRect().width + gap : 200;
+    };
+
+    const hold = () => {
+      marquee.classList.add('is-held');
+      clearTimeout(holdTimer);
+      holdTimer = setTimeout(() => marquee.classList.remove('is-held'), 5000);
+    };
+
+    const move = (direction) => {
+      hold();
+      const animation = typeof track.getAnimations === 'function' ? track.getAnimations()[0] : null;
+
+      // Reduced motion (no animation): the strip scrolls instead
+      if (!animation) {
+        marquee.scrollBy({ left: direction * stepWidth(), behavior: 'smooth' });
+        return;
+      }
+
+      // Shift the running animation by one logo, smoothly
+      const duration = animation.effect.getTiming().duration;
+      const setWidth = track.scrollWidth / 2;
+      const shift = (duration * stepWidth() / setWidth) * direction;
+      const start = animation.currentTime;
+      const startedAt = performance.now();
+      cancelAnimationFrame(tween);
+
+      const frame = (now) => {
+        const t = Math.min((now - startedAt) / 450, 1);
+        const eased = 1 - Math.pow(1 - t, 3);
+        animation.currentTime = (((start + shift * eased) % duration) + duration) % duration;
+        if (t < 1) tween = requestAnimationFrame(frame);
+      };
+      tween = requestAnimationFrame(frame);
+    };
+
+    prev.addEventListener('click', () => move(-1));
+    next.addEventListener('click', () => move(1));
+  };
+
+  /* =========================================================
      INITIALIZE ALL FUNCTIONS
      ========================================================= */
   const init = () => {
@@ -1008,6 +1065,7 @@ function sendEmail(e) {
     initToursShowMore();
     initFaqShowMore();
     initBackToTop();
+    initPartnerNav();
 
     console.log('✅ VOT Website initialized successfully');
   };
