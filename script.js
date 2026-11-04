@@ -1049,6 +1049,36 @@ function sendEmail(e) {
   };
 
   /* =========================================================
+     GOOGLE MAP — start loading early, after the page is ready
+     The map stays loading="lazy" in the HTML (so it never slows the
+     first view); once the page has loaded and the browser is idle,
+     we switch it to eager so it is ready before visitors scroll down.
+     ========================================================= */
+  const initMapPreload = () => {
+    const maps = document.querySelectorAll('iframe[src*="google.com/maps/embed"][loading="lazy"]');
+    if (!maps.length) return;
+
+    let started = false;
+    const start = () => {
+      if (started) return;
+      started = true;
+      maps.forEach((frame) => { frame.loading = 'eager'; });
+      triggers.forEach((type) => window.removeEventListener(type, start));
+    };
+
+    // Whichever comes first: the visitor starts scrolling/touching, or the page finishes loading
+    const triggers = ['scroll', 'touchstart', 'pointerdown', 'keydown'];
+    triggers.forEach((type) => window.addEventListener(type, start, { passive: true, once: true }));
+
+    const whenIdle = () => {
+      if ('requestIdleCallback' in window) requestIdleCallback(start, { timeout: 3000 });
+      else setTimeout(start, 1500);
+    };
+    if (document.readyState === 'complete') whenIdle();
+    else window.addEventListener('load', whenIdle, { once: true });
+  };
+
+  /* =========================================================
      INITIALIZE ALL FUNCTIONS
      ========================================================= */
   const init = () => {
@@ -1066,6 +1096,7 @@ function sendEmail(e) {
     initFaqShowMore();
     initBackToTop();
     initPartnerNav();
+    initMapPreload();
 
     console.log('✅ VOT Website initialized successfully');
   };

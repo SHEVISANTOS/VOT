@@ -7728,3 +7728,8 @@ PARTNER LOGOS — FULL COLOUR (overrides grayscale)
     padding: 0.6rem 0.95rem 0.6rem 0.8rem;
   }
 }
+
+/* Google map: dark placeholder colour while it loads (instead of a white box) */
+iframe[src*="google.com/maps/embed"] {
+  background: var(--lake-deep-light);
+}
