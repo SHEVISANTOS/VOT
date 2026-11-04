@@ -5829,6 +5829,21 @@ video[preload="none"] {
   color: var(--ink);
 }
 
+/* Centre the whole FAQ heading block: label, title and divider */
+.faq-section .section-heading {
+  max-width: 980px;
+  margin-inline: auto;
+  text-align: center;
+}
+
+.faq-section .section-heading .eyebrow {
+  text-align: center;
+}
+
+.faq-section .section-heading .section-divider {
+  margin-inline: auto;
+}
+
 .faq-grid {
   margin-top: 2.5rem;
   display: grid;
