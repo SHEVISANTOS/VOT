@@ -48,7 +48,7 @@
     },
     {
       "source": "/day-trip(.html)?",
-      "destination": "/tour.html#day-trips",
+      "destination": "https://www.volunteertotanzania.com/tour.html",
       "statusCode": 301
     },
     {
