@@ -207,10 +207,15 @@ function initContactForm() {
 
   form.addEventListener("submit", handleSubmit);
 
+  let isSending = false;
+
   async function handleSubmit(event) {
     event.preventDefault();
 
     if (!note) return;
+
+    /* Ignore repeat clicks / Enter presses while sending or after a successful send */
+    if (isSending || form.classList.contains("is-sent")) return;
 
     const submitButton = form.querySelector('button[type="submit"]');
     const honeypot = form.elements["_gotcha"];
@@ -231,6 +236,11 @@ function initContactForm() {
       form.reset();
       note.textContent = "Thank you.";
       note.classList.add("is-success");
+      return;
+    }
+
+    /* Field-by-field checks (required, email, phone) from initFormValidation */
+    if (typeof form.votValidate === "function" && !form.votValidate()) {
       return;
     }
 
@@ -263,7 +273,9 @@ function initContactForm() {
     }
 
     const originalButtonText = submitButton.textContent;
+    let sent = false;
 
+    isSending = true;
     submitButton.disabled = true;
     submitButton.textContent = "Sending...";
     submitButton.classList.add("is-loading");
@@ -284,6 +296,8 @@ function initContactForm() {
         appendWhatsAppFollowUp(note, firstName, lastName);
 
         form.reset();
+        sent = true;
+        lockAfterSuccess(submitButton, originalButtonText);
         form.dispatchEvent(new CustomEvent("vot:form-submitted", { bubbles: true }));
       } else {
         let errorMessage =
@@ -314,10 +328,38 @@ function initContactForm() {
         "Sorry, we could not submit the form right now. Please try again or contact us on WhatsApp.";
       note.classList.add("is-error");
     } finally {
+      isSending = false;
+      submitButton.classList.remove("is-loading");
+      if (!sent) {
+        submitButton.disabled = false;
+        submitButton.textContent = originalButtonText;
+      }
+    }
+  }
+
+  /* After a successful send the button stays locked; a small link lets someone
+     who really needs to (e.g. a group member) send another application. */
+  function lockAfterSuccess(submitButton, originalButtonText) {
+    form.classList.add("is-sent");
+    submitButton.disabled = true;
+    submitButton.textContent = "Application sent \u2713";
+
+    if (form.querySelector(".form-send-another")) return;
+    const again = document.createElement("button");
+    again.type = "button";
+    again.className = "form-send-another";
+    again.textContent = "Send another application";
+    again.addEventListener("click", () => {
+      form.classList.remove("is-sent");
       submitButton.disabled = false;
       submitButton.textContent = originalButtonText;
-      submitButton.classList.remove("is-loading");
-    }
+      note.textContent = "";
+      note.classList.remove("is-success", "is-error");
+      again.remove();
+      const first = form.querySelector('[name="first-name"]');
+      if (first) first.focus();
+    });
+    submitButton.insertAdjacentElement("afterend", again);
   }
 
   function appendWhatsAppFollowUp(noteElement, firstName, lastName) {
@@ -782,11 +824,11 @@ function sendEmail(e) {
       input.style.borderColor = '';
     };
 
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
+    // Field checks only — the real sending happens in initContactForm,
+    // which calls this first and only sends when every field is valid.
+    form.votValidate = () => {
       let isValid = true;
 
-      // Validate required fields
       const requiredFields = form.querySelectorAll('[required]');
       requiredFields.forEach((field) => {
         if (!field.value.trim()) {
@@ -813,40 +855,12 @@ function sendEmail(e) {
         }
       });
 
-      if (isValid) {
-        // Show success message
-        const submitBtn = form.querySelector('button[type="submit"]');
-        if (submitBtn) {
-          const originalText = submitBtn.textContent;
-          submitBtn.textContent = 'Sending...';
-          submitBtn.disabled = true;
-          submitBtn.classList.add('is-loading');
-
-          // Simulate form submission (replace with actual AJAX call)
-          setTimeout(() => {
-            submitBtn.textContent = 'Application Sent Successfully!';
-            submitBtn.style.background = 'var(--acacia)';
-            
-            // Reset form
-            form.reset();
-            
-            // Reset button after 3 seconds
-            setTimeout(() => {
-              submitBtn.textContent = originalText;
-              submitBtn.disabled = false;
-              submitBtn.classList.remove('is-loading');
-              submitBtn.style.background = '';
-            }, 3000);
-          }, 1500);
-        }
-      } else {
-        // Focus first invalid field
+      if (!isValid) {
         const firstInvalid = form.querySelector('[aria-invalid="true"]');
-        if (firstInvalid) {
-          firstInvalid.focus();
-        }
+        if (firstInvalid) firstInvalid.focus();
       }
-    });
+      return isValid;
+    };
 
     // Clear errors on input
     form.querySelectorAll('input, textarea, select').forEach((field) => {
@@ -1336,15 +1350,6 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 
-// ================= FORMSPREE AJAX SCRIPT =================
-window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
-formspree('initForm', { formElement: '#contact-form', formId: 'mrpbljve' });
-
-// Load Formspree AJAX SDK Dynamically
-const formspreeScript = document.createElement('script');
-formspreeScript.src = "https://unpkg.com/@formspree/ajax@1";
-formspreeScript.defer = true;
-document.head.appendChild(formspreeScript);
 
 /* =========================================================
    PRICING CALCULATOR
