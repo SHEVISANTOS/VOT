@@ -7750,3 +7750,8 @@ iframe[src*="google.com/maps/embed"] {
 .form-send-another:hover {
   color: var(--sun-ochre-dark);
 }
+
+/* Home accommodation panel: link to the full accommodation page */
+.acc-intro__more {
+  margin-top: 1.75rem;
+}
