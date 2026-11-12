@@ -1093,6 +1093,87 @@ function sendEmail(e) {
   };
 
   /* =========================================================
+     ACCOMMODATION GALLERY — click a photo to see it full size
+     ========================================================= */
+  const initPhotoViewer = () => {
+    const items = Array.from(document.querySelectorAll('.acc-page-gallery .acc-gallery-item'));
+    if (!items.length) return;
+
+    const viewer = document.createElement('div');
+    viewer.className = 'photo-viewer';
+    viewer.setAttribute('role', 'dialog');
+    viewer.setAttribute('aria-modal', 'true');
+    viewer.setAttribute('aria-label', 'Photo viewer');
+    viewer.innerHTML =
+      '<img class="photo-viewer__img" alt="">' +
+      '<button type="button" class="photo-viewer__btn photo-viewer__close" aria-label="Close">&times;</button>' +
+      '<button type="button" class="photo-viewer__btn photo-viewer__prev" aria-label="Previous photo">&#8249;</button>' +
+      '<button type="button" class="photo-viewer__btn photo-viewer__next" aria-label="Next photo">&#8250;</button>' +
+      '<p class="photo-viewer__count" aria-live="polite"></p>';
+    document.body.appendChild(viewer);
+
+    const img = viewer.querySelector('.photo-viewer__img');
+    const count = viewer.querySelector('.photo-viewer__count');
+    let current = 0;
+    let lastFocus = null;
+
+    const show = (index) => {
+      current = (index + items.length) % items.length;
+      const source = items[current].querySelector('img');
+      img.src = source.currentSrc || source.src;
+      img.alt = source.alt;
+      count.textContent = `${current + 1} / ${items.length}`;
+    };
+
+    const open = (index) => {
+      lastFocus = document.activeElement;
+      show(index);
+      viewer.classList.add('is-open');
+      document.body.classList.add('photo-viewer-open');
+      viewer.querySelector('.photo-viewer__close').focus();
+    };
+
+    const close = () => {
+      viewer.classList.remove('is-open');
+      document.body.classList.remove('photo-viewer-open');
+      if (lastFocus) lastFocus.focus();
+    };
+
+    items.forEach((item, index) => {
+      item.setAttribute('tabindex', '0');
+      item.setAttribute('role', 'button');
+      const alt = item.querySelector('img') ? item.querySelector('img').alt : 'photo';
+      item.setAttribute('aria-label', `View larger: ${alt}`);
+      item.addEventListener('click', () => open(index));
+      item.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(index); }
+      });
+    });
+
+    viewer.querySelector('.photo-viewer__close').addEventListener('click', close);
+    viewer.querySelector('.photo-viewer__prev').addEventListener('click', () => show(current - 1));
+    viewer.querySelector('.photo-viewer__next').addEventListener('click', () => show(current + 1));
+    viewer.addEventListener('click', (e) => { if (e.target === viewer) close(); });
+
+    document.addEventListener('keydown', (e) => {
+      if (!viewer.classList.contains('is-open')) return;
+      if (e.key === 'Escape') close();
+      if (e.key === 'ArrowLeft') show(current - 1);
+      if (e.key === 'ArrowRight') show(current + 1);
+    });
+
+    // Swipe on phones
+    let startX = null;
+    viewer.addEventListener('touchstart', (e) => { startX = e.touches[0].clientX; }, { passive: true });
+    viewer.addEventListener('touchend', (e) => {
+      if (startX === null) return;
+      const dx = e.changedTouches[0].clientX - startX;
+      if (Math.abs(dx) > 50) show(current + (dx < 0 ? 1 : -1));
+      startX = null;
+    });
+  };
+
+  /* =========================================================
      INITIALIZE ALL FUNCTIONS
      ========================================================= */
   const init = () => {
@@ -1111,6 +1192,7 @@ function sendEmail(e) {
     initBackToTop();
     initPartnerNav();
     initMapPreload();
+    initPhotoViewer();
 
     console.log('✅ VOT Website initialized successfully');
   };
